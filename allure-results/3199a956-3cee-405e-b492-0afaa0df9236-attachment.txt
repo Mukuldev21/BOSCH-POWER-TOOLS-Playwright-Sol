@@ -1,0 +1,2 @@
+Page Title: Bosch Power Tools | Boschtools
+Main search bar element is visible.
