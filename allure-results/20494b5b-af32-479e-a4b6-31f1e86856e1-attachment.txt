@@ -1,0 +1,9 @@
+No visible consent banner found or timeout reached.
+URL check passed: URL contains "power-tools".
+Title check passed: Title is "Professional Grade Power Tools | Bosch Power Tools" and contains "power tools".
+Successfully navigated to the "Power Tools" page.
+No visible consent banner found or timeout reached.
+URL check passed: URL contains "accessories".
+Title check passed: Title is "Bosch Professional Accessories | Bosch Professional" and contains "accessories".
+Successfully navigated to the "Accessories" page.
+No visible consent banner found or timeout reached.

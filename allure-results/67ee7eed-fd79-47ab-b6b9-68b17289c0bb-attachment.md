@@ -1,0 +1,780 @@
+# Page snapshot
+
+```yaml
+- generic [active] [ref=e1]:
+  - banner [ref=e2]:
+    - generic [ref=e3]:
+      - generic [ref=e4]:
+        - navigation "Meta" [ref=e5]:
+          - list [ref=e6]:
+            - listitem [ref=e7]:
+              - link "Tool Repair" [ref=e8] [cursor=pointer]:
+                - /url: //www.boschtools.com/us/en/service/bosch-e-repair-network/
+            - listitem [ref=e9]:
+              - link "Spare Parts" [ref=e10] [cursor=pointer]:
+                - /url: //www.boschtools.com/us/en/service/replacement-parts/
+            - listitem [ref=e11]:
+              - link "Warranty" [ref=e12] [cursor=pointer]:
+                - /url: //www.boschtools.com/us/en/service/product-warranty/
+            - listitem [ref=e13]:
+              - button "English " [ref=e14] [cursor=pointer]:
+                - text: English
+                - generic [ref=e15]: 
+        - navigation "Search" [ref=e16]:
+          - link "Bosch logo in red with black lettering on a white background, modern and clearly designed." [ref=e19] [cursor=pointer]:
+            - /url: //www.boschtools.com/us/en/
+            - img "Bosch logo in red with black lettering on a white background, modern and clearly designed." [ref=e21]
+          - search [ref=e24]:
+            - generic [ref=e25]:
+              - generic [ref=e26]: Search
+              - button "Onsite Search" [ref=e27] [cursor=pointer]:
+                - generic [ref=e28]: 
+            - generic [ref=e29]:
+              - button "Submit search request" [ref=e30] [cursor=pointer]:
+                - generic [ref=e31]: 
+              - combobox "Search" [ref=e32]
+            - button "Onsite Search Close" [ref=e33] [cursor=pointer]:
+              - generic [ref=e34]: 
+          - navigation "Conversion Bar" [ref=e37]:
+            - list [ref=e38]:
+              - listitem [ref=e39]:
+                - link " Where to buy" [ref=e40] [cursor=pointer]:
+                  - /url: //www.boschtools.com/us/en/service/where-to-buy/store-locator/
+                  - generic [ref=e41]: 
+                  - generic [ref=e42]: Where to buy
+              - listitem [ref=e43]:
+                - link " Product Registration" [ref=e44] [cursor=pointer]:
+                  - /url: https://erepair.boschtools.com/boschtools-erepair/login
+                  - generic [ref=e45]: 
+                  - generic [ref=e46]: Product Registration
+      - navigation "Main" [ref=e50]:
+        - generic [ref=e53]:
+          - list [ref=e54]:
+            - listitem [ref=e55]:
+              - generic [ref=e56]:
+                - link "Power Tools" [ref=e57] [cursor=pointer]:
+                  - /url: /us/en/trade-industry-22064-ocs-c/
+                  - generic [ref=e58]: Power Tools
+                - text: 
+            - listitem [ref=e59]:
+              - generic [ref=e60]:
+                - link "Hand Tools" [ref=e61] [cursor=pointer]:
+                  - /url: https://www.boschtools.com/us/en/hand-tools-44308-ocs-c/
+                  - generic [ref=e62]: Hand Tools
+                - text: 
+            - listitem [ref=e63]:
+              - generic [ref=e64]:
+                - link "Measuring Tools" [ref=e65] [cursor=pointer]:
+                  - /url: /us/en/measuring-and-layout-tools-23413-ocs-c/
+                  - generic [ref=e66]: Measuring Tools
+                - text: 
+            - listitem [ref=e67]:
+              - generic [ref=e68]:
+                - link "Accessories" [ref=e69] [cursor=pointer]:
+                  - /url: /us/en/bosch-professional-accessories-43498-ocs-ac/
+                  - generic [ref=e70]: Accessories
+                - text: 
+            - listitem [ref=e71]:
+              - generic [ref=e72]:
+                - link "Service" [ref=e73] [cursor=pointer]:
+                  - /url: //www.boschtools.com/us/en/service/
+                  - generic [ref=e74]: Service
+                - text: 
+              - text:           
+            - listitem [ref=e75]:
+              - generic [ref=e76]:
+                - link "Trade Solutions" [ref=e77] [cursor=pointer]:
+                  - /url: //www.boschtools.com/us/en/trade-solutions/
+                  - generic [ref=e78]: Trade Solutions
+                - text: 
+              - text:               
+            - listitem [ref=e79]:
+              - generic [ref=e80]:
+                - link "New Products" [ref=e81] [cursor=pointer]:
+                  - /url: //www.boschtools.com/us/en/new-products/
+                  - generic [ref=e82]: New Products
+                - text: 
+            - listitem [ref=e83]:
+              - generic [ref=e84]:
+                - link "PRO Deals" [ref=e85] [cursor=pointer]:
+                  - /url: /us/en/pro360/prodeal/
+                  - generic [ref=e87]: PRO Deals
+                - text: 
+          - text: 
+      - generic:
+        - navigation "Accessories":
+          - generic:
+            - generic:
+              - button "Close":
+                - generic: 
+            - generic:
+              - generic:
+                - text: 
+                - generic:
+                  - generic:
+                    - link "No alt text available Drilling":
+                      - /url: https://www.boschtools.com/us/en/drilling-43509-ocs-ac/
+                      - generic:
+                        - generic:
+                          - img "No alt text available"
+                      - generic: Drilling
+                  - generic:
+                    - link "No alt text available Diamond Drilling, Cutting & Grinding":
+                      - /url: https://www.boschtools.com/us/en/diamond-drilling-cutting-grinding-43499-ocs-ac/
+                      - generic:
+                        - generic:
+                          - img "No alt text available"
+                      - generic: Diamond Drilling, Cutting & Grinding
+                  - generic:
+                    - link "No alt text available Router Bits & Planer Blades":
+                      - /url: https://www.boschtools.com/us/en/router-bits-planer-blades-43503-ocs-ac/
+                      - generic:
+                        - generic:
+                          - img "No alt text available"
+                      - generic: Router Bits & Planer Blades
+                  - generic:
+                    - link "No alt text available Chiseling":
+                      - /url: https://www.boschtools.com/us/en/chiseling-43500-ocs-ac/
+                      - generic:
+                        - generic:
+                          - img "No alt text available"
+                      - generic: Chiseling
+                  - generic:
+                    - link "No alt text available Multi-Tool Accessories":
+                      - /url: https://www.boschtools.com/us/en/multi-tool-accessories-43501-ocs-ac/
+                      - generic:
+                        - generic:
+                          - img "No alt text available"
+                      - generic: Multi-Tool Accessories
+                  - generic:
+                    - link "No alt text available Sawing":
+                      - /url: https://www.boschtools.com/us/en/sawing-43510-ocs-ac/
+                      - generic:
+                        - generic:
+                          - img "No alt text available"
+                      - generic: Sawing
+                  - generic:
+                    - link "No alt text available Sanding & Polishing":
+                      - /url: https://www.boschtools.com/us/en/sanding-polishing-43505-ocs-ac/
+                      - generic:
+                        - generic:
+                          - img "No alt text available"
+                      - generic: Sanding & Polishing
+                  - generic:
+                    - link "No alt text available Screwdriver Bits, Nutsetters & Sockets":
+                      - /url: https://www.boschtools.com/us/en/screwdriver-bits-nutsetters-sockets-43506-ocs-ac/
+                      - generic:
+                        - generic:
+                          - img "No alt text available"
+                      - generic: Screwdriver Bits, Nutsetters & Sockets
+                  - generic:
+                    - link "No alt text available Cutting, Grinding & Brushing":
+                      - /url: https://www.boschtools.com/us/en/cutting-grinding-brushing-43504-ocs-ac/
+                      - generic:
+                        - generic:
+                          - img "No alt text available"
+                      - generic: Cutting, Grinding & Brushing
+                  - generic:
+                    - link "No alt text available Fastening":
+                      - /url: https://www.boschtools.com/us/en/fastening-43507-ocs-ac/
+                      - generic:
+                        - generic:
+                          - img "No alt text available"
+                      - generic: Fastening
+                  - generic:
+                    - link "No alt text available Threading Tools":
+                      - /url: https://www.boschtools.com/us/en/threading-tools-43508-ocs-ac/
+                      - generic:
+                        - generic:
+                          - img "No alt text available"
+                      - generic: Threading Tools
+                  - generic:
+                    - link "No alt text available Sets":
+                      - /url: https://www.boschtools.com/us/en/sets-43502-ocs-ac/
+                      - generic:
+                        - generic:
+                          - img "No alt text available"
+                      - generic: Sets
+        - navigation "Measuring Tools":
+          - generic:
+            - generic:
+              - button "Close":
+                - generic: 
+            - generic:
+              - generic:
+                - text: 
+                - generic:
+                  - generic:
+                    - link "No alt text available Laser Measures":
+                      - /url: https://www.boschtools.com/us/en/laser-measures-23502-ocs-c/
+                      - generic:
+                        - generic:
+                          - img "No alt text available"
+                      - generic: Laser Measures
+                  - generic:
+                    - link "No alt text available Digital Levels, Digital Angle Finders and Inclinometer":
+                      - /url: https://www.boschtools.com/us/en/digital-levels-digital-angle-finders-and-inclinometer-23505-ocs-c/
+                      - generic:
+                        - generic:
+                          - img "No alt text available"
+                      - generic: Digital Levels, Digital Angle Finders and Inclinometer
+                  - generic:
+                    - link "No alt text available Inspection/Detection Tools":
+                      - /url: https://www.boschtools.com/us/en/inspection-detection-tools-44238-ocs-c/
+                      - generic:
+                        - generic:
+                          - img "No alt text available"
+                      - generic: Inspection/Detection Tools
+                  - generic:
+                    - link "No alt text available Line Lasers":
+                      - /url: https://www.boschtools.com/us/en/line-lasers-41057-ocs-c/
+                      - generic:
+                        - generic:
+                          - img "No alt text available"
+                      - generic: Line Lasers
+                  - generic:
+                    - link "No alt text available Point Lasers":
+                      - /url: https://www.boschtools.com/us/en/point-lasers-23507-ocs-c/
+                      - generic:
+                        - generic:
+                          - img "No alt text available"
+                      - generic: Point Lasers
+                  - generic:
+                    - link "No alt text available Rotary Lasers":
+                      - /url: https://www.boschtools.com/us/en/rotary-lasers-23508-ocs-c/
+                      - generic:
+                        - generic:
+                          - img "No alt text available"
+                      - generic: Rotary Lasers
+                  - generic:
+                    - link "No alt text available Optical Levels":
+                      - /url: https://www.boschtools.com/us/en/optical-levels-23504-ocs-c/
+                      - generic:
+                        - generic:
+                          - img "No alt text available"
+                      - generic: Optical Levels
+                  - generic:
+                    - link "No alt text available Batteries and Chargers":
+                      - /url: https://www.boschtools.com/us/en/batteries-and-chargers-41356-ocs-c/
+                      - generic:
+                        - generic:
+                          - img "No alt text available"
+                      - generic: Batteries and Chargers
+                  - generic:
+                    - link "No alt text available Attachments":
+                      - /url: https://www.boschtools.com/us/en/attachments-41079-ocs-c/
+                      - generic:
+                        - generic:
+                          - img "No alt text available"
+                      - generic: Attachments
+                  - generic:
+                    - link "No alt text available Accessories":
+                      - /url: https://www.boschtools.com/us/en/accessories-23509-ocs-c/
+                      - generic:
+                        - generic:
+                          - img "No alt text available"
+                      - generic: Accessories
+        - navigation "Power Tools":
+          - generic:
+            - generic:
+              - button "Close":
+                - generic: 
+            - generic:
+              - generic:
+                - text: 
+                - generic:
+                  - generic:
+                    - link "No alt text available New Products":
+                      - /url: https://www.boschtools.com/us/en/new-products/
+                      - generic:
+                        - generic:
+                          - img "No alt text available"
+                      - generic: New Products
+                  - generic:
+                    - link "No alt text available Spare Parts":
+                      - /url: https://www.boschtoolservice.com/us/en/bosch-pt/spareparts/search
+                      - generic:
+                        - generic:
+                          - img "No alt text available"
+                      - generic: Spare Parts
+                  - generic:
+                    - link "No alt text available PROFACTOR":
+                      - /url: https://www.boschtools.com/us/en/profactor-41308-ocs-c/
+                      - generic:
+                        - generic:
+                          - img "No alt text available"
+                      - generic: PROFACTOR
+                  - generic:
+                    - link "No alt text available 12V Max Cordless Power Tools":
+                      - /url: https://www.boschtools.com/us/en/12v-max-cordless-power-tools-37932-ocs-c/
+                      - generic:
+                        - generic:
+                          - img "No alt text available"
+                      - generic: 12V Max Cordless Power Tools
+                  - generic:
+                    - link "No alt text available 18V Cordless Power Tools":
+                      - /url: https://www.boschtools.com/us/en/18v-cordless-power-tools-37933-ocs-c/
+                      - generic:
+                        - generic:
+                          - img "No alt text available"
+                      - generic: 18V Cordless Power Tools
+                  - generic:
+                    - link "No alt text available Batteries, Chargers & Starter Kits":
+                      - /url: https://www.boschtools.com/us/en/batteries-chargers-starter-kits-23419-ocs-c/
+                      - generic:
+                        - generic:
+                          - img "No alt text available"
+                      - generic: Batteries, Chargers & Starter Kits
+                  - generic:
+                    - link "No alt text available Cordless Power Tools":
+                      - /url: https://www.boschtools.com/us/en/cordless-power-tools-35676-ocs-c/
+                      - generic:
+                        - generic:
+                          - img "No alt text available"
+                      - generic: Cordless Power Tools
+                  - generic:
+                    - link "No alt text available Cordless Combo Kits":
+                      - /url: https://www.boschtools.com/us/en/cordless-combo-kits-37711-ocs-c/
+                      - generic:
+                        - generic:
+                          - img "No alt text available"
+                      - generic: Cordless Combo Kits
+                  - generic:
+                    - link "No alt text available Band Saws":
+                      - /url: https://www.boschtools.com/us/en/band-saws-36762-ocs-c/
+                      - generic:
+                        - generic:
+                          - img "No alt text available"
+                      - generic: Band Saws
+                  - generic:
+                    - link "No alt text available Benchtop Tools":
+                      - /url: https://www.boschtools.com/us/en/benchtop-tools-25311-ocs-c/
+                      - generic:
+                        - generic:
+                          - img "No alt text available"
+                      - generic: Benchtop Tools
+                  - generic:
+                    - link "No alt text available Circular Saws":
+                      - /url: https://www.boschtools.com/us/en/circular-saws-36763-ocs-c/
+                      - generic:
+                        - generic:
+                          - img "No alt text available"
+                      - generic: Circular Saws
+                  - generic:
+                    - link "No alt text available Drills, Hammer Drills & Impact Drivers":
+                      - /url: https://www.boschtools.com/us/en/drills-hammer-drills-impact-drivers-23409-ocs-c/
+                      - generic:
+                        - generic:
+                          - img "No alt text available"
+                      - generic: Drills, Hammer Drills & Impact Drivers
+                  - generic:
+                    - link "No alt text available Drywall Tools":
+                      - /url: https://www.boschtools.com/us/en/drywall-tools-41698-ocs-c/
+                      - generic:
+                        - generic:
+                          - img "No alt text available"
+                      - generic: Drywall Tools
+                  - generic:
+                    - link "No alt text available Dust Extraction and Collection":
+                      - /url: https://www.boschtools.com/us/en/dust-extraction-and-collection-23421-ocs-c/
+                      - generic:
+                        - generic:
+                          - img "No alt text available"
+                      - generic: Dust Extraction and Collection
+                  - generic:
+                    - link "No alt text available Grinders and Metalworking":
+                      - /url: https://www.boschtools.com/us/en/grinders-and-metalworking-23412-ocs-c/
+                      - generic:
+                        - generic:
+                          - img "No alt text available"
+                      - generic: Grinders and Metalworking
+                  - generic:
+                    - link "No alt text available Hammers (Rotary & Demolition)":
+                      - /url: https://www.boschtools.com/us/en/hammers-rotary-demolition-23411-ocs-c/
+                      - generic:
+                        - generic:
+                          - img "No alt text available"
+                      - generic: Hammers (Rotary & Demolition)
+                  - generic:
+                    - link "No alt text available Jig Saws":
+                      - /url: https://www.boschtools.com/us/en/jig-saws-36764-ocs-c/
+                      - generic:
+                        - generic:
+                          - img "No alt text available"
+                      - generic: Jig Saws
+                  - generic:
+                    - link "No alt text available Lights":
+                      - /url: https://www.boschtools.com/us/en/lights-41089-ocs-c/
+                      - generic:
+                        - generic:
+                          - img "No alt text available"
+                      - generic: Lights
+                  - generic:
+                    - link "No alt text available Measuring and Layout Tools":
+                      - /url: https://www.boschtools.com/us/en/measuring-and-layout-tools-23413-ocs-c/
+                      - generic:
+                        - generic:
+                          - img "No alt text available"
+                      - generic: Measuring and Layout Tools
+                  - generic:
+                    - link "No alt text available Nailers & Staplers":
+                      - /url: https://www.boschtools.com/us/en/nailers-staplers-41742-ocs-c/
+                      - generic:
+                        - generic:
+                          - img "No alt text available"
+                      - generic: Nailers & Staplers
+                  - generic:
+                    - link "No alt text available Oscillating Multi-Tools":
+                      - /url: https://www.boschtools.com/us/en/oscillating-multi-tools-23414-ocs-c/
+                      - generic:
+                        - generic:
+                          - img "No alt text available"
+                      - generic: Oscillating Multi-Tools
+                  - generic:
+                    - link "No alt text available Planers":
+                      - /url: https://www.boschtools.com/us/en/planers-23417-ocs-c/
+                      - generic:
+                        - generic:
+                          - img "No alt text available"
+                      - generic: Planers
+                  - generic:
+                    - link "No alt text available Radios":
+                      - /url: https://www.boschtools.com/us/en/radios-23424-ocs-c/
+                      - generic:
+                        - generic:
+                          - img "No alt text available"
+                      - generic: Radios
+                  - generic:
+                    - link "No alt text available Reciprocating Saws":
+                      - /url: https://www.boschtools.com/us/en/reciprocating-saws-36761-ocs-c/
+                      - generic:
+                        - generic:
+                          - img "No alt text available"
+                      - generic: Reciprocating Saws
+                  - generic:
+                    - link "No alt text available Routers & Router Tables":
+                      - /url: https://www.boschtools.com/us/en/routers-router-tables-23415-ocs-c/
+                      - generic:
+                        - generic:
+                          - img "No alt text available"
+                      - generic: Routers & Router Tables
+                  - generic:
+                    - link "No alt text available Sanders":
+                      - /url: https://www.boschtools.com/us/en/sanders-23416-ocs-c/
+                      - generic:
+                        - generic:
+                          - img "No alt text available"
+                      - generic: Sanders
+                  - generic:
+                    - link "No alt text available Saws":
+                      - /url: https://www.boschtools.com/us/en/saws-23418-ocs-c/
+                      - generic:
+                        - generic:
+                          - img "No alt text available"
+                      - generic: Saws
+                  - generic:
+                    - link "No alt text available Specialty Tools":
+                      - /url: https://www.boschtools.com/us/en/specialty-tools-23422-ocs-c/
+                      - generic:
+                        - generic:
+                          - img "No alt text available"
+                      - generic: Specialty Tools
+                  - generic:
+                    - link "No alt text available Track/Plunge Saws":
+                      - /url: https://www.boschtools.com/us/en/track-plunge-saws-37558-ocs-c/
+                      - generic:
+                        - generic:
+                          - img "No alt text available"
+                      - generic: Track/Plunge Saws
+                  - generic:
+                    - link "No alt text available Power Tool Attachments":
+                      - /url: https://www.boschtools.com/us/en/power-tool-attachments-23462-ocs-c/
+                      - generic:
+                        - generic:
+                          - img "No alt text available"
+                      - generic: Power Tool Attachments
+                  - generic:
+                    - link "No alt text available Workwear":
+                      - /url: https://www.boschtools.com/us/en/workwear-23426-ocs-c/
+                      - generic:
+                        - generic:
+                          - img "No alt text available"
+                      - generic: Workwear
+                  - generic:
+                    - link "No alt text available Organization Systems and Solutions":
+                      - /url: https://www.boschtools.com/us/en/organization-systems-and-solutions-23420-ocs-c/
+                      - generic:
+                        - generic:
+                          - img "No alt text available"
+                      - generic: Organization Systems and Solutions
+                  - generic:
+                    - link "No alt text available Press Tools":
+                      - /url: https://www.boschtools.com/us/en/press-tools-44299-ocs-c/
+                      - generic:
+                        - generic:
+                          - img "No alt text available"
+                      - generic: Press Tools
+        - navigation "Service":
+          - generic:
+            - generic:
+              - button "Close":
+                - generic: 
+            - generic:
+              - text: 
+              - generic:
+                - generic:
+                  - link "Service":
+                    - /url: https://www.boschtools.com/us/en/service/
+                    - generic:
+                      - img "A green Bosch Professional tool case is standing on the sidewalk."
+                  - generic:
+                    - link "Service":
+                      - /url: https://www.boschtools.com/us/en/service/
+                    - link "Tool Repair":
+                      - /url: https://www.boschtools.com/us/en/service/bosch-e-repair-network/
+                    - link "Product Warranty":
+                      - /url: https://www.boschtools.com/us/en/service/product-warranty/
+                    - link "MaxVantage Pro":
+                      - /url: https://www.boschtools.com/us/en/service/maxvantage-pro/
+                    - link "Service Center Locator":
+                      - /url: https://www.boschtools.com/us/en/service/service-center-locator/
+                    - link "Replacement Parts":
+                      - /url: https://www.boschtools.com/us/en/service/replacement-parts/
+                    - link "Manuals and Part Diagrams":
+                      - /url: https://www.boschtools.com/us/en/service/manuals-and-part-diagrams/
+                    - link "Product Safety":
+                      - /url: https://www.boschtools.com/us/en/service/product-safety/
+                    - link "Contact Us":
+                      - /url: https://www.boschtools.com/us/en/service/contact-us/
+                    - link "Product Registration":
+                      - /url: https://erepair.boschtools.com/boschtools-erepair/login
+                    - link "PROFACTOR Guarantee":
+                      - /url: https://www.boschtools.com/us/en/service/profactorguarantee/
+        - navigation "Trade Solutions":
+          - generic:
+            - generic:
+              - button "Close":
+                - generic: 
+            - generic:
+              - text: 
+              - generic:
+                - generic:
+                  - link "Trades":
+                    - /url: //www.boschtools.com/us/en/trade-solutions/trades/
+                    - generic:
+                      - img "A Bosch Professional cordless hammer drill is being used on a wall."
+                  - generic:
+                    - link "Trades":
+                      - /url: //www.boschtools.com/us/en/trade-solutions/trades/
+                    - link "Drywall Solutions":
+                      - /url: //www.boschtools.com/us/en/trade-solutions/trades/drywall-solutions/
+                    - link "General Contracting":
+                      - /url: //www.boschtools.com/us/en/trade-solutions/trades/general-contracting/
+                    - link "Carpentry":
+                      - /url: //www.boschtools.com/us/en/trade-solutions/trades/carpentry/
+                    - link "Concrete":
+                      - /url: //www.boschtools.com/us/en/trade-solutions/trades/concrete/
+                    - link "Masonry & Restoration":
+                      - /url: //www.boschtools.com/us/en/trade-solutions/trades/masonry-restoration/
+                    - link "Demolition":
+                      - /url: //www.boschtools.com/us/en/trade-solutions/trades/demolition/
+                    - link "Electrician":
+                      - /url: //www.boschtools.com/us/en/trade-solutions/trades/electrician/
+                    - link "Framer":
+                      - /url: //www.boschtools.com/us/en/trade-solutions/trades/framer/
+                    - link "Plumber":
+                      - /url: //www.boschtools.com/us/en/trade-solutions/trades/plumber/
+                    - link "Property Manager":
+                      - /url: //www.boschtools.com/us/en/trade-solutions/trades/property-manager/
+                - generic:
+                  - link "Solutions":
+                    - /url: //www.boschtools.com/us/en/trade-solutions/solutions/
+                    - generic:
+                      - img "A blue Bosch Professional cordless jigsaw stands next to a smartphone."
+                  - generic:
+                    - link "Solutions":
+                      - /url: //www.boschtools.com/us/en/trade-solutions/solutions/
+                    - link "Connected":
+                      - /url: //www.boschtools.com/us/en/trade-solutions/solutions/connected/
+                    - link "MeasureOn":
+                      - /url: //www.boschtools.com/us/en/trade-solutions/solutions/measureon/
+                    - link "PRO360":
+                      - /url: /us/en/pro360/
+    - navigation "Breadcrumb" [ref=e90]:
+      - list [ref=e91]:
+        - listitem [ref=e92]:
+          - link "Home " [ref=e93] [cursor=pointer]:
+            - /url: //www.boschtools.com/us/en/
+        - listitem [ref=e94]:
+          - generic [ref=e95]: Power Tools
+  - main [ref=e96]:
+    - generic [ref=e101]:
+      - heading "Power Tools" [level=1] [ref=e102]
+      - text: 
+    - paragraph [ref=e109]: Bosch Power Tools are built for professionals who depend on performance, precision, and reliability to get the job done. From drilling and cutting to fastening and finishing, many tools in the lineup are thoughtfully engineered to simplify demanding tasks and stand up to tough conditions. With options that include brushless motors, CORE18V® battery technology, and ergonomic designs that support all-day use, Bosch offers solutions that help tradespeople work efficiently, comfortably, and with confidence - across a wide range of applications.
+    - generic [ref=e110]:
+      - article [ref=e111]:
+        - generic [ref=e113]:
+          - button "New Products New Products" [ref=e115] [cursor=pointer]:
+            - img "New Products" [ref=e118]
+            - generic [ref=e121]: New Products
+          - button "PROFACTOR PROFACTOR" [ref=e123] [cursor=pointer]:
+            - img "PROFACTOR" [ref=e126]
+            - generic [ref=e129]: PROFACTOR
+          - button "12V Max Cordless Power Tools 12V Max Cordless Power Tools" [ref=e131] [cursor=pointer]:
+            - img "12V Max Cordless Power Tools" [ref=e134]
+            - generic [ref=e137]: 12V Max Cordless Power Tools
+          - button "18V Cordless Power Tools 18V Cordless Power Tools" [ref=e139] [cursor=pointer]:
+            - img "18V Cordless Power Tools" [ref=e142]
+            - generic [ref=e145]: 18V Cordless Power Tools
+      - article [ref=e147]:
+        - generic [ref=e149]:
+          - button "Batteries, Chargers & Starter Kits Batteries, Chargers & Starter Kits" [ref=e151] [cursor=pointer]:
+            - img "Batteries, Chargers & Starter Kits" [ref=e154]
+            - generic [ref=e157]: Batteries, Chargers & Starter Kits
+          - button "Cordless Power Tools Cordless Power Tools" [ref=e159] [cursor=pointer]:
+            - img "Cordless Power Tools" [ref=e162]
+            - generic [ref=e165]: Cordless Power Tools
+          - button "Cordless Combo Kits Cordless Combo Kits" [ref=e167] [cursor=pointer]:
+            - img "Cordless Combo Kits" [ref=e170]
+            - generic [ref=e173]: Cordless Combo Kits
+          - button "Band Saws Band Saws" [ref=e175] [cursor=pointer]:
+            - img "Band Saws" [ref=e178]
+            - generic [ref=e181]: Band Saws
+      - article [ref=e183]:
+        - generic [ref=e185]:
+          - button "Benchtop Tools Benchtop Tools" [ref=e187] [cursor=pointer]:
+            - img "Benchtop Tools" [ref=e190]
+            - generic [ref=e193]: Benchtop Tools
+          - button "Circular Saws Circular Saws" [ref=e195] [cursor=pointer]:
+            - img "Circular Saws" [ref=e198]
+            - generic [ref=e201]: Circular Saws
+          - button "Drills, Hammer Drills & Impact Drivers Drills, Hammer Drills & Impact Drivers" [ref=e203] [cursor=pointer]:
+            - img "Drills, Hammer Drills & Impact Drivers" [ref=e206]
+            - generic [ref=e209]: Drills, Hammer Drills & Impact Drivers
+          - button "Drywall Tools Drywall Tools" [ref=e211] [cursor=pointer]:
+            - img "Drywall Tools" [ref=e214]
+            - generic [ref=e217]: Drywall Tools
+      - article [ref=e219]:
+        - generic [ref=e221]:
+          - button "Dust Extraction and Collection Dust Extraction and Collection" [ref=e223] [cursor=pointer]:
+            - img "Dust Extraction and Collection" [ref=e226]
+            - generic [ref=e229]: Dust Extraction and Collection
+          - button "Grinders and Metalworking Grinders and Metalworking" [ref=e231] [cursor=pointer]:
+            - img "Grinders and Metalworking" [ref=e234]
+            - generic [ref=e237]: Grinders and Metalworking
+          - button "Hammers (Rotary & Demolition) Hammers (Rotary & Demolition)" [ref=e239] [cursor=pointer]:
+            - img "Hammers (Rotary & Demolition)" [ref=e242]
+            - generic [ref=e245]: Hammers (Rotary & Demolition)
+          - button "Jig Saws Jig Saws" [ref=e247] [cursor=pointer]:
+            - img "Jig Saws" [ref=e250]
+            - generic [ref=e253]: Jig Saws
+      - article [ref=e255]:
+        - generic [ref=e257]:
+          - button "Lights Lights" [ref=e259] [cursor=pointer]:
+            - img "Lights" [ref=e262]
+            - generic [ref=e265]: Lights
+          - button "Measuring and Layout Tools Measuring and Layout Tools" [ref=e267] [cursor=pointer]:
+            - img "Measuring and Layout Tools" [ref=e270]
+            - generic [ref=e273]: Measuring and Layout Tools
+          - button "Nailers & Staplers Nailers & Staplers" [ref=e275] [cursor=pointer]:
+            - img "Nailers & Staplers" [ref=e278]
+            - generic [ref=e281]: Nailers & Staplers
+          - button "Oscillating Multi-Tools Oscillating Multi-Tools" [ref=e283] [cursor=pointer]:
+            - img "Oscillating Multi-Tools" [ref=e286]
+            - generic [ref=e289]: Oscillating Multi-Tools
+      - article [ref=e291]:
+        - generic [ref=e293]:
+          - button "Planers Planers" [ref=e295] [cursor=pointer]:
+            - img "Planers" [ref=e298]
+            - generic [ref=e301]: Planers
+          - button "Radios Radios" [ref=e303] [cursor=pointer]:
+            - img "Radios" [ref=e306]
+            - generic [ref=e309]: Radios
+          - button "Reciprocating Saws Reciprocating Saws" [ref=e311] [cursor=pointer]:
+            - img "Reciprocating Saws" [ref=e314]
+            - generic [ref=e317]: Reciprocating Saws
+          - button "Routers & Router Tables Routers & Router Tables" [ref=e319] [cursor=pointer]:
+            - img "Routers & Router Tables" [ref=e322]
+            - generic [ref=e325]: Routers & Router Tables
+      - article [ref=e327]:
+        - generic [ref=e329]:
+          - button "Sanders Sanders" [ref=e331] [cursor=pointer]:
+            - img "Sanders" [ref=e334]
+            - generic [ref=e337]: Sanders
+          - button "Saws Saws" [ref=e339] [cursor=pointer]:
+            - img "Saws" [ref=e342]
+            - generic [ref=e345]: Saws
+          - button "Specialty Tools Specialty Tools" [ref=e347] [cursor=pointer]:
+            - img "Specialty Tools" [ref=e350]
+            - generic [ref=e353]: Specialty Tools
+          - button "Track/Plunge Saws Track/Plunge Saws" [ref=e355] [cursor=pointer]:
+            - img "Track/Plunge Saws" [ref=e358]
+            - generic [ref=e361]: Track/Plunge Saws
+      - article [ref=e363]:
+        - generic [ref=e365]:
+          - button "Workwear Workwear" [ref=e367] [cursor=pointer]:
+            - img "Workwear" [ref=e370]
+            - generic [ref=e373]: Workwear
+          - button "Organization Systems and Solutions Organization Systems and Solutions" [ref=e375] [cursor=pointer]:
+            - img "Organization Systems and Solutions" [ref=e378]
+            - generic [ref=e381]: Organization Systems and Solutions
+          - button "Press Tools Press Tools" [ref=e383] [cursor=pointer]:
+            - img "Press Tools" [ref=e386]
+            - generic [ref=e389]: Press Tools
+  - complementary [ref=e391]:
+    - link "to the top of the page" [ref=e392] [cursor=pointer]:
+      - /url: "#scroll-top-toggler"
+      - generic [ref=e393]: 
+  - contentinfo [ref=e394]:
+    - generic [ref=e396]:
+      - heading "Join our email list" [level=2] [ref=e397]
+      - paragraph [ref=e398]: Subscribe now for new product updates and more.
+      - link "Subscribe" [ref=e399] [cursor=pointer]:
+        - /url: //www.boschtools.com/us/en/footer/newsletter-signup/
+    - generic [ref=e405]:
+      - generic [ref=e407]: Follow us
+      - list [ref=e409]:
+        - listitem [ref=e410]:
+          - button "instagram" [ref=e411] [cursor=pointer]:
+            - generic [ref=e412]: 
+        - listitem [ref=e413]:
+          - button "facebook" [ref=e414] [cursor=pointer]:
+            - generic [ref=e415]: 
+        - listitem [ref=e416]:
+          - button "TikTok" [ref=e417] [cursor=pointer]:
+            - generic [ref=e418]: 
+        - listitem [ref=e419]:
+          - button "YouTube" [ref=e420] [cursor=pointer]:
+            - generic [ref=e421]: 
+    - generic [ref=e424]:
+      - list [ref=e426]:
+        - listitem [ref=e427]: © Robert Bosch Tool Corporation 2024, all rights reserved
+        - listitem [ref=e428]: About Us
+        - listitem [ref=e429]: Careers
+        - listitem [ref=e430]: Contact Us
+        - listitem [ref=e431]: Unsubscribe
+        - listitem [ref=e432]: Privacy Notice
+        - listitem [ref=e433]: Terms of Use
+        - listitem [ref=e434]: Web Accessibility
+        - listitem [ref=e435]: Register Your Product
+        - listitem [ref=e436]: IMPORTANT Product Recalls
+        - listitem [ref=e437]: Sitemap
+        - listitem [ref=e438]: Your Privacy Choices
+        - listitem [ref=e439]: Notices
+      - generic [ref=e442] [cursor=pointer]: 
+  - generic: 
+  - generic:
+    - generic:
+      - button "Maximize":
+        - img "Chat Icon"
+  - complementary "Bosch Newsletter Signup":
+    - generic [ref=e443]:
+      - img [ref=e444]
+      - generic [ref=e445]:
+        - heading "STAY IN THE LOOP" [level=2] [ref=e446]
+        - paragraph [ref=e447]: Sign up for our newsletter to receive the latest information on new products, offers and more.
+        - link "Sign up" [ref=e448] [cursor=pointer]:
+          - /url: https://www.boschtools.com/us/en/footer/newsletter-signup/
+      - generic [ref=e449] [cursor=pointer]: x
+```
