@@ -1,0 +1,17 @@
+{
+  "name": "bosch-power-tools",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {},
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "devDependencies": {
+    "@playwright/test": "^1.56.1",
+    "@types/node": "^24.9.2",
+    "allure-commandline": "^2.34.1",
+    "allure-playwright": "^3.4.2"
+  }
+}

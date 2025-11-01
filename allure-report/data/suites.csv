@@ -1,0 +1,2 @@
+"DESCRIPTION","DURATION IN MS","NAME","PARENT SUITE","START TIME","STATUS","STOP TIME","SUB SUITE","SUITE","TEST CLASS","TEST METHOD"
+"","26389","Should load homepage, dismiss consent, and display core elements","chromium","2025-11-01","passed","2025-11-01","NAV-001: Homepage Integrity and Essential Elements","navtest.spec.ts","",""
