@@ -1,0 +1,4 @@
+No visible consent banner found or timeout reached.
+Hamburger menu icon is visible in mobile viewport.
+Mobile navigation links are successfully revealed.
+Mobile navigation menu closed.

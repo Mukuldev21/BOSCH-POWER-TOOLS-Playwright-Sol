@@ -16,6 +16,11 @@ export class Homepage {
     readonly serviceLink: Locator;
     readonly tradeSolutionsLink: Locator;
     readonly newProductsLink: Locator;
+    // NEW LOCATORS FOR NAV-004
+    // NEW LOCATORS FOR NAV-004 (Mobile Menu)
+    readonly hamburgerIcon: Locator;
+    readonly mobileNavContainer: Locator;
+
 
   constructor(page: Page) {
     this.page = page;
@@ -31,6 +36,13 @@ export class Homepage {
     this.serviceLink = page.getByRole('link', { name: 'Service' }).first();
     this.tradeSolutionsLink = page.getByRole('link', { name: 'Trade Solutions' }).first();
     this.newProductsLink = page.getByRole('link', { name: 'New Products' }).first();
+
+    // Initializing Locators for NAV-004 (Mobile Menu)
+        // Using a more robust OR locator to find the menu button.
+        this.hamburgerIcon = page.locator('.m-mainNavigation__toggle');
+        
+        // This targets the wrapper for the overall mobile navigation
+        this.mobileNavContainer = page.locator('nav.mobile-navigation, div#mobile-menu, .m-mainNavigation__itemsWrapper');  
   }
 
   async navigate() {
@@ -127,6 +139,7 @@ export class Homepage {
         // Re-dismiss banner in case the navigation back to the root page causes it to reappear
         await this.dismissConsentBanner(); 
     }
+    
 
   // --- NAV-003 New Action Method ---
 
@@ -191,4 +204,35 @@ export class Homepage {
         await Promise.all(linkVerificationPromises);
         console.log('All footer link status checks completed.');
     }
+
+
+     // --- NAV-004 Mobile Action Method ---
+    
+    /**
+     * Verifies the hamburger menu icon is visible and that clicking it reveals the mobile navigation.
+     */
+    async verifyMobileMenu() {
+        // 1. Verify the hamburger icon is visible (it should only be visible in mobile view)
+        await expect(this.hamburgerIcon).toBeVisible({ timeout: 10000 });
+        console.log('Hamburger menu icon is visible in mobile viewport.');
+
+        // 2. Click the menu icon
+        await this.hamburgerIcon.click();
+        
+        // 3. Verify the main navigation container/drawer is visible
+        // We use the Power Tools link as a representative element within the revealed menu
+        await expect(this.powerToolsLink).toBeVisible({ timeout: 10000 });
+
+        // Optional: Verify the container itself is visible/expanded
+        await expect(this.mobileNavContainer).toBeVisible({ timeout: 5000 });
+
+        console.log('Mobile navigation links are successfully revealed.');
+
+        // 4. Clean up by closing the menu for the next test (optional but good practice)
+        // Clicking the hamburger icon a second time often closes it
+        await this.hamburgerIcon.click();
+        await expect(this.mobileNavContainer).toBeHidden({ timeout: 5000 });
+        console.log('Mobile navigation menu closed.');
+    }
+    
 }
