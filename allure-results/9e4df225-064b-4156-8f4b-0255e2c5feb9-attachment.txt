@@ -1,0 +1,2 @@
+No visible consent banner found or timeout reached.
+URL check passed: URL contains "power".

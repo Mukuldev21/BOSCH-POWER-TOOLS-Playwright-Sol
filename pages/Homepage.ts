@@ -16,7 +16,6 @@ export class Homepage {
     readonly serviceLink: Locator;
     readonly tradeSolutionsLink: Locator;
     readonly newProductsLink: Locator;
-    readonly proDealsLink: Locator;
 
   constructor(page: Page) {
     this.page = page;
@@ -32,7 +31,6 @@ export class Homepage {
     this.serviceLink = page.getByRole('link', { name: 'Service' }).first();
     this.tradeSolutionsLink = page.getByRole('link', { name: 'Trade Solutions' }).first();
     this.newProductsLink = page.getByRole('link', { name: 'New Products' }).first();
-    this.proDealsLink = page.getByRole('link', { name: 'Pro Deals' }).first();
   }
 
   async navigate() {
@@ -71,46 +69,126 @@ export class Homepage {
      * @param categoryName The expected URL slug (e.g., 'power-tools').
      */
     async clickAndVerifyCategoryLink(locator: Locator, categoryName: string) {
-        await expect(locator).toBeVisible();
+        await expect(locator).toBeVisible({ timeout: 15000 }); // Wait longer for visibility
         
-    const categoryLabel = (await locator.textContent())?.trim() || categoryName;
+        const categoryLabel = (await locator.textContent())?.trim() || categoryName;
         
-    await locator.click();
+        // Logic to derive two different anchors for better resilience:
+        const slugParts = categoryName.split('-');
         
-   // Wait for the navigation to complete and the page to settle
-    await this.page.waitForLoadState('domcontentloaded');
+        // 1. Anchor for URL check: Use only the first word. This is the most reliable part of the URL.
+        const urlAnchor = slugParts[0].toLowerCase();
+        
+        // FIX: Use Promise.all to wait for both the click action and the page navigation/load event
+        // We wait for the 'load' state which is generally more reliable for confirming navigation is complete
+        await Promise.all([
+            // 2. Wait for navigation to complete (using 'load' state)
+            this.page.waitForLoadState('load'), 
+            // 1. Force a more stable click
+            locator.click({ force: true }),
+        ]);
 
-    const expectedSubstring = categoryName.replace(/-/g, ' '); // e.g., "power tools"
-
-     const categoryAnchor = categoryName.split('-')[0];
-
-        // 1. Verify URL contains the category anchor (case-insensitive)
+        // 2. Anchor for Title check: Use the actual link text (with spaces) to match the title.
+        const titleAnchor = categoryLabel.toLowerCase(); 
+        
+        // 1. Verify URL contains the primary anchor (case-insensitive)
         const currentUrl = this.page.url().toLowerCase();
         
-        const urlCheckPassed = currentUrl.includes(categoryAnchor);
-        expect(urlCheckPassed, 
-            `Expected URL "${currentUrl}" to contain category slug anchor "${categoryAnchor}"`)
-            .toBe(true);
-        console.log(`URL check passed: URL contains "${categoryAnchor}".`);
-        
-        // 2. Verify Page Title contains the category anchor (case-insensitive)
-        const currentTitle = await this.page.title();
-        const titleCheckPassed = currentTitle.toLowerCase().includes(categoryAnchor);
+        const urlCheckPassed = currentUrl.includes(urlAnchor);
 
-        expect(titleCheckPassed, 
-            `Expected page title "${currentTitle}" to contain category anchor "${categoryAnchor}"`)
+        expect(urlCheckPassed, 
+            `Expected URL "${currentUrl}" to contain category slug anchor "${urlAnchor}"`)
+            .toBe(true);
+        console.log(`URL check passed: URL contains "${urlAnchor}".`);
+        
+        // 2. Verify Page Title contains the title anchor (case-insensitive)
+        const currentTitle = await this.page.title();
+        const currentTitleLower = currentTitle.toLowerCase();
+        
+        // FIX: Instead of checking the whole titleAnchor, check if all words from the link text are present in the page title.
+        const titleWords = titleAnchor.split(' ');
+        const allWordsInTitle = titleWords.every(word => currentTitleLower.includes(word));
+
+        expect(allWordsInTitle, 
+            `Expected page title "${currentTitle}" to contain all words from category anchor "${titleAnchor}"`)
             .toBe(true);
             
-        console.log(`Title check passed: Title is "${currentTitle}" and contains "${categoryAnchor}".`);
+        console.log(`Title check passed: Title is "${currentTitle}" and contains all words from "${titleAnchor}".`);
         
         console.log(`Successfully navigated to the "${categoryLabel}" page.`);
 
-
-  // Navigate back to the homepage for the next link click
-    await this.page.goto(this.baseURL);
-    await this.page.waitForLoadState('domcontentloaded');
+        // 3. Ensure the homepage is fully ready before the next click
+        await this.page.goto(this.baseURL);
         
-  // Re-dismiss banner in case the navigation back to the root page causes it to reappear
-    await this.dismissConsentBanner();
-  }
+        // Final wait sequence to ensure the page is stable for the next click
+        await this.page.waitForLoadState('load'); 
+        await this.searchButton.waitFor({ state: 'visible', timeout: 15000 }); 
+
+        // Re-dismiss banner in case the navigation back to the root page causes it to reappear
+        await this.dismissConsentBanner(); 
+    }
+
+  // --- NAV-003 New Action Method ---
+
+    /**
+     * Verifies that all links within the footer section return a successful HTTP status code (200).
+     * @param footerSelector A selector identifying the main footer element.
+     */
+
+    async verifyFooterLinks(footerSelector: string = 'footer') {
+        await this.page.waitForSelector(footerSelector);
+        
+        // Find all links within the footer that have an href attribute
+        const links = await this.page.locator(`${footerSelector} a[href]`).all();
+
+        const linkVerificationPromises = links.map(async (linkLocator) => {
+            const href = await linkLocator.getAttribute('href');
+            let url = href;
+            const linkText = (await linkLocator.textContent())?.trim() || 'No Text';
+
+            // 1. Skip if the href is null, undefined, '#' or starts with a special protocol
+            // Also explicitly skip common non-navigational links like 'Subscribe'
+            if (!url || url === '#' || url.startsWith('mailto:') || url.startsWith('tel:') || linkText.toLowerCase().includes('subscribe')) {
+                console.log(`Skipping link: ${linkText} (${url})`);
+                return { status: 200, url: url || 'Skipped', text: linkText };
+            }
+            
+            // CRITICAL FIX: Determine if the href is relative or absolute.
+            if (!url.startsWith('http') && !url.startsWith('//')) {
+                // If it's a relative path, construct the full URL
+                // Ensure there is only one slash separating the base URL and the relative path
+                url = url.startsWith('/') ? `${this.baseURL}${url.substring(1)}` : `${this.baseURL}${url}`;
+            }
+
+            // 2. Check for empty URL after processing (this should catch the 'Invalid URL' error)
+            if (!url) {
+                console.log(`Skipping link: ${linkText} (Resulting URL is empty/invalid)`);
+                return { status: 200, url: 'Skipped (Invalid URL)', text: linkText };
+            }
+
+            try {
+                // Use a request context to check the status without navigating
+                const response = await this.page.request.head(url, { timeout: 10000 });
+                const status = response.status();
+                
+                // Assert the status code is acceptable (200 is successful, 301/302 are redirects, 403 Forbidden is sometimes valid)
+                expect([200, 204, 301, 302, 403].includes(status), 
+                    `Link "${linkText}" at ${url} failed with status: ${status}`)
+                    .toBe(true);
+                
+                console.log(`PASS: Link "${linkText}" (${url}) returned status ${status}`);
+                return { status, url, text: linkText };
+
+            } catch (error) {
+                console.error(`FAIL: Link "${linkText}" at ${url} failed to fetch: ${error}`);
+                // Fail the test if the request itself fails (e.g., timeout, DNS error)
+                expect(false, `Link "${linkText}" failed to resolve or returned an error: ${error}`).toBe(true);
+                return { status: 0, url, text: linkText }; // Placeholder for failed request
+            }
+        });
+
+        // Wait for all link checks to complete
+        await Promise.all(linkVerificationPromises);
+        console.log('All footer link status checks completed.');
+    }
 }

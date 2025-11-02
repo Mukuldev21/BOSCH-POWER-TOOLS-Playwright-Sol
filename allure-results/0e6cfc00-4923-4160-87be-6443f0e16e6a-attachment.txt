@@ -1,0 +1,10 @@
+FAIL: Link "
+Subscribe
+" at https://www.boschtools.com/us/en//www.boschtools.com/us/en/footer/newsletter-signup/ failed to fetch: Error: Link "
+Subscribe
+" at https://www.boschtools.com/us/en//www.boschtools.com/us/en/footer/newsletter-signup/ failed with status: 404
+
+expect(received).toBe(expected) // Object.is equality
+
+Expected: true
+Received: false

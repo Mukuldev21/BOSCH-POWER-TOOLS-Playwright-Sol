@@ -1,0 +1,30 @@
+No visible consent banner found or timeout reached.
+URL check passed: URL contains "power" (or 'prodeal' for Pro Deals).
+Title check passed: Title is "Professional Grade Power Tools | Bosch Power Tools" and contains "power".
+Successfully navigated to the "Power Tools" page.
+No visible consent banner found or timeout reached.
+URL check passed: URL contains "accessories" (or 'prodeal' for Pro Deals).
+Title check passed: Title is "Bosch Professional Accessories | Bosch Professional" and contains "accessories".
+Successfully navigated to the "Accessories" page.
+No visible consent banner found or timeout reached.
+URL check passed: URL contains "measuring" (or 'prodeal' for Pro Deals).
+Title check passed: Title is "Measuring and Layout Tools | Bosch Professional" and contains "measuring".
+Successfully navigated to the "Measuring Tools" page.
+No visible consent banner found or timeout reached.
+URL check passed: URL contains "hand" (or 'prodeal' for Pro Deals).
+Title check passed: Title is "Hand Tools" and contains "hand".
+Successfully navigated to the "Hand Tools" page.
+No visible consent banner found or timeout reached.
+URL check passed: URL contains "service" (or 'prodeal' for Pro Deals).
+Title check passed: Title is "Bosch service | Boschtools" and contains "service".
+Successfully navigated to the "Service" page.
+No visible consent banner found or timeout reached.
+URL check passed: URL contains "trade" (or 'prodeal' for Pro Deals).
+Title check passed: Title is "Trade Solutions | Boschtools" and contains "trade".
+Successfully navigated to the "Trade Solutions" page.
+No visible consent banner found or timeout reached.
+URL check passed: URL contains "new" (or 'prodeal' for Pro Deals).
+Title check passed: Title is "New Products | Boschtools" and contains "new".
+Successfully navigated to the "New Products" page.
+No visible consent banner found or timeout reached.
+URL check passed: URL contains "prodeal" (or 'prodeal' for Pro Deals).

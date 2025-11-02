@@ -1,0 +1,29 @@
+No visible consent banner found or timeout reached.
+URL check passed: URL contains "power".
+Title check passed: Title is "Professional Grade Power Tools | Bosch Power Tools" and contains all words from "power tools".
+Successfully navigated to the "Power Tools" page.
+No visible consent banner found or timeout reached.
+URL check passed: URL contains "accessories".
+Title check passed: Title is "Bosch Professional Accessories | Bosch Professional" and contains all words from "accessories".
+Successfully navigated to the "Accessories" page.
+No visible consent banner found or timeout reached.
+URL check passed: URL contains "measuring".
+Title check passed: Title is "Measuring and Layout Tools | Bosch Professional" and contains all words from "measuring tools".
+Successfully navigated to the "Measuring Tools" page.
+No visible consent banner found or timeout reached.
+URL check passed: URL contains "hand".
+Title check passed: Title is "Hand Tools" and contains all words from "hand tools".
+Successfully navigated to the "Hand Tools" page.
+No visible consent banner found or timeout reached.
+URL check passed: URL contains "service".
+Title check passed: Title is "Bosch service | Boschtools" and contains all words from "service".
+Successfully navigated to the "Service" page.
+No visible consent banner found or timeout reached.
+URL check passed: URL contains "trade".
+Title check passed: Title is "Trade Solutions | Boschtools" and contains all words from "trade solutions".
+Successfully navigated to the "Trade Solutions" page.
+No visible consent banner found or timeout reached.
+URL check passed: URL contains "new".
+Title check passed: Title is "New Products | Boschtools" and contains all words from "new products".
+Successfully navigated to the "New Products" page.
+No visible consent banner found or timeout reached.

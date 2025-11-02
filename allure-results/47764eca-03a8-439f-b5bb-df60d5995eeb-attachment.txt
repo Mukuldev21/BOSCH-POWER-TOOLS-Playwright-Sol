@@ -1,0 +1,1 @@
+FAIL: Link "Subscribe" at //www.boschtools.com/us/en/footer/newsletter-signup/ failed to fetch: TypeError: apiRequestContext.head: Invalid URL

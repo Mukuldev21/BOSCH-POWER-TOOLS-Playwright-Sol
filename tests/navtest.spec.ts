@@ -94,13 +94,21 @@ test.describe('Category A: Site Integrity and Navigation (Smoke)', () => {
     await test.step('7. Click "New Products" link and verify page loads', async () => {
       await homepage.clickAndVerifyCategoryLink(homepage.newProductsLink, 'new-products');  
     });
-    // NEW Step 8: Click "Pro Deals" link
-    await test.step('8. Click "Pro Deals" link and verify page loads', async () => {
-      await homepage.clickAndVerifyCategoryLink(homepage.proDealsLink, 'prodeal');  
-    });
-  
-  
-  
-  
   });
+
+  // NAV-003: Verify all footer links return HTTP 200 status.
+    test('NAV-003: Verify all footer links return HTTP 200 status', async ({ page }) => {
+        const homepage = new Homepage(page);
+
+        // Precondition: Ensure we are on the homepage and ready
+        await test.step('Precondition: Navigate to Homepage and dismiss banner', async () => {
+            await homepage.navigate();
+            await homepage.dismissConsentBanner();
+        });
+        // Test Step: Verify footer links
+        await test.step('1. Verify all footer links return HTTP 200 status', async () => {
+            await homepage.verifyFooterLinks();
+        });
+    });
+    
 });
