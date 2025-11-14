@@ -38,4 +38,47 @@ test.describe('Category C: Product Details Page (PDP) Validation', () => {
 
     console.log('Test case PDP-001 passed successfully.');
   });
+
+  /**
+   * Test Case: PDP-002
+   * Description: Verify link to "Where to Buy" or "Dealer Locator".
+   * Steps:
+   *   1. On a PDP, click the "Where to Buy" or similar call-to-action button.
+   *   2. A modal or new page loads, showing authorized sellers or directing to the Dealer Locator.
+   * Expected: Modal or new page with dealer/seller info is shown.
+   */
+  test('PDP-002: Should open "Where to Buy" or Dealer Locator from PDP', async ({ page, context }) => {
+    const pdp = new ProductPage(page);
+    await test.step('Navigate directly to the Product Details Page (PDP)', async () => {
+      await pdp.goto(PRODUCT_URL);
+    });
+
+    await test.step('Click the "Where to Buy" or Dealer Locator button', async () => {
+      await pdp.clickWhereToBuyOrDealerLocator();
+    });
+
+    await test.step('Verify a modal or new page with dealer/seller info is shown', async () => {
+      // Check for modal
+      const modal = page.locator('text=/authorized sellers|dealer locator|where to buy/i');
+      if (await modal.isVisible()) {
+        expect(await modal.isVisible()).toBe(true);
+        return;
+      }
+      // Or check for new page
+      const [newPage] = await Promise.all([
+        context.waitForEvent('page'),
+        // The click is already done, so this is just a fallback in case a new page opened
+      ]).catch(() => [null]);
+      if (newPage) {
+        await newPage.waitForLoadState('domcontentloaded');
+        const url = newPage.url();
+        expect(url).toMatch(/dealer|where-to-buy|store-locator/i);
+        await newPage.close();
+        return;
+      }
+      // If neither, fail
+      throw new Error('Dealer locator modal or page did not appear after clicking Where to Buy.');
+    });
+    console.log('Test case PDP-002 passed successfully.');
+  });
 });

@@ -1,6 +1,27 @@
 import { expect, Page } from '@playwright/test';
 
 export class ProductPage {
+    async clickWhereToBuyOrDealerLocator() {
+      // Try common selectors/texts for Where to Buy/Dealer Locator
+      const cta = this.page.getByRole('button', { name: /where to buy|dealer locator|find a dealer|find store/i }).first();
+      if (await cta.count()) {
+        await cta.click();
+        return;
+      }
+      // Try as a link
+      const link = this.page.getByRole('link', { name: /where to buy|dealer locator|find a dealer|find store/i }).first();
+      if (await link.count()) {
+        await link.click();
+        return;
+      }
+      // Try fallback by text
+      const textLink = this.page.getByText(/where to buy|dealer locator|find a dealer|find store/i, { exact: false }).first();
+      if (await textLink.count()) {
+        await textLink.click();
+        return;
+      }
+      throw new Error('Where to Buy / Dealer Locator button or link not found on PDP.');
+    }
   readonly page: Page;
 
   constructor(page: Page) {
