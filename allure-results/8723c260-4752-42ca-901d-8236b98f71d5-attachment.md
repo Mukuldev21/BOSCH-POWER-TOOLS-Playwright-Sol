@@ -1,0 +1,1398 @@
+# Page snapshot
+
+```yaml
+- generic [active] [ref=e1]:
+  - banner [ref=e2]:
+    - generic [ref=e3]:
+      - generic [ref=e4]:
+        - navigation "Meta" [ref=e5]:
+          - list [ref=e6]:
+            - listitem [ref=e7]:
+              - link "Tool Repair" [ref=e8] [cursor=pointer]:
+                - /url: //www.boschtools.com/us/en/service/bosch-e-repair-network/
+            - listitem [ref=e9]:
+              - link "Spare Parts" [ref=e10] [cursor=pointer]:
+                - /url: //www.boschtools.com/us/en/service/replacement-parts/
+            - listitem [ref=e11]:
+              - link "Warranty" [ref=e12] [cursor=pointer]:
+                - /url: //www.boschtools.com/us/en/service/product-warranty/
+            - listitem [ref=e13]:
+              - button "English " [ref=e14] [cursor=pointer]:
+                - text: English
+                - generic [ref=e15]: 
+        - navigation "Search" [ref=e16]:
+          - link "Bosch logo in red with black lettering on a white background, modern and clearly designed." [ref=e19] [cursor=pointer]:
+            - /url: //www.boschtools.com/us/en/
+            - img "Bosch logo in red with black lettering on a white background, modern and clearly designed." [ref=e21]
+          - search [ref=e24]:
+            - generic [ref=e25]:
+              - generic [ref=e26]: Search
+              - button "Onsite Search" [ref=e27] [cursor=pointer]:
+                - generic [ref=e28]: 
+            - generic [ref=e29]:
+              - button "Submit search request" [ref=e30] [cursor=pointer]:
+                - generic [ref=e31]: 
+              - combobox "Search" [ref=e32]
+            - button "Onsite Search Close" [ref=e33] [cursor=pointer]:
+              - generic [ref=e34]: 
+          - navigation "Conversion Bar" [ref=e37]:
+            - list [ref=e38]:
+              - listitem [ref=e39]:
+                - link " Where to buy" [ref=e40] [cursor=pointer]:
+                  - /url: //www.boschtools.com/us/en/service/where-to-buy/store-locator/
+                  - generic [ref=e41]: 
+                  - generic [ref=e42]: Where to buy
+              - listitem [ref=e43]:
+                - link " Product Registration" [ref=e44] [cursor=pointer]:
+                  - /url: https://erepair.boschtools.com/boschtools-erepair/login
+                  - generic [ref=e45]: 
+                  - generic [ref=e46]: Product Registration
+      - navigation "Main" [ref=e50]:
+        - generic [ref=e53]:
+          - list [ref=e54]:
+            - listitem [ref=e55]:
+              - generic [ref=e56]:
+                - link "Power Tools" [ref=e57] [cursor=pointer]:
+                  - /url: /us/en/trade-industry-22064-ocs-c/
+                  - generic [ref=e58]: Power Tools
+                - text: 
+            - listitem [ref=e59]:
+              - generic [ref=e60]:
+                - link "Hand Tools" [ref=e61] [cursor=pointer]:
+                  - /url: https://www.boschtools.com/us/en/hand-tools-44308-ocs-c/
+                  - generic [ref=e62]: Hand Tools
+                - text: 
+            - listitem [ref=e63]:
+              - generic [ref=e64]:
+                - link "Measuring Tools" [ref=e65] [cursor=pointer]:
+                  - /url: /us/en/measuring-and-layout-tools-23413-ocs-c/
+                  - generic [ref=e66]: Measuring Tools
+                - text: 
+            - listitem [ref=e67]:
+              - generic [ref=e68]:
+                - link "Accessories" [ref=e69] [cursor=pointer]:
+                  - /url: /us/en/bosch-professional-accessories-43498-ocs-ac/
+                  - generic [ref=e70]: Accessories
+                - text: 
+            - listitem [ref=e71]:
+              - generic [ref=e72]:
+                - link "Service" [ref=e73] [cursor=pointer]:
+                  - /url: //www.boschtools.com/us/en/service/
+                  - generic [ref=e74]: Service
+                - text: 
+              - text:           
+            - listitem [ref=e75]:
+              - generic [ref=e76]:
+                - link "Trade Solutions" [ref=e77] [cursor=pointer]:
+                  - /url: //www.boschtools.com/us/en/trade-solutions/
+                  - generic [ref=e78]: Trade Solutions
+                - text: 
+              - text:               
+            - listitem [ref=e79]:
+              - generic [ref=e80]:
+                - link "New Products" [ref=e81] [cursor=pointer]:
+                  - /url: //www.boschtools.com/us/en/new-products/
+                  - generic [ref=e82]: New Products
+                - text: 
+            - listitem [ref=e83]:
+              - generic [ref=e84]:
+                - link "PRO Deals" [ref=e85] [cursor=pointer]:
+                  - /url: /us/en/pro360/prodeal/
+                  - generic [ref=e86]: PRO Deals
+                - text: 
+          - text: 
+      - generic:
+        - navigation "Accessories":
+          - generic:
+            - generic:
+              - button "Close":
+                - generic: 
+            - generic:
+              - generic:
+                - text: 
+                - generic:
+                  - generic:
+                    - link "Drilling":
+                      - /url: https://www.boschtools.com/us/en/drilling-43509-ocs-ac/
+                      - generic: Drilling
+                  - generic:
+                    - link "Diamond Drilling, Cutting & Grinding":
+                      - /url: https://www.boschtools.com/us/en/diamond-drilling-cutting-grinding-43499-ocs-ac/
+                      - generic: Diamond Drilling, Cutting & Grinding
+                  - generic:
+                    - link "Router Bits & Planer Blades":
+                      - /url: https://www.boschtools.com/us/en/router-bits-planer-blades-43503-ocs-ac/
+                      - generic: Router Bits & Planer Blades
+                  - generic:
+                    - link "Chiseling":
+                      - /url: https://www.boschtools.com/us/en/chiseling-43500-ocs-ac/
+                      - generic: Chiseling
+                  - generic:
+                    - link "Multi-Tool Accessories":
+                      - /url: https://www.boschtools.com/us/en/multi-tool-accessories-43501-ocs-ac/
+                      - generic: Multi-Tool Accessories
+                  - generic:
+                    - link "Sawing":
+                      - /url: https://www.boschtools.com/us/en/sawing-43510-ocs-ac/
+                      - generic: Sawing
+                  - generic:
+                    - link "Sanding & Polishing":
+                      - /url: https://www.boschtools.com/us/en/sanding-polishing-43505-ocs-ac/
+                      - generic: Sanding & Polishing
+                  - generic:
+                    - link "Screwdriver Bits, Nutsetters & Sockets":
+                      - /url: https://www.boschtools.com/us/en/screwdriver-bits-nutsetters-sockets-43506-ocs-ac/
+                      - generic: Screwdriver Bits, Nutsetters & Sockets
+                  - generic:
+                    - link "Cutting, Grinding & Brushing":
+                      - /url: https://www.boschtools.com/us/en/cutting-grinding-brushing-43504-ocs-ac/
+                      - generic: Cutting, Grinding & Brushing
+                  - generic:
+                    - link "Fastening":
+                      - /url: https://www.boschtools.com/us/en/fastening-43507-ocs-ac/
+                      - generic: Fastening
+                  - generic:
+                    - link "Threading Tools":
+                      - /url: https://www.boschtools.com/us/en/threading-tools-43508-ocs-ac/
+                      - generic: Threading Tools
+                  - generic:
+                    - link "Sets":
+                      - /url: https://www.boschtools.com/us/en/sets-43502-ocs-ac/
+                      - generic: Sets
+        - navigation "Measuring Tools":
+          - generic:
+            - generic:
+              - button "Close":
+                - generic: 
+            - generic:
+              - generic:
+                - text: 
+                - generic:
+                  - generic:
+                    - link "Laser Measures":
+                      - /url: https://www.boschtools.com/us/en/laser-measures-23502-ocs-c/
+                      - generic: Laser Measures
+                  - generic:
+                    - link "Digital Levels, Digital Angle Finders and Inclinometer":
+                      - /url: https://www.boschtools.com/us/en/digital-levels-digital-angle-finders-and-inclinometer-23505-ocs-c/
+                      - generic: Digital Levels, Digital Angle Finders and Inclinometer
+                  - generic:
+                    - link "Inspection/Detection Tools":
+                      - /url: https://www.boschtools.com/us/en/inspection-detection-tools-44238-ocs-c/
+                      - generic: Inspection/Detection Tools
+                  - generic:
+                    - link "Line Lasers":
+                      - /url: https://www.boschtools.com/us/en/line-lasers-41057-ocs-c/
+                      - generic: Line Lasers
+                  - generic:
+                    - link "Point Lasers":
+                      - /url: https://www.boschtools.com/us/en/point-lasers-23507-ocs-c/
+                      - generic: Point Lasers
+                  - generic:
+                    - link "Rotary Lasers":
+                      - /url: https://www.boschtools.com/us/en/rotary-lasers-23508-ocs-c/
+                      - generic: Rotary Lasers
+                  - generic:
+                    - link "Optical Levels":
+                      - /url: https://www.boschtools.com/us/en/optical-levels-23504-ocs-c/
+                      - generic: Optical Levels
+                  - generic:
+                    - link "Batteries and Chargers":
+                      - /url: https://www.boschtools.com/us/en/batteries-and-chargers-41356-ocs-c/
+                      - generic: Batteries and Chargers
+                  - generic:
+                    - link "Attachments":
+                      - /url: https://www.boschtools.com/us/en/attachments-41079-ocs-c/
+                      - generic: Attachments
+                  - generic:
+                    - link "Accessories":
+                      - /url: https://www.boschtools.com/us/en/accessories-23509-ocs-c/
+                      - generic: Accessories
+        - navigation "Power Tools":
+          - generic:
+            - generic:
+              - button "Close":
+                - generic: 
+            - generic:
+              - generic:
+                - text: 
+                - generic:
+                  - generic:
+                    - link "New Products":
+                      - /url: https://www.boschtools.com/us/en/new-products-33327-ocs-c/
+                      - generic: New Products
+                  - generic:
+                    - link "Spare Parts":
+                      - /url: https://www.boschtoolservice.com/us/en/bosch-pt/spareparts/search
+                      - generic: Spare Parts
+                  - generic:
+                    - link "PROFACTOR":
+                      - /url: https://www.boschtools.com/us/en/profactor-41308-ocs-c/
+                      - generic: PROFACTOR
+                  - generic:
+                    - link "12V Max Cordless Power Tools":
+                      - /url: https://www.boschtools.com/us/en/12v-max-cordless-power-tools-37932-ocs-c/
+                      - generic: 12V Max Cordless Power Tools
+                  - generic:
+                    - link "18V Cordless Power Tools":
+                      - /url: https://www.boschtools.com/us/en/18v-cordless-power-tools-37933-ocs-c/
+                      - generic: 18V Cordless Power Tools
+                  - generic:
+                    - link "Batteries, Chargers & Starter Kits":
+                      - /url: https://www.boschtools.com/us/en/batteries-chargers-starter-kits-23419-ocs-c/
+                      - generic: Batteries, Chargers & Starter Kits
+                  - generic:
+                    - link "Cordless Power Tools":
+                      - /url: https://www.boschtools.com/us/en/cordless-power-tools-35676-ocs-c/
+                      - generic: Cordless Power Tools
+                  - generic:
+                    - link "Cordless Combo Kits":
+                      - /url: https://www.boschtools.com/us/en/cordless-combo-kits-37711-ocs-c/
+                      - generic: Cordless Combo Kits
+                  - generic:
+                    - link "Band Saws":
+                      - /url: https://www.boschtools.com/us/en/band-saws-36762-ocs-c/
+                      - generic: Band Saws
+                  - generic:
+                    - link "Benchtop Tools":
+                      - /url: https://www.boschtools.com/us/en/benchtop-tools-25311-ocs-c/
+                      - generic: Benchtop Tools
+                  - generic:
+                    - link "Circular Saws":
+                      - /url: https://www.boschtools.com/us/en/circular-saws-36763-ocs-c/
+                      - generic: Circular Saws
+                  - generic:
+                    - link "Drills, Hammer Drills & Impact Drivers":
+                      - /url: https://www.boschtools.com/us/en/drills-hammer-drills-impact-drivers-23409-ocs-c/
+                      - generic: Drills, Hammer Drills & Impact Drivers
+                  - generic:
+                    - link "Drywall Tools":
+                      - /url: https://www.boschtools.com/us/en/drywall-tools-41698-ocs-c/
+                      - generic: Drywall Tools
+                  - generic:
+                    - link "Dust Extraction and Collection":
+                      - /url: https://www.boschtools.com/us/en/dust-extraction-and-collection-23421-ocs-c/
+                      - generic: Dust Extraction and Collection
+                  - generic:
+                    - link "Grinders and Metalworking":
+                      - /url: https://www.boschtools.com/us/en/grinders-and-metalworking-23412-ocs-c/
+                      - generic: Grinders and Metalworking
+                  - generic:
+                    - link "Hammers (Rotary & Demolition)":
+                      - /url: https://www.boschtools.com/us/en/hammers-rotary-demolition-23411-ocs-c/
+                      - generic: Hammers (Rotary & Demolition)
+                  - generic:
+                    - link "Jig Saws":
+                      - /url: https://www.boschtools.com/us/en/jig-saws-36764-ocs-c/
+                      - generic: Jig Saws
+                  - generic:
+                    - link "Lights":
+                      - /url: https://www.boschtools.com/us/en/lights-41089-ocs-c/
+                      - generic: Lights
+                  - generic:
+                    - link "Measuring and Layout Tools":
+                      - /url: https://www.boschtools.com/us/en/measuring-and-layout-tools-23413-ocs-c/
+                      - generic: Measuring and Layout Tools
+                  - generic:
+                    - link "Nailers & Staplers":
+                      - /url: https://www.boschtools.com/us/en/nailers-staplers-41742-ocs-c/
+                      - generic: Nailers & Staplers
+                  - generic:
+                    - link "Oscillating Multi-Tools":
+                      - /url: https://www.boschtools.com/us/en/oscillating-multi-tools-23414-ocs-c/
+                      - generic: Oscillating Multi-Tools
+                  - generic:
+                    - link "Planers":
+                      - /url: https://www.boschtools.com/us/en/planers-23417-ocs-c/
+                      - generic: Planers
+                  - generic:
+                    - link "Radios":
+                      - /url: https://www.boschtools.com/us/en/radios-23424-ocs-c/
+                      - generic: Radios
+                  - generic:
+                    - link "Reciprocating Saws":
+                      - /url: https://www.boschtools.com/us/en/reciprocating-saws-36761-ocs-c/
+                      - generic: Reciprocating Saws
+                  - generic:
+                    - link "Routers & Router Tables":
+                      - /url: https://www.boschtools.com/us/en/routers-router-tables-23415-ocs-c/
+                      - generic: Routers & Router Tables
+                  - generic:
+                    - link "Sanders":
+                      - /url: https://www.boschtools.com/us/en/sanders-23416-ocs-c/
+                      - generic: Sanders
+                  - generic:
+                    - link "Saws":
+                      - /url: https://www.boschtools.com/us/en/saws-23418-ocs-c/
+                      - generic: Saws
+                  - generic:
+                    - link "Specialty Tools":
+                      - /url: https://www.boschtools.com/us/en/specialty-tools-23422-ocs-c/
+                      - generic: Specialty Tools
+                  - generic:
+                    - link "Track/Plunge Saws":
+                      - /url: https://www.boschtools.com/us/en/track-plunge-saws-37558-ocs-c/
+                      - generic: Track/Plunge Saws
+                  - generic:
+                    - link "Power Tool Attachments":
+                      - /url: https://www.boschtools.com/us/en/power-tool-attachments-23462-ocs-c/
+                      - generic: Power Tool Attachments
+                  - generic:
+                    - link "Workwear":
+                      - /url: https://www.boschtools.com/us/en/workwear-23426-ocs-c/
+                      - generic: Workwear
+                  - generic:
+                    - link "Organization Systems and Solutions":
+                      - /url: https://www.boschtools.com/us/en/organization-systems-and-solutions-23420-ocs-c/
+                      - generic: Organization Systems and Solutions
+                  - generic:
+                    - link "Press Tools":
+                      - /url: https://www.boschtools.com/us/en/press-tools-44299-ocs-c/
+                      - generic: Press Tools
+        - navigation "Service":
+          - generic:
+            - generic:
+              - button "Close":
+                - generic: 
+            - generic:
+              - text: 
+              - generic:
+                - generic:
+                  - link "Service":
+                    - /url: https://www.boschtools.com/us/en/service/
+                    - generic:
+                      - img "A green Bosch Professional tool case is standing on the sidewalk."
+                  - generic:
+                    - link "Service":
+                      - /url: https://www.boschtools.com/us/en/service/
+                    - link "Tool Repair":
+                      - /url: https://www.boschtools.com/us/en/service/bosch-e-repair-network/
+                    - link "Product Warranty":
+                      - /url: https://www.boschtools.com/us/en/service/product-warranty/
+                    - link "MaxVantage Pro":
+                      - /url: https://www.boschtools.com/us/en/service/maxvantage-pro/
+                    - link "Service Center Locator":
+                      - /url: https://www.boschtools.com/us/en/service/service-center-locator/
+                    - link "Replacement Parts":
+                      - /url: https://www.boschtools.com/us/en/service/replacement-parts/
+                    - link "Manuals and Part Diagrams":
+                      - /url: https://www.boschtools.com/us/en/service/manuals-and-part-diagrams/
+                    - link "Product Safety":
+                      - /url: https://www.boschtools.com/us/en/service/product-safety/
+                    - link "Contact Us":
+                      - /url: https://www.boschtools.com/us/en/service/contact-us/
+                    - link "Product Registration":
+                      - /url: https://erepair.boschtools.com/boschtools-erepair/login
+                    - link "PROFACTOR Guarantee":
+                      - /url: https://www.boschtools.com/us/en/service/profactorguarantee/
+        - navigation "Trade Solutions":
+          - generic:
+            - generic:
+              - button "Close":
+                - generic: 
+            - generic:
+              - text: 
+              - generic:
+                - generic:
+                  - link "Trades":
+                    - /url: //www.boschtools.com/us/en/trade-solutions/trades/
+                    - generic:
+                      - img "A Bosch Professional cordless hammer drill is being used on a wall."
+                  - generic:
+                    - link "Trades":
+                      - /url: //www.boschtools.com/us/en/trade-solutions/trades/
+                    - link "Drywall Solutions":
+                      - /url: //www.boschtools.com/us/en/trade-solutions/trades/drywall-solutions/
+                    - link "General Contracting":
+                      - /url: //www.boschtools.com/us/en/trade-solutions/trades/general-contracting/
+                    - link "Carpentry":
+                      - /url: //www.boschtools.com/us/en/trade-solutions/trades/carpentry/
+                    - link "Concrete":
+                      - /url: //www.boschtools.com/us/en/trade-solutions/trades/concrete/
+                    - link "Masonry & Restoration":
+                      - /url: //www.boschtools.com/us/en/trade-solutions/trades/masonry-restoration/
+                    - link "Demolition":
+                      - /url: //www.boschtools.com/us/en/trade-solutions/trades/demolition/
+                    - link "Electrician":
+                      - /url: //www.boschtools.com/us/en/trade-solutions/trades/electrician/
+                    - link "Framer":
+                      - /url: //www.boschtools.com/us/en/trade-solutions/trades/framer/
+                    - link "Plumber":
+                      - /url: //www.boschtools.com/us/en/trade-solutions/trades/plumber/
+                    - link "Property Manager":
+                      - /url: //www.boschtools.com/us/en/trade-solutions/trades/property-manager/
+                - generic:
+                  - link "Solutions":
+                    - /url: //www.boschtools.com/us/en/trade-solutions/solutions/
+                    - generic:
+                      - img "A blue Bosch Professional cordless jigsaw stands next to a smartphone."
+                  - generic:
+                    - link "Solutions":
+                      - /url: //www.boschtools.com/us/en/trade-solutions/solutions/
+                    - link "Connected":
+                      - /url: //www.boschtools.com/us/en/trade-solutions/solutions/connected/
+                    - link "MeasureOn":
+                      - /url: //www.boschtools.com/us/en/trade-solutions/solutions/measureon/
+                    - link "PRO360":
+                      - /url: /us/en/pro360/
+    - navigation "Breadcrumb" [ref=e89]:
+      - list [ref=e90]:
+        - listitem [ref=e91]:
+          - link "Home " [ref=e92] [cursor=pointer]:
+            - /url: //www.boschtools.com/us/en/
+        - listitem [ref=e93]:
+          - link "Power Tools " [ref=e94] [cursor=pointer]:
+            - /url: https://www.boschtools.com/us/en/power-tools-22064-ocs-c/
+        - listitem [ref=e95]:
+          - link "Cordless Combo Kits " [ref=e96] [cursor=pointer]:
+            - /url: https://www.boschtools.com/us/en/cordless-combo-kits-37711-ocs-c/
+        - listitem [ref=e97]:
+          - generic [ref=e98]: GXL18V-496B22 Professional
+  - main [ref=e99]:
+    - text:      
+    - generic [ref=e102]:
+      - generic [ref=e104]:
+        - generic [ref=e105]:
+          - generic [ref=e107]:
+            - generic [ref=e109]:
+              - img "Bosch GDX18V-1600, GSA18V-083, GLI18V-300 power tools, 18V batteries, charger, and tool bag." [ref=e113]
+              - img [ref=e117]
+              - img [ref=e121]
+              - img [ref=e125]
+              - img [ref=e129]
+              - img [ref=e133]
+              - img [ref=e137]
+              - img [ref=e141]
+              - img [ref=e145]
+              - img [ref=e149]
+              - img [ref=e153]
+              - img [ref=e157]
+              - img [ref=e161]
+              - img [ref=e165]
+              - img [ref=e169]
+              - img [ref=e173]
+              - img [ref=e177]
+              - img [ref=e181]
+              - img [ref=e185]
+            - button "Next" [ref=e186] [cursor=pointer]: Next
+          - generic [ref=e187]:
+            - button "zoom in" [ref=e188] [cursor=pointer]:
+              - generic [ref=e189]: 
+            - button "zoom out" [ref=e190] [cursor=pointer]:
+              - generic [ref=e191]: 
+        - generic [ref=e192]:
+          - generic "GXL18V-496B22" [ref=e193] [cursor=pointer]:
+            - img "Bosch GDX18V-1600, GSA18V-083, GLI18V-300 power tools, 18V batteries, charger, and tool bag." [ref=e194]
+            - text: 
+          - generic "GXL18V-496B22" [ref=e195] [cursor=pointer]:
+            - img "Bosch GDX18V-1600 impact driver and impact wrench with a 1/4\" quick-change hex and 1/2\" square drive chuck for sockets, with LED light and belt clip." [ref=e196]
+            - text: 
+          - generic "GXL18V-496B22" [ref=e197] [cursor=pointer]:
+            - img "Bosch GLI18V-300 work light with 6 LED lights, articulating action, hanging hook, and compatible with all Bosch 18V Li-ion batteries." [ref=e198]
+            - text: 
+          - generic "GXL18V-496B22" [ref=e199] [cursor=pointer]:
+            - img "Bosch GSA18V-083 saw with 0.83\" stroke, 4.4 lbs weight, and 15-3/4 in length, features ergonomic multi-grip handle, switch lock, toolless blade change system, and LED light." [ref=e200]
+            - text: 
+          - generic "GXL18V-496B22" [ref=e201] [cursor=pointer]:
+            - img "Bosch Lithium-Ion 18V cordless drill, with a red trigger." [ref=e202]
+            - text: 
+          - generic "GXL18V-496B22" [ref=e203] [cursor=pointer]:
+            - img "Bosch GSA18V-083 saw with \"EDGE\" blade and \"Demolition Wood/Nails\" detail." [ref=e204]
+            - text: 
+          - generic "GXL18V-496B22" [ref=e205] [cursor=pointer]:
+            - img "Bosch LED work light with model number GLI 18V-1200 C." [ref=e206]
+            - text: 
+          - generic "GXL18V-496B22" [ref=e207] [cursor=pointer]:
+            - img "Bosch GDX18V-1600 impact driver, with blue and black casing, and an orange trigger." [ref=e208]
+            - text: 
+          - generic "GXL18V-496B22" [ref=e209] [cursor=pointer]:
+            - img "Man using a Bosch Lithium-Ion 18V drill to install a screw into a cabinet, with a black glove. Two clamps are visible." [ref=e210]
+            - text: 
+          - generic "GXL18V-496B22" [ref=e211] [cursor=pointer]:
+            - img "Bosch cordless drill being used to install an electrical box in a wooden frame." [ref=e212]
+            - text: 
+          - generic "GXL18V-496B22" [ref=e213] [cursor=pointer]:
+            - img "Bosch GSA 18V-083, 18V 4.0 Ah Li-ion, cordless reciprocating saw, in use near ductwork." [ref=e214]
+            - text: 
+          - generic "GXL18V-496B22" [ref=e215] [cursor=pointer]:
+            - img "Bosch GSA18V-083 reciprocating saw being used to cut a pipe." [ref=e216]
+            - text: 
+          - generic "GXL18V-496B22" [ref=e217] [cursor=pointer]:
+            - img "Bosch GSA18V-083 reciprocating saw being used to cut a line in a wood panel by a person wearing gloves." [ref=e218]
+            - text: 
+          - generic "GXL18V-496B22" [ref=e219] [cursor=pointer]:
+            - img "Bosch GLI18V-300 LED work light, with 18V 2.0Ah Li-ion battery." [ref=e220]
+            - text: 
+          - generic "GXL18V-496B22" [ref=e221] [cursor=pointer]:
+            - img "Bosch GLI18V-300, 18V, 2.0 Ah Li-ion work light hanging from a metal bar." [ref=e222]
+            - text: 
+          - generic "GXL18V-496B22" [ref=e223] [cursor=pointer]:
+            - img "Bosch GDX18V-1600 impact driver being used to install a bolt into wooden construction." [ref=e224]
+            - text: 
+          - generic "GXL18V-496B22" [ref=e225] [cursor=pointer]:
+            - img "Bosch GDX18V-1600 impact driver, 18V, being used to fasten a screw to a metal electrical box on a cinder block wall. The person holding the tool wears a black glove." [ref=e226]
+            - text: 
+          - generic "GXL18V-496B22" [ref=e227] [cursor=pointer]:
+            - img "AMP Share Multi-brand Compatible 18V Battery System, powered by BOSCH." [ref=e228]
+            - text: 
+          - generic "GXL18V-496B22" [ref=e229] [cursor=pointer]:
+            - img "Bosch 18V Tool-Charger/Battery Kit, 5 Year Tool/Charger, 3 Year Battery Limited Warranty. Effective 6/1/23, all 18V products covered by updated warranty; see rb-pt.io/PowerToolWarranty or call 1-877-BOSCH99." [ref=e230]
+            - text: 
+        - text:  
+      - generic [ref=e231]:
+        - heading "GXL18V-496B22 Professional" [level=1] [ref=e232]
+        - heading "Cordless Combo Kits" [level=2] [ref=e233]
+        - generic [ref=e236]:
+          - button "4.8 out of 5 stars, average rating value. Read 10 Reviews. Same page link. 4.8 (10)" [ref=e237]:
+            - generic [ref=e238]: 4.8 out of 5 stars, average rating value. Read 10 Reviews. Same page link.
+            - generic [ref=e239]:
+              - img [ref=e240]
+              - img [ref=e242]
+              - img [ref=e244]
+              - img [ref=e246]
+              - img [ref=e248]
+            - generic [ref=e250]: "4.8"
+            - generic [ref=e252]: (10)
+          - generic [ref=e254]: 6 of 10 reviewers received a sample product or took part in a promotion
+          - button "Write a Review (opens pop-up). This action will open a modal dialog." [ref=e258]: Write a review
+      - generic [ref=e259]:
+        - heading "18V 4-Tool Combo Kit with Compact Tough 1/2 In. Drill/Driver, Two-In-One 1/4 In. and 1/2 In. Bit/Socket Impact Driver/Wrench, Compact Reciprocating Saw, LED Worklight and (2) 2.0 Ah SlimPack Batteries" [level=2] [ref=e260]
+        - list [ref=e261]:
+          - listitem [ref=e262]: ■ Convenient 18V 4-tool combo kit – has an impact driver/wrench, drill/driver, recip saw, worklight, and two batteries
+          - listitem [ref=e263]: ■ Two-in-one cordless impact driver/wrench – designed for use with bits and sockets
+          - listitem [ref=e264]: ■ Powerful impact driver/wrench motor – delivers a max of 1,600 In.-Lbs. of torque and up to 3,600 ipm for professional power
+          - listitem [ref=e265]: ■ Impact driver/wrench – does two jobs with one tool and goes from impact wrench to impact driver fast
+          - text: ■ ■ ■ ■ ■ ■ ■ ■
+        - generic [ref=e266] [cursor=pointer]: View more
+        - text: 
+      - button "Buy Now" [ref=e268] [cursor=pointer]
+    - generic [ref=e270]:
+      - text: 
+      - generic [ref=e272]:
+        - img "Bosch GDX18V-1600, GSA18V-083, GLI18V-300 power tools, 18V batteries, charger, and tool bag." [ref=e275]
+        - generic [ref=e276]:
+          - text: Your Selected Variant
+          - generic [ref=e277]: GXL18V-496B22 Professional
+    - generic [ref=e279]:
+      - heading "Technical data" [level=2] [ref=e282]
+      - generic [ref=e285]:
+        - heading "The most important data" [level=3] [ref=e289]
+        - generic [ref=e290]:
+          - generic [ref=e291]:
+            - generic [ref=e292]: Battery
+            - generic [ref=e293]: Lithium-Ion Battery
+          - generic [ref=e294]:
+            - generic [ref=e295]: Battery Chemistry
+            - generic [ref=e296]: Lithium Ion
+          - generic [ref=e297]:
+            - generic [ref=e298]: Case Type
+            - generic [ref=e299]: Bag
+          - generic [ref=e300]:
+            - generic [ref=e301]: Height in
+            - generic [ref=e302]: 7.9 "
+          - generic [ref=e303]:
+            - generic [ref=e304]: Length in
+            - generic [ref=e305]: 7.5 "
+          - generic [ref=e306]:
+            - generic [ref=e307]: Number of Tools in Kit
+            - generic [ref=e308]: "4"
+          - generic [ref=e309]:
+            - generic [ref=e310]: Weight
+            - generic [ref=e311]: 2.6 lb
+          - generic [ref=e312]:
+            - generic [ref=e313]: Weight (lbs.)
+            - generic [ref=e314]: "2.6"
+          - generic [ref=e315]:
+            - generic [ref=e316]: Width in
+            - generic [ref=e317]: 3 "
+          - generic [ref=e318]:
+            - generic [ref=e319]: Includes
+            - generic [ref=e321]:
+              - text: (1) DDS181A 18V Compact Tough 1/2 In. Drill/Driver
+              - text: (1) GDX18V-1600 18V Two-In-One 1/4 In. and 1/2 In. Bit/Socket Impact Driver/Wrench
+              - text: (1) GSA18V-083 18V Compact Reciprocating Saw
+              - text: (1) GLI18V-300 18V Articulating LED Worklight
+              - text: (2) 18V Lithium-Ion 2.0 Ah SlimPack Batteries
+              - text: (1) 18V Charger
+              - text: (2) Belt Clips
+              - text: (2) Reciprocating Saw Blades
+              - text: (1) Bit Tip Set
+              - text: (1) Carrying Bag
+    - generic [ref=e326]:
+      - 'heading "GXL18V-496B22 Professional: Further information" [level=2] [ref=e327]'
+      - heading "Product Highlights" [level=3] [ref=e328]
+      - paragraph [ref=e329]: The Bosch GXL18V-496B22 18V Cordless Four-Tool Kit is a convenient way to get into the Bosch's 18V platform. Included is the GDX18V-1800 two-in-one cordless impact driver/wrench for use with bits and sockets. It does two jobs with one tool and goes from impact wrench to impact driver fast. The DDS181A Drill/Driver features a compact motor with the same power as conventional 18V motors at a lighter weight. It produces 600 In.-Lbs. max torque. The GSA18V-083 Reciprocating Saw is 15-3/4 In. long and only 4.4 Lbs. (tool only), but it delivers 0-3,050 strokes per minute. The GLI18V-300 is a bright light with 300 minutes of runtime per amp hour. The kit comes with two 18V 2.0 Ah SlimPack batteries and a charger.
+    - generic [ref=e333]:
+      - alert [ref=e334]
+      - generic [ref=e335]:
+        - heading "Reviews" [level=2] [ref=e337]
+        - generic [ref=e338]:
+          - generic [ref=e339]:
+            - generic [ref=e341]:
+              - heading "Rating Snapshot" [level=3] [ref=e342]
+              - generic [ref=e343]:
+                - generic [ref=e344]: Select a row below to filter reviews.
+                - group "Rating Snapshot" [ref=e345]:
+                  - button "8 reviews with 5 stars." [ref=e346]:
+                    - paragraph [ref=e347]:
+                      - text: 5 stars
+                      - generic [ref=e348]: stars
+                    - generic [ref=e351]:
+                      - text: "8"
+                      - generic [ref=e352]: 8 reviews with 5 stars.
+                  - button "2 reviews with 4 stars." [ref=e353]:
+                    - paragraph [ref=e354]:
+                      - text: 4 stars
+                      - generic [ref=e355]: stars
+                    - generic [ref=e358]:
+                      - text: "2"
+                      - generic [ref=e359]: 2 reviews with 4 stars.
+                  - button "0 reviews with 3 stars." [ref=e360]:
+                    - paragraph [ref=e361]:
+                      - text: 3 stars
+                      - generic [ref=e362]: stars
+                    - generic [ref=e364]:
+                      - text: "0"
+                      - generic [ref=e365]: 0 reviews with 3 stars.
+                  - button "0 reviews with 2 stars." [ref=e366]:
+                    - paragraph [ref=e367]:
+                      - text: 2 stars
+                      - generic [ref=e368]: stars
+                    - generic [ref=e370]:
+                      - text: "0"
+                      - generic [ref=e371]: 0 reviews with 2 stars.
+                  - button "0 reviews with 1 star." [ref=e372]:
+                    - paragraph [ref=e373]:
+                      - text: 1 star
+                      - generic [ref=e374]: stars
+                    - generic [ref=e376]:
+                      - text: "0"
+                      - generic [ref=e377]: 0 reviews with 1 star.
+            - region "Overall Rating" [ref=e379]:
+              - heading "Overall Rating" [level=3] [ref=e380]
+              - generic [ref=e381]:
+                - generic [ref=e382]:
+                  - generic [ref=e383]: "4.8"
+                  - link "4.8 out of 5 stars. Read 10 reviews for GXL18V-496B22 18V 4-Tool Combo Kit with Compact Tough 1/2 In. Drill/Driver, Two-In-One 1/4 In. and 1/2 In. Bit/Socket Impact Driver/Wrench, Compact Reciprocating Saw, LED Worklight and (2) 2.0 Ah SlimPack Batteries. This action will navigate to reviews." [ref=e384] [cursor=pointer]:
+                    - generic [ref=e385]:
+                      - generic [ref=e386]:
+                        - img [ref=e387]
+                        - img [ref=e389]
+                        - img [ref=e391]
+                        - img [ref=e393]
+                        - img [ref=e395]
+                      - text: 10 Reviews
+                - generic [ref=e397]: 9 out of 9 (100%) reviewers recommend this product
+                - generic [ref=e398]: 6 of 10 reviewers received a sample product or took part in a promotion
+            - generic [ref=e400]:
+              - heading "Review this Product" [level=3] [ref=e401]
+              - group "Rating is 0 (out of 5 stars)." [ref=e403]:
+                - button "Select to rate the item with 1 star. This action will open submission form." [ref=e404]:
+                  - img [ref=e406] [cursor=pointer]
+                  - generic [ref=e413]: Select to rate the item with 1 star. This action will open submission form.
+                - button "Select to rate the item with 2 stars. This action will open submission form." [ref=e414]:
+                  - img [ref=e416] [cursor=pointer]
+                  - generic [ref=e423]: Select to rate the item with 2 stars. This action will open submission form.
+                - button "Select to rate the item with 3 stars. This action will open submission form." [ref=e424]:
+                  - img [ref=e426] [cursor=pointer]
+                  - generic [ref=e433]: Select to rate the item with 3 stars. This action will open submission form.
+                - button "Select to rate the item with 4 stars. This action will open submission form." [ref=e434]:
+                  - img [ref=e436] [cursor=pointer]
+                  - generic [ref=e443]: Select to rate the item with 4 stars. This action will open submission form.
+                - button "Select to rate the item with 5 stars. This action will open submission form." [ref=e444]:
+                  - img [ref=e446] [cursor=pointer]
+                  - generic [ref=e453]: Select to rate the item with 5 stars. This action will open submission form.
+              - generic [ref=e455]: Adding a review will require a valid email for verification
+          - generic [ref=e456]:
+            - heading "Average Customer Ratings" [level=3] [ref=e457]
+            - generic [ref=e458]:
+              - generic [ref=e459]: Quality of Product
+              - generic [ref=e460]: Quality of Product, 4.8 out of 5
+              - generic [ref=e468]: "4.8"
+            - generic [ref=e469]:
+              - generic [ref=e470]: Value of Product
+              - generic [ref=e471]: Value of Product, 4.8 out of 5
+              - generic [ref=e479]: "4.8"
+        - generic [ref=e482]:
+          - heading "Filter Reviews" [level=3] [ref=e483]
+          - search [ref=e486]:
+            - generic [ref=e487]: Search topics and reviews search region
+            - textbox "Search topics and reviews search region" [ref=e488]:
+              - /placeholder: Search topics and reviews
+            - img [ref=e490] [cursor=pointer]
+          - combobox "Menu, Filter by Rating" [ref=e494] [cursor=pointer]:
+            - text: Rating
+            - img [ref=e496]
+        - generic [ref=e501]:
+          - alert [ref=e502]
+          - alert [ref=e503]: 1 to 8 of 10 Reviews
+          - generic [ref=e504]:
+            - generic [ref=e505]: 1 – 8 of 10 Reviews
+            - generic [ref=e510]:
+              - generic [ref=e512]: Sort by
+              - combobox "Menu, Sort by Most Recent." [ref=e513] [cursor=pointer]:
+                - generic [ref=e515]: Most Recent
+              - img [ref=e517]
+        - region "Reviews" [ref=e522]:
+          - region "1 out of 8 , Ratings 5 out of 5" [ref=e523]:
+            - generic [ref=e525]:
+              - generic [ref=e527]:
+                - button "See jake90 profile. This action will open a modal dialog." [ref=e528]: jake90
+                - button "Incentivized Review" [ref=e530] [cursor=pointer]:
+                  - generic [ref=e531]:
+                    - img [ref=e533]
+                    - text: Incentivized Review
+                - generic [ref=e542]:
+                  - generic [ref=e543]: Green Bay, Wi
+                  - generic [ref=e545]:
+                    - generic [ref=e547]:
+                      - text: Reviews
+                      - generic [ref=e548]: "3"
+                    - generic [ref=e550]:
+                      - text: Votes
+                      - generic [ref=e551]: "0"
+                  - generic [ref=e555]:
+                    - text: Skill Level
+                    - generic [ref=e556]: Advanced DIY User
+              - generic [ref=e558]:
+                - generic [ref=e559]:
+                  - generic [ref=e560]:
+                    - img "5 out of 5 stars." [ref=e561]:
+                      - generic [ref=e562]:
+                        - img [ref=e563]
+                        - img [ref=e565]
+                        - img [ref=e567]
+                        - img [ref=e569]
+                        - img [ref=e571]
+                      - generic [ref=e573]: 5 out of 5 stars.
+                    - generic [ref=e574]:
+                      - heading "Great Tool Set" [level=3] [ref=e575]
+                      - generic [ref=e579]: 2 years ago
+                  - generic [ref=e581]:
+                    - generic [ref=e582]: I have been using this tool set for a few months. For different at home projects. I have used the impact drill to install a new wood handrail on my back patio. It has a great battery life and I was able to complete the project in one charge. I have used the reciprocating saw to cut wood and drywall in a basement bathroom remodel. It was east to handle and use the reciprocating saw. I would recommend this quality tool set to others.
+                    - generic [ref=e584]:
+                      - img [ref=e588]
+                      - paragraph [ref=e597]: Yes, I recommend this product.
+                    - group "Content helpfulness" [ref=e600]:
+                      - generic [ref=e602]: Helpful?
+                      - generic [ref=e603]:
+                        - 'button "Yes: 0 people found this review by jake90 helpful." [ref=e604] [cursor=pointer]':
+                          - generic [ref=e605]:
+                            - img [ref=e607]
+                            - generic [ref=e609]: (0)
+                          - alert
+                        - 'button "No: 0 people did not find this review by jake90 helpful." [ref=e611] [cursor=pointer]':
+                          - generic [ref=e612]:
+                            - img [ref=e613]
+                            - generic [ref=e615]: (0)
+                          - alert
+                        - generic [ref=e617]:
+                          - button "Report this review Great Tool Set by jake90 as inappropriate." [ref=e618] [cursor=pointer]: Report
+                          - alert
+                - generic [ref=e621]:
+                  - generic [ref=e622]: Quality of Product
+                  - generic [ref=e623]: Quality of Product, 5.0 out of 5
+                  - generic [ref=e630]: "5.0"
+                  - generic [ref=e631]: Value of Product
+                  - generic [ref=e632]: Value of Product, 5.0 out of 5
+                  - generic [ref=e639]: "5.0"
+          - region "2 out of 8 , Ratings 5 out of 5" [ref=e640]:
+            - generic [ref=e642]:
+              - generic [ref=e644]:
+                - button "See MattyJ profile. This action will open a modal dialog." [ref=e645]: MattyJ
+                - generic [ref=e646]:
+                  - generic [ref=e647]: Bucks County Pennsylvania
+                  - generic [ref=e649]:
+                    - generic [ref=e651]:
+                      - text: Reviews
+                      - generic [ref=e652]: "2"
+                    - generic [ref=e654]:
+                      - text: Vote
+                      - generic [ref=e655]: "1"
+                  - generic [ref=e657]:
+                    - generic [ref=e659]:
+                      - text: Skill Level
+                      - generic [ref=e660]: Professional User
+                    - generic [ref=e662]:
+                      - text: Age
+                      - generic [ref=e663]: 35 to 44
+                    - generic [ref=e665]:
+                      - text: Gender
+                      - generic [ref=e666]: Male
+              - generic [ref=e668]:
+                - generic [ref=e669]:
+                  - generic [ref=e670]:
+                    - img "5 out of 5 stars." [ref=e671]:
+                      - generic [ref=e672]:
+                        - img [ref=e673]
+                        - img [ref=e675]
+                        - img [ref=e677]
+                        - img [ref=e679]
+                        - img [ref=e681]
+                      - generic [ref=e683]: 5 out of 5 stars.
+                    - generic [ref=e684]:
+                      - heading "Absolute best on the market!" [level=3] [ref=e685]
+                      - generic [ref=e689]: 5 years ago
+                  - generic [ref=e691]:
+                    - generic [ref=e692]: Absolute no-brainer for everybody in America in the garage. Sell a company product and value all the way through. I am an 18-volt Bosch guy for life!
+                    - generic [ref=e694]:
+                      - img [ref=e698]
+                      - paragraph [ref=e707]: Yes, I recommend this product.
+                    - group "Content helpfulness" [ref=e710]:
+                      - generic [ref=e712]: Helpful?
+                      - generic [ref=e713]:
+                        - 'button "Yes: 1 person found this review by MattyJ helpful." [ref=e714] [cursor=pointer]':
+                          - generic [ref=e715]:
+                            - img [ref=e717]
+                            - generic [ref=e719]: (1)
+                          - alert
+                        - 'button "No: 0 people did not find this review by MattyJ helpful." [ref=e721] [cursor=pointer]':
+                          - generic [ref=e722]:
+                            - img [ref=e723]
+                            - generic [ref=e725]: (0)
+                          - alert
+                        - generic [ref=e727]:
+                          - button "Report this review Absolute best on the market! by MattyJ as inappropriate." [ref=e728] [cursor=pointer]: Report
+                          - alert
+                - generic [ref=e731]:
+                  - generic [ref=e732]: Quality of Product
+                  - generic [ref=e733]: Quality of Product, 5.0 out of 5
+                  - generic [ref=e740]: "5.0"
+                  - generic [ref=e741]: Value of Product
+                  - generic [ref=e742]: Value of Product, 5.0 out of 5
+                  - generic [ref=e749]: "5.0"
+          - region "3 out of 8 , Ratings 5 out of 5" [ref=e750]:
+            - generic [ref=e752]:
+              - generic [ref=e754]:
+                - button "See Melv715 profile. This action will open a modal dialog." [ref=e755]: Melv715
+                - generic [ref=e756]:
+                  - generic [ref=e757]: Jackson,NJ
+                  - generic [ref=e759]:
+                    - generic [ref=e761]:
+                      - text: Reviews
+                      - generic [ref=e762]: "2"
+                    - generic [ref=e764]:
+                      - text: Votes
+                      - generic [ref=e765]: "0"
+                  - generic [ref=e767]:
+                    - generic [ref=e769]:
+                      - text: Skill Level
+                      - generic [ref=e770]: Professional User
+                    - generic [ref=e772]:
+                      - text: Age
+                      - generic [ref=e773]: 45 to 54
+                    - generic [ref=e775]:
+                      - text: Gender
+                      - generic [ref=e776]: Male
+              - generic [ref=e778]:
+                - generic [ref=e779]:
+                  - generic [ref=e780]:
+                    - img "5 out of 5 stars." [ref=e781]:
+                      - generic [ref=e782]:
+                        - img [ref=e783]
+                        - img [ref=e785]
+                        - img [ref=e787]
+                        - img [ref=e789]
+                        - img [ref=e791]
+                      - generic [ref=e793]: 5 out of 5 stars.
+                    - generic [ref=e794]:
+                      - heading "Great product" [level=3] [ref=e795]
+                      - generic [ref=e799]: 5 years ago
+                  - generic [ref=e801]:
+                    - generic [ref=e802]: I bought this about two months ago. It is a great addition to my tool collection. I bought it tonite around the house for some home improvements, it worked well and seems it will last a long time. Great product.
+                    - generic [ref=e804]:
+                      - img [ref=e808]
+                      - paragraph [ref=e817]: Yes, I recommend this product.
+                    - group "Content helpfulness" [ref=e820]:
+                      - generic [ref=e822]: Helpful?
+                      - generic [ref=e823]:
+                        - 'button "Yes: 0 people found this review by Melv715 helpful." [ref=e824] [cursor=pointer]':
+                          - generic [ref=e825]:
+                            - img [ref=e827]
+                            - generic [ref=e829]: (0)
+                          - alert
+                        - 'button "No: 0 people did not find this review by Melv715 helpful." [ref=e831] [cursor=pointer]':
+                          - generic [ref=e832]:
+                            - img [ref=e833]
+                            - generic [ref=e835]: (0)
+                          - alert
+                        - generic [ref=e837]:
+                          - button "Report this review Great product by Melv715 as inappropriate." [ref=e838] [cursor=pointer]: Report
+                          - alert
+                - generic [ref=e841]:
+                  - generic [ref=e842]: Quality of Product
+                  - generic [ref=e843]: Quality of Product, 5.0 out of 5
+                  - generic [ref=e850]: "5.0"
+                  - generic [ref=e851]: Value of Product
+                  - generic [ref=e852]: Value of Product, 5.0 out of 5
+                  - generic [ref=e859]: "5.0"
+          - region "4 out of 8 , Ratings 4 out of 5" [ref=e860]:
+            - generic [ref=e862]:
+              - generic [ref=e864]:
+                - button "See Artie John profile. This action will open a modal dialog." [ref=e865]: Artie John
+                - generic [ref=e866]:
+                  - generic [ref=e867]: Greenwood, SC
+                  - generic [ref=e869]:
+                    - generic [ref=e871]:
+                      - text: Review
+                      - generic [ref=e872]: "1"
+                    - generic [ref=e874]:
+                      - text: Votes
+                      - generic [ref=e875]: "0"
+                  - generic [ref=e877]:
+                    - generic [ref=e879]:
+                      - text: Skill Level
+                      - generic [ref=e880]: Advanced DIY User
+                    - generic [ref=e882]:
+                      - text: Age
+                      - generic [ref=e883]: 65 or over
+                    - generic [ref=e885]:
+                      - text: Gender
+                      - generic [ref=e886]: Male
+              - generic [ref=e888]:
+                - generic [ref=e889]:
+                  - generic [ref=e890]:
+                    - img "4 out of 5 stars." [ref=e891]:
+                      - generic [ref=e892]:
+                        - img [ref=e893]
+                        - img [ref=e895]
+                        - img [ref=e897]
+                        - img [ref=e899]
+                        - img [ref=e901]
+                      - generic [ref=e903]: 4 out of 5 stars.
+                    - generic [ref=e904]:
+                      - heading "Another cordless system" [level=3] [ref=e905]
+                      - generic [ref=e909]: 5 years ago
+                  - generic [ref=e911]:
+                    - generic [ref=e912]: I bought this system because my previous Bosch drill, the batteries died and replacements aren't available, my Milwaukee multi tool systems, both 18V and M18 batteries died and replacement either aren't available or are as expensive as a new tool, which of course has an incompatible battery. So let's see how long these batteries last and how long before a design change obsoletes them. So far the drill and reciprocating saw are working fine for what I've use them for. Battery charge life is good, recharge is quick. I like the fact that Lithium batteries run full power until dead, no taper off of speed or power.
+                    - generic [ref=e914]:
+                      - img [ref=e918]
+                      - paragraph [ref=e927]: Yes, I recommend this product.
+                    - group "Content helpfulness" [ref=e930]:
+                      - generic [ref=e932]: Helpful?
+                      - generic [ref=e933]:
+                        - 'button "Yes: 0 people found this review by Artie John helpful." [ref=e934] [cursor=pointer]':
+                          - generic [ref=e935]:
+                            - img [ref=e937]
+                            - generic [ref=e939]: (0)
+                          - alert
+                        - 'button "No: 0 people did not find this review by Artie John helpful." [ref=e941] [cursor=pointer]':
+                          - generic [ref=e942]:
+                            - img [ref=e943]
+                            - generic [ref=e945]: (0)
+                          - alert
+                        - generic [ref=e947]:
+                          - button "Report this review Another cordless system by Artie John as inappropriate." [ref=e948] [cursor=pointer]: Report
+                          - alert
+                - generic [ref=e951]:
+                  - generic [ref=e952]: Quality of Product
+                  - generic [ref=e953]: Quality of Product, 4.0 out of 5
+                  - generic [ref=e960]: "4.0"
+                  - generic [ref=e961]: Value of Product
+                  - generic [ref=e962]: Value of Product, 4.0 out of 5
+                  - generic [ref=e969]: "4.0"
+          - region "5 out of 8 , Ratings 4 out of 5" [ref=e970]:
+            - generic [ref=e972]:
+              - generic [ref=e974]:
+                - button "See MinnesotaToolGuy profile. This action will open a modal dialog." [ref=e975]: MinnesotaToolGuy
+                - button "Incentivized Review" [ref=e977] [cursor=pointer]:
+                  - generic [ref=e978]:
+                    - img [ref=e980]
+                    - text: Incentivized Review
+                - generic [ref=e989]:
+                  - generic [ref=e990]: Minnesota
+                  - generic [ref=e992]:
+                    - generic [ref=e994]:
+                      - text: Reviews
+                      - generic [ref=e995]: "9"
+                    - generic [ref=e997]:
+                      - text: Vote
+                      - generic [ref=e998]: "1"
+                  - generic [ref=e1000]:
+                    - generic [ref=e1002]:
+                      - text: Age
+                      - generic [ref=e1003]: 35 to 44
+                    - generic [ref=e1005]:
+                      - text: Gender
+                      - generic [ref=e1006]: Male
+              - generic [ref=e1008]:
+                - generic [ref=e1009]:
+                  - generic [ref=e1010]:
+                    - img "4 out of 5 stars." [ref=e1011]:
+                      - generic [ref=e1012]:
+                        - img [ref=e1013]
+                        - img [ref=e1015]
+                        - img [ref=e1017]
+                        - img [ref=e1019]
+                        - img [ref=e1021]
+                      - generic [ref=e1023]: 4 out of 5 stars.
+                    - generic [ref=e1024]:
+                      - heading "Awesome combo kit" [level=3] [ref=e1025]
+                      - generic [ref=e1029]: 6 years ago
+                  - generic [ref=e1031]:
+                    - generic [ref=e1032]: I’d like to start off by thanking Bosch for the opportunity to try out and review this combo tool kit, overall this is a great starter kit and works well for both DIY and in the work place. I will add some other 18v tools they offer seeing the quality of these tools I’d be happy to retire some older power tools from my collection. I’ll start with my favorite tool in the combo and that would be “The FREAK” I was so pumped when I first seen this released, this is a perfect impact driver for many applications. I absolutely fell in love with the fact that I can carry one tool to use 1/2 sockets and 1/4 hex bits. I did run into one issue though my bit extension did not lock into the drill almost like the locking mechanism is deeper than my other impact drivers. I have seen complaints about it not being able to set a large lag into a 4x4 piece of lumber but I always pre drill a pilot hole first and believe it would do just fine. Another feature I really like is the trigger is pressure sensitive for speed control. Next I’ll move onto the Reciprocating Saw. I was also a fan of this it is light weight and easy to use in spots where a conventional one is very hard to use. I really like the fact that you can use it one handed for safety and convenience reasons it’s a more practical choice. Cuts good and isn’t a whole lot bigger than a 12v version I have. The light that comes with this set is a 300 lumens 6 led bright white compact work light. I’ll start with the positives, I was worried that being only 300 lumens that this would be dull and not really put out much light but I was wrong the light is bright and lights area, it is pretty compact/light weight and not bulky. The hook comes in handy but I wish it was metal because I worry I may accidentally snap it. I also really wish that it had a magnet for times when hanging it just isn’t a option. Overall it’s a good little work light and will come in real handy. And lastly the drill, it’s light weight and the grip has a good feel to it, I can tell it is still rugged as well it has a nice metal chuck not plastic , nothing was lost slimming the drill for comfort. It packs good power and drills pretty nice. The only downfall I really saw was I wish the led was higher up so it wouldn’t be blocked so easily. The kit also included a big bag but the downfall is there is no shoulder strap or any loops to add one so that makes a long walk to the job site a pain carrying it by the handle loaded up.
+                    - generic [ref=e1034]:
+                      - img [ref=e1038]
+                      - paragraph [ref=e1047]: Yes, I recommend this product.
+                    - list [ref=e1048]:
+                      - listitem [ref=e1049]:
+                        - button "Unleash the FREAK This action will open a modal dialog." [ref=e1050]
+                      - listitem [ref=e1052]:
+                        - button "A quality collection This action will open a modal dialog." [ref=e1053]
+                    - group "Content helpfulness" [ref=e1057]:
+                      - generic [ref=e1059]: Helpful?
+                      - generic [ref=e1060]:
+                        - 'button "Yes: 1 person found this review by MinnesotaToolGuy helpful." [ref=e1061] [cursor=pointer]':
+                          - generic [ref=e1062]:
+                            - img [ref=e1064]
+                            - generic [ref=e1066]: (1)
+                          - alert
+                        - 'button "No: 0 people did not find this review by MinnesotaToolGuy helpful." [ref=e1068] [cursor=pointer]':
+                          - generic [ref=e1069]:
+                            - img [ref=e1070]
+                            - generic [ref=e1072]: (0)
+                          - alert
+                        - generic [ref=e1074]:
+                          - button "Report this review Awesome combo kit by MinnesotaToolGuy as inappropriate." [ref=e1075] [cursor=pointer]: Report
+                          - alert
+                - generic [ref=e1078]:
+                  - generic [ref=e1079]: Value of Product
+                  - generic [ref=e1080]: Value of Product, 4.0 out of 5
+                  - generic [ref=e1087]: "4.0"
+          - region "6 out of 8 , Ratings 5 out of 5" [ref=e1088]:
+            - generic [ref=e1090]:
+              - generic [ref=e1092]:
+                - button "See norstar1 profile. This action will open a modal dialog." [ref=e1093]: norstar1
+                - button "Incentivized Review" [ref=e1095] [cursor=pointer]:
+                  - generic [ref=e1096]:
+                    - img [ref=e1098]
+                    - text: Incentivized Review
+                - generic [ref=e1107]:
+                  - generic [ref=e1108]: Plano,Texas
+                  - generic [ref=e1110]:
+                    - generic [ref=e1112]:
+                      - text: Reviews
+                      - generic [ref=e1113]: "3"
+                    - generic [ref=e1115]:
+                      - text: Votes
+                      - generic [ref=e1116]: "0"
+                  - generic [ref=e1118]:
+                    - generic [ref=e1120]:
+                      - text: Age
+                      - generic [ref=e1121]: 35 to 44
+                    - generic [ref=e1123]:
+                      - text: Gender
+                      - generic [ref=e1124]: Male
+              - generic [ref=e1126]:
+                - generic [ref=e1127]:
+                  - generic [ref=e1128]:
+                    - img "5 out of 5 stars." [ref=e1129]:
+                      - generic [ref=e1130]:
+                        - img [ref=e1131]
+                        - img [ref=e1133]
+                        - img [ref=e1135]
+                        - img [ref=e1137]
+                        - img [ref=e1139]
+                      - generic [ref=e1141]: 5 out of 5 stars.
+                    - generic [ref=e1142]:
+                      - heading "the Best Tool Kit on the Planet" [level=3] [ref=e1143]
+                      - generic [ref=e1147]: 6 years ago
+                  - generic [ref=e1149]:
+                    - generic [ref=e1150]: I love the Bosch Power Tools Set That Was Given to Try!!! I love the Many Products They Make. The Product Are Very Durable and Strong! Great Color to Help Identify the Products. I make a Wooden Shelf the The Tool Set. I will Buy again in the Future!!! I have Told Many of My Friends about the Products and More
+                    - generic [ref=e1152]:
+                      - img [ref=e1156]
+                      - paragraph [ref=e1165]: Yes, I recommend this product.
+                    - group "Content helpfulness" [ref=e1168]:
+                      - generic [ref=e1170]: Helpful?
+                      - generic [ref=e1171]:
+                        - 'button "Yes: 0 people found this review by norstar1 helpful." [ref=e1172] [cursor=pointer]':
+                          - generic [ref=e1173]:
+                            - img [ref=e1175]
+                            - generic [ref=e1177]: (0)
+                          - alert
+                        - 'button "No: 0 people did not find this review by norstar1 helpful." [ref=e1179] [cursor=pointer]':
+                          - generic [ref=e1180]:
+                            - img [ref=e1181]
+                            - generic [ref=e1183]: (0)
+                          - alert
+                        - generic [ref=e1185]:
+                          - button "Report this review the Best Tool Kit on the Planet by norstar1 as inappropriate." [ref=e1186] [cursor=pointer]: Report
+                          - alert
+                - generic [ref=e1189]:
+                  - generic [ref=e1190]: Value of Product
+                  - generic [ref=e1191]: Value of Product, 5.0 out of 5
+                  - generic [ref=e1198]: "5.0"
+          - region "7 out of 8 , Ratings 5 out of 5" [ref=e1199]:
+            - generic [ref=e1201]:
+              - generic [ref=e1203]:
+                - button "See Bhremod profile. This action will open a modal dialog." [ref=e1204]: Bhremod
+                - button "Incentivized Review" [ref=e1206] [cursor=pointer]:
+                  - generic [ref=e1207]:
+                    - img [ref=e1209]
+                    - text: Incentivized Review
+                - generic [ref=e1218]:
+                  - generic [ref=e1219]: Biloxi, MS
+                  - generic [ref=e1221]:
+                    - generic [ref=e1223]:
+                      - text: Review
+                      - generic [ref=e1224]: "1"
+                    - generic [ref=e1226]:
+                      - text: Vote
+                      - generic [ref=e1227]: "1"
+                  - generic [ref=e1229]:
+                    - generic [ref=e1231]:
+                      - text: Age
+                      - generic [ref=e1232]: 35 to 44
+                    - generic [ref=e1234]:
+                      - text: Gender
+                      - generic [ref=e1235]: Male
+              - generic [ref=e1237]:
+                - generic [ref=e1238]:
+                  - generic [ref=e1239]:
+                    - img "5 out of 5 stars." [ref=e1240]:
+                      - generic [ref=e1241]:
+                        - img [ref=e1242]
+                        - img [ref=e1244]
+                        - img [ref=e1246]
+                        - img [ref=e1248]
+                        - img [ref=e1250]
+                      - generic [ref=e1252]: 5 out of 5 stars.
+                    - generic [ref=e1253]:
+                      - heading "Very light tools with long lasting batteries!" [level=3] [ref=e1254]
+                      - generic [ref=e1258]: 6 years ago
+                  - generic [ref=e1260]:
+                    - generic [ref=e1261]: Pleasantly surprised at how powerful the saw saw is compared to other battery operated ones I have used in the past! The drill and impact are very light but that doesn't stop them from being powerful. The flashlight is so bright I lit up a whole big room using just the flashlight. The batteries last a long time, I used the drill all day long for work & then switched the battery to the flashlight & had the light on for 6 hours while I worked on a car & the battery only used 1 bar of power up.
+                    - generic [ref=e1263]:
+                      - img [ref=e1267]
+                      - paragraph [ref=e1276]: Yes, I recommend this product.
+                    - group "Content helpfulness" [ref=e1279]:
+                      - generic [ref=e1281]: Helpful?
+                      - generic [ref=e1282]:
+                        - 'button "Yes: 1 person found this review by Bhremod helpful." [ref=e1283] [cursor=pointer]':
+                          - generic [ref=e1284]:
+                            - img [ref=e1286]
+                            - generic [ref=e1288]: (1)
+                          - alert
+                        - 'button "No: 0 people did not find this review by Bhremod helpful." [ref=e1290] [cursor=pointer]':
+                          - generic [ref=e1291]:
+                            - img [ref=e1292]
+                            - generic [ref=e1294]: (0)
+                          - alert
+                        - generic [ref=e1296]:
+                          - button "Report this review Very light tools with long lasting batteries! by Bhremod as inappropriate." [ref=e1297] [cursor=pointer]: Report
+                          - alert
+                - generic [ref=e1300]:
+                  - generic [ref=e1301]: Value of Product
+                  - generic [ref=e1302]: Value of Product, 5.0 out of 5
+                  - generic [ref=e1309]: "5.0"
+          - region "8 out of 8 , Ratings 5 out of 5" [ref=e1310]:
+            - generic [ref=e1312]:
+              - generic [ref=e1314]:
+                - button "See BillyFred profile. This action will open a modal dialog." [ref=e1315]: BillyFred
+                - button "Incentivized Review" [ref=e1317] [cursor=pointer]:
+                  - generic [ref=e1318]:
+                    - img [ref=e1320]
+                    - text: Incentivized Review
+                - generic [ref=e1329]:
+                  - generic [ref=e1330]: Charlotte, NC
+                  - generic [ref=e1332]:
+                    - generic [ref=e1334]:
+                      - text: Reviews
+                      - generic [ref=e1335]: "4"
+                    - generic [ref=e1337]:
+                      - text: Votes
+                      - generic [ref=e1338]: "0"
+                  - generic [ref=e1340]:
+                    - generic [ref=e1342]:
+                      - text: Age
+                      - generic [ref=e1343]: 45 to 54
+                    - generic [ref=e1345]:
+                      - text: Gender
+                      - generic [ref=e1346]: Male
+              - generic [ref=e1348]:
+                - generic [ref=e1349]:
+                  - generic [ref=e1350]:
+                    - img "5 out of 5 stars." [ref=e1351]:
+                      - generic [ref=e1352]:
+                        - img [ref=e1353]
+                        - img [ref=e1355]
+                        - img [ref=e1357]
+                        - img [ref=e1359]
+                        - img [ref=e1361]
+                      - generic [ref=e1363]: 5 out of 5 stars.
+                    - generic [ref=e1364]:
+                      - heading "Excellent variety!" [level=3] [ref=e1365]
+                      - generic [ref=e1369]: 6 years ago
+                  - generic [ref=e1371]:
+                    - generic [ref=e1372]: "On the drill: This compact 18v drill did great in a room remodel job. I usually use a hammer drill for my projects so this was a perfect opportunity to try this, the drill was light weight and had plenty of power and life to get it done. The belt clip hanger was very useful also to keep the drill close at all times and helpful will climbing up and down the ladder. On the saw: I enjoyed this light weight powerful saw. I used it on a few jobs so far. The room remodel I used it in to remove bad framing, it cut through wood and nails with ease. Also used it to remove some tree branches, while on the ladder using the saw it was light weight and compact enough to use with one hand. This came in quite helpful. It also has a nice rubber grip for two handed use. On the Socket Ready impact driver: I have to say the best feature is the ability to use this with all of the different bits from any of my socket sets. This was great to add power and torch, it made the job faster for sure! On the light: The LED brings great bright white light for seeing everything even the small details. The hanging feature allows you to put it anywhere you need with hands free ease. The battery life was amazing, I literally had it on for 4 1/2 hours before shutting it off and it only used 1 bar on the battery. I had to work in someone’s walk in craw space white lighting was not bright enough for the work I need to do, and this brightened the project perfectly. On the storage bag: this bag is plenty big enough to hold everything and extra items you will need for any project. But I would have liked to have inside pockets on the sides of the bag for the smaller accessories, so they do not get lost in the large bag. A side pouch for the batteries would be nice, or separate compartments for each tool. A way to organize the tools rather just having them all thrown in. Would make finding what you need much easier and faster. Overall I really like this set. The light weight design is great for on the job. It makes maneuvering with cords and ladders much easier. And the hands free hooks make the tools much easier to carry."
+                    - generic [ref=e1374]:
+                      - img [ref=e1378]
+                      - paragraph [ref=e1387]: Yes, I recommend this product.
+                    - list [ref=e1388]:
+                      - listitem [ref=e1389]:
+                        - button "Remodel project - used the drill and saw o this project. This action will open a modal dialog." [ref=e1390]
+                      - listitem [ref=e1392]:
+                        - button "Using the light in a Craw space without lighting. This action will open a modal dialog." [ref=e1393]
+                      - listitem [ref=e1395]:
+                        - button "Using the light in the craw space was great. This action will open a modal dialog." [ref=e1396]
+                    - group "Content helpfulness" [ref=e1400]:
+                      - generic [ref=e1402]: Helpful?
+                      - generic [ref=e1403]:
+                        - 'button "Yes: 0 people found this review by BillyFred helpful." [ref=e1404] [cursor=pointer]':
+                          - generic [ref=e1405]:
+                            - img [ref=e1407]
+                            - generic [ref=e1409]: (0)
+                          - alert
+                        - 'button "No: 0 people did not find this review by BillyFred helpful." [ref=e1411] [cursor=pointer]':
+                          - generic [ref=e1412]:
+                            - img [ref=e1413]
+                            - generic [ref=e1415]: (0)
+                          - alert
+                        - generic [ref=e1417]:
+                          - button "Report this review Excellent variety! by BillyFred as inappropriate." [ref=e1418] [cursor=pointer]: Report
+                          - alert
+                - generic [ref=e1421]:
+                  - generic [ref=e1422]: Value of Product
+                  - generic [ref=e1423]: Value of Product, 5.0 out of 5
+                  - generic [ref=e1430]: "5.0"
+        - generic [ref=e1431]:
+          - alert [ref=e1432]
+          - alert [ref=e1433]
+          - generic [ref=e1434]:
+            - generic [ref=e1435]: 1 – 8 of 10 Reviews
+            - button "Previous Reviews" [disabled] [ref=e1436]:
+              - generic [ref=e1437]: Previous Reviews
+              - img [ref=e1439]
+            - button "Next Reviews" [ref=e1445] [cursor=pointer]:
+              - generic [ref=e1446]: Next Reviews
+              - img [ref=e1448]
+    - generic [ref=e1454]:
+      - generic:
+        - generic:  
+    - generic [ref=e1456]:
+      - heading "Downloads" [level=2] [ref=e1457]
+      - generic [ref=e1459]:
+        - text: User Manual
+        - paragraph
+        - link " User Manual | o202653v2_2610051971_0219_GDR18V1400_GDX18V1600.pdf (PDF 3.6 MB)" [ref=e1460] [cursor=pointer]:
+          - /url: https://ocsmedia.boschtools.com/binary/manualsmedia/o202653v2_2610051971_0219_GDR18V1400_GDX18V1600.pdf
+          - generic [ref=e1461]: 
+          - generic [ref=e1462]: User Manual | o202653v2_2610051971_0219_GDR18V1400_GDX18V1600.pdf (PDF 3.6 MB)
+        - link " User Manual | o202321v2_2610039327_0515_DDS181A_HDS181A.pdf (PDF 2.9 MB)" [ref=e1463] [cursor=pointer]:
+          - /url: https://ocsmedia.boschtools.com/binary/manualsmedia/o202321v2_2610039327_0515_DDS181A_HDS181A.pdf
+          - generic [ref=e1464]: 
+          - generic [ref=e1465]: User Manual | o202321v2_2610039327_0515_DDS181A_HDS181A.pdf (PDF 2.9 MB)
+        - link " User Manual | o190931v2_2610047949_0717_GLI18V300.pdf (PDF 1.5 MB)" [ref=e1466] [cursor=pointer]:
+          - /url: https://ocsmedia.boschtools.com/binary/manualsmedia/o190931v2_2610047949_0717_GLI18V300.pdf
+          - generic [ref=e1467]: 
+          - generic [ref=e1468]: User Manual | o190931v2_2610047949_0717_GLI18V300.pdf (PDF 1.5 MB)
+        - link " User Manual | o207209v2_2610051988_032020_GSA18V083.pdf (PDF 3.5 MB)" [ref=e1469] [cursor=pointer]:
+          - /url: https://ocsmedia.boschtools.com/binary/manualsmedia/o207209v2_2610051988_032020_GSA18V083.pdf
+          - generic [ref=e1470]: 
+          - generic [ref=e1471]: User Manual | o207209v2_2610051988_032020_GSA18V083.pdf (PDF 3.5 MB)
+        - link " User Manual | o245109v2_GAL18V20_Owne ... ions_2610056537_0620.pdf (PDF 1.3 MB)" [ref=e1472] [cursor=pointer]:
+          - /url: https://ocsmedia.boschtools.com/binary/manualsmedia/o245109v2_GAL18V20_Owners_Operating_Instructions_2610056537_0620.pdf
+          - generic [ref=e1473]: 
+          - generic [ref=e1474]: User Manual | o245109v2_GAL18V20_Owne ... ions_2610056537_0620.pdf (PDF 1.3 MB)
+        - link " User Manual | o245130v2_Battery_Charger_List_2610067470_122021.pdf (PDF 0.1 MB)" [ref=e1475] [cursor=pointer]:
+          - /url: https://ocsmedia.boschtools.com/binary/manualsmedia/o245130v2_Battery_Charger_List_2610067470_122021.pdf
+          - generic [ref=e1476]: 
+          - generic [ref=e1477]: User Manual | o245130v2_Battery_Charger_List_2610067470_122021.pdf (PDF 0.1 MB)
+  - complementary [ref=e1478]:
+    - link "to the top of the page" [ref=e1479] [cursor=pointer]:
+      - /url: "#scroll-top-toggler"
+      - generic [ref=e1480]: 
+  - contentinfo [ref=e1481]:
+    - generic [ref=e1483]:
+      - heading "Join our email list" [level=2] [ref=e1484]
+      - paragraph [ref=e1485]: Subscribe now for new product updates and more.
+      - link "Subscribe" [ref=e1486] [cursor=pointer]:
+        - /url: //www.boschtools.com/us/en/footer/newsletter-signup/
+    - generic [ref=e1489]:
+      - generic [ref=e1490]:
+        - generic [ref=e1493]:
+          - link "Power Tools" [ref=e1497] [cursor=pointer]
+          - region "Power Tools" [ref=e1498]:
+            - list [ref=e1499]:
+              - listitem [ref=e1500]: Power Tools
+              - listitem [ref=e1501]: 18V System
+              - listitem [ref=e1502]: Core18V
+              - listitem [ref=e1503]: Dust Control
+        - generic [ref=e1506]:
+          - link "Measuring Tools" [ref=e1510] [cursor=pointer]
+          - region "Measuring Tools" [ref=e1511]:
+            - list [ref=e1512]:
+              - listitem [ref=e1513]: Measuring Tools
+              - listitem [ref=e1514]: MeasureOn
+              - listitem [ref=e1515]: Laser Measures
+              - listitem [ref=e1516]: Rotary Lasers
+              - listitem [ref=e1517]: Line Lasers
+        - generic [ref=e1520]:
+          - link "Accessories" [ref=e1524] [cursor=pointer]
+          - region "Accessories" [ref=e1525]:
+            - list [ref=e1526]:
+              - listitem [ref=e1527]: Accessories
+              - listitem [ref=e1528]: Concrete Drill Bits
+              - listitem [ref=e1529]: Drilling
+              - listitem [ref=e1530]: Chiseling
+              - listitem [ref=e1531]: Sawing
+        - generic [ref=e1534]:
+          - link "About Bosch" [ref=e1538] [cursor=pointer]
+          - region "About Bosch" [ref=e1539]:
+            - list [ref=e1540]:
+              - listitem [ref=e1541]: About
+              - listitem [ref=e1542]: News
+              - listitem [ref=e1543]: AMPShare
+              - listitem [ref=e1544]: Safety
+              - listitem [ref=e1545]: Careers
+        - generic [ref=e1548]:
+          - link "Help Center" [ref=e1552] [cursor=pointer]
+          - region "Help Center" [ref=e1553]:
+            - list [ref=e1554]:
+              - listitem [ref=e1555]: Tool Repair
+              - listitem [ref=e1556]: Spare Parts
+              - listitem [ref=e1557]: User Manuals
+              - listitem [ref=e1558]: Warranty
+              - listitem [ref=e1559]: Contact Us
+              - listitem [ref=e1560]: Unsubscribe
+        - generic [ref=e1563]:
+          - link "Trade Solutions" [ref=e1567] [cursor=pointer]
+          - region "Trade Solutions" [ref=e1568]:
+            - list [ref=e1569]:
+              - listitem [ref=e1570]: Drywall
+              - listitem [ref=e1571]: General Contracting
+              - listitem [ref=e1572]: Carpentry
+              - listitem [ref=e1573]: Concrete
+              - listitem [ref=e1574]: Masonry & Restoration
+              - listitem [ref=e1575]: Demolition
+              - listitem [ref=e1576]: Electrician
+              - listitem [ref=e1577]: Framer
+              - listitem [ref=e1578]: Plumber
+              - listitem [ref=e1579]: Property Manager
+      - generic [ref=e1582]:
+        - generic [ref=e1584]: Follow us
+        - list [ref=e1586]:
+          - listitem [ref=e1587]:
+            - button "instagram" [ref=e1588] [cursor=pointer]:
+              - generic [ref=e1589]: 
+          - listitem [ref=e1590]:
+            - button "facebook" [ref=e1591] [cursor=pointer]:
+              - generic [ref=e1592]: 
+          - listitem [ref=e1593]:
+            - button "TikTok" [ref=e1594] [cursor=pointer]:
+              - generic [ref=e1595]: 
+          - listitem [ref=e1596]:
+            - button "YouTube" [ref=e1597] [cursor=pointer]:
+              - generic [ref=e1598]: 
+    - generic [ref=e1601]:
+      - list [ref=e1603]:
+        - listitem [ref=e1604]: © Robert Bosch Tool Corporation 2025, all rights reserved
+        - listitem [ref=e1605]: Privacy Notice
+        - listitem [ref=e1606]: Your Privacy Choices
+        - listitem [ref=e1607]: Notices
+        - listitem [ref=e1608]: Terms of Use
+        - listitem [ref=e1609]: Web Accessibility
+        - listitem [ref=e1610]: Product Recalls
+      - generic [ref=e1613] [cursor=pointer]: 
+  - generic: 
+```
