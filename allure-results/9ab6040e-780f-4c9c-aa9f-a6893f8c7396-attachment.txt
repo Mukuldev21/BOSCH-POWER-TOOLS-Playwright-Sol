@@ -1,0 +1,33 @@
+No visible consent banner found or timeout reached.
+Starting search for: saw
+SUCCESS: Search for "saw" was successful and results are displayed.
+DEBUG: Visible filter checkbox labels: [
+  'Power Tools\n                                                132',
+  'Table Saw Attachments\n                                            17',
+  'Track/Plunge Saw Attachments\n' +
+    '                                            14',
+  'Circular Saw Attachments\n                                            8',
+  'Jig Saw Attachments\n                                            7',
+  'Miter Saw Attachments\n                                            5',
+  'Cordless Jig Saws\n                                            4',
+  'Table Saws\n                                            2',
+  '18V Band Saws\n                                            2',
+  'Reciprocating Saw Attachments\n' +
+    '                                            1',
+  '12V Max Reciprocating Saws\n                                            1',
+  'Accessories\n                                                93',
+  'Jig Saw Blades\n                                            17',
+  'Reciprocating Saw Blades\n                                            11',
+  'Circular Saw Blades\n                                            10',
+  'Hole Saws\n                                            9',
+  'Other Saw Blades\n                                            8',
+  'Saw Blade & Hole Saw Sets\n                                            8',
+  'Saw Blade Sets\n                                            8',
+  'Diamond Cutting Blades\n                                            6',
+  'Multi-Tool Accessories\n                                            4',
+  'Sawing\n                                            4',
+  'Tiling\n                                            3',
+  'Diamond Hole Saws\n                                            2',
+  'Press Jaws\n                                            2',
+  'Cutting Discs\n                                            1'
+]

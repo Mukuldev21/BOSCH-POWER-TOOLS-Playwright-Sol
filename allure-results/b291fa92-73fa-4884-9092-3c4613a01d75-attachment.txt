@@ -1,0 +1,4 @@
+No visible consent banner found or timeout reached.
+Testing auto-suggest for partial term: drill
+SUCCESS: Auto-suggest for partial term "drill" checked for expected suggestions.
+Test case SEARCH-002 passed successfully.

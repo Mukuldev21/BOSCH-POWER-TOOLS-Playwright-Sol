@@ -52,4 +52,40 @@ test.describe('Category B: Product Search Functionality', () => {
 
         console.log('Test case SEARCH-002 passed successfully.');
     });
+    /**
+     * Test Case: SEARCH-003
+     * Description: Verify filtering by battery system on SRP.
+     * Steps:
+     *   1. Search for a generic tool type (e.g., "saw") that yields multiple results.
+     *   2. Locate the "Filter" or "Refine" section.
+     *   3. Select the filter for "18V System."
+     *   4. Apply the filter.
+     * Expected: The list of products updates, and only products matching the "18V System" criteria are displayed.
+     */
+    const batterySystemLabels = [
+        '18V Drill/Drivers',
+        '18V Hammer Drill/Drivers',
+        '12V Max Drill/Drivers',
+        'Cordless Drill/Drivers',
+        'Cordless Hammer Drill/Drivers',
+    ];
+
+    for (const batterySystemLabel of batterySystemLabels) {
+        test(`SEARCH-003: Should filter by battery system '${batterySystemLabel}' on SRP`, async ({ page }) => {
+            const homepage = new Homepage(page);
+            const searchpage = new Searchpage(page);
+            const toolType = 'drill';
+
+            await test.step('Navigate to Homepage and dismiss consent banner', async () => {
+                await homepage.navigate();
+                await homepage.dismissConsentBanner();
+            });
+
+            await test.step(`Search for tool type: ${toolType} and filter by battery system: ${batterySystemLabel}`, async () => {
+                await searchpage.filterByBatterySystem(toolType, batterySystemLabel);
+            });
+
+            console.log(`Test case SEARCH-003 passed for battery system: ${batterySystemLabel}`);
+        });
+    }
 });

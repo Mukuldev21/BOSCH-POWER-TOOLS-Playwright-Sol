@@ -1,3 +1,5 @@
+
+
 import { Page, Locator, expect } from '@playwright/test';
 
 export class Searchpage {
@@ -119,4 +121,72 @@ export class Searchpage {
         console.log(`SUCCESS: Auto-suggest for partial term "${partialTerm}" checked for expected suggestions.`);
         }
 
-}  
+    // --- SEARCH-003 Action Method ---
+    /**
+     * Filters SRP results by battery system (e.g., '18V System') after searching for a generic tool type.
+     * @param toolType The generic tool type to search for (e.g., 'saw').
+     * @param batterySystemLabel The label of the battery system filter (e.g., '18V System').
+     */
+    async filterByBatterySystem(toolType: string, batterySystemLabel: string) {
+        // 1. Search for the generic tool type
+        await this.searchForProduct(toolType);
+
+        // 2. Wait for the filter/refine section to be visible (try common selectors)
+        // Try dialog, aside, or region with filter/facet keywords
+        const filterSection = this.page.locator('dialog[aria-label*="Filter" i], aside[aria-label*="Filter" i], [aria-label*="Refine" i], [aria-label*="facet" i], [role="region"]:has-text("Filter")').first();
+        await filterSection.waitFor({ state: 'visible', timeout: 10000 }).catch(() => {});
+
+
+        // 3. Expand all filter groups to reveal hidden checkboxes
+        const expandButtons = this.page.locator('a[aria-expanded="false"], button[aria-expanded="false"], [role="button"][aria-expanded="false"]');
+        const expandCount = await expandButtons.count();
+        for (let i = 0; i < expandCount; i++) {
+            try {
+                await expandButtons.nth(i).click({ timeout: 1000 });
+            } catch (e) {
+                // Ignore if not clickable
+            }
+        }
+
+        // 4. Debug: Log all visible filter checkbox labels after expanding
+        const allCheckboxes = this.page.locator('input[type="checkbox"]');
+        const allLabels = await allCheckboxes.evaluateAll((nodes) => nodes.map(cb => {
+            // Try to get the label text associated with the checkbox
+            let label = cb.getAttribute('aria-label') || '';
+            if (!label && cb.id) {
+                const labelElem = document.querySelector(`label[for='${cb.id}']`);
+                if (labelElem) label = labelElem.textContent || '';
+            }
+            // Try parent label
+            if (!label && cb.parentElement && cb.parentElement.tagName.toLowerCase() === 'label') {
+                label = cb.parentElement.textContent || '';
+            }
+            return label.trim();
+        }));
+        console.log('DEBUG: Visible filter checkbox labels:', allLabels);
+
+        // 5. Find and select the battery system filter checkbox (by label text)
+        // Try to find a checkbox or label containing the battery system text
+        const batteryCheckbox = this.page.getByRole('checkbox', { name: new RegExp(batterySystemLabel, 'i') });
+        await batteryCheckbox.waitFor({ state: 'visible', timeout: 10000 });
+        await batteryCheckbox.check();
+
+        // 4. Wait for the results to update (URL or product list changes)
+        await this.page.waitForTimeout(2000); // Wait for filter to apply (adjust if needed)
+
+        // 5. Verify that all visible product cards match the battery system (by product text or tag)
+        // This is a generic check; you may want to refine the selector for your SRP
+        const productCards = this.page.locator('[data-track_moduletype="Product List"], .product-card');
+        const count = await productCards.count();
+        expect(count).toBeGreaterThan(0);
+
+        // Optionally, check that each product card contains the battery system label
+        for (let i = 0; i < count; i++) {
+            const card = productCards.nth(i);
+            const text = await card.textContent();
+            expect(text?.toLowerCase()).toContain(batterySystemLabel.toLowerCase());
+        }
+
+        console.log(`SUCCESS: Filtered by '${batterySystemLabel}' and verified all products match.`);
+    }
+}
