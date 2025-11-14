@@ -88,4 +88,33 @@ test.describe('Category B: Product Search Functionality', () => {
             console.log(`Test case SEARCH-003 passed for battery system: ${batterySystemLabel}`);
         });
     }
+
+     /**
+     * Test Case: SEARCH-004
+     * Description: Search for a non-existent product and verify the SRP displays a 'No Results Found' message or error state.
+     * Steps:
+     *   1. Search for a unique, fictional product code (e.g., "XYZ-999-BOSCH").
+     *   2. Verify the SRP displays a 'No Results Found' message or relevant error state.
+     */
+    test('SEARCH-004: Should show "No Results Found" for a non-existent product', async ({ page }) => {
+        const homepage = new Homepage(page);
+        const searchpage = new Searchpage(page);
+        const nonExistentProduct = 'XYZ-999-BOSCH';
+
+                await homepage.navigate();
+                await homepage.dismissConsentBanner();
+                await searchpage.searchForProduct(nonExistentProduct, { skipHeadingCheck: true });
+                // Pass if 'No Results Found' message is visible
+                if (await page.locator('text=No Results Found').first().isVisible().catch(() => false)) return;
+                // Pass if there are zero product cards
+                if ((await page.locator('[data-testid="product-card"]').count()) === 0) return;
+                // Pass if 'Products (0)' tab is present (no products, only fallback)
+                const productsTab = page.locator('a:has-text("Products")').first();
+                if (await productsTab.isVisible()) {
+                    const tabText = await productsTab.textContent();
+                    if (tabText && /Products\s*\(0\)/.test(tabText)) return;
+                }
+                // Otherwise, fail
+                expect(false).toBe(true);
+    });
 });
