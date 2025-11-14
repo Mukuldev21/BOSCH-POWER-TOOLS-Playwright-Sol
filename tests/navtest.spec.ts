@@ -52,8 +52,8 @@ test.describe('Category A: Site Integrity and Navigation (Smoke)', () => {
     });
 
 
-  // NAV-002: Verify main product category links are functional.
-    test('NAV-002: Verify main product category links are functional', async ({ page }) => {
+  // NAV-002: Verify main product category links are functional - Split into smaller tests
+    test('NAV-002a: Verify core category links (Power Tools, Accessories)', async ({ page }) => {
         const homepage = new Homepage(page);
 
         // Precondition: Ensure we are on the homepage and ready
@@ -71,30 +71,52 @@ test.describe('Category A: Site Integrity and Navigation (Smoke)', () => {
         await test.step('2. Click "Accessories" link and verify page loads', async () => {
             await homepage.clickAndVerifyCategoryLink(homepage.accessoriesLink, 'accessories');
         });
+    });
 
-        // Test Step 3: Click "Measuring Tools" and verify URL
-        await test.step('3. Click "Measuring Tools" link and verify page loads', async () => {
+    test('NAV-002b: Verify tools category links (Measuring Tools, Hand Tools)', async ({ page }) => {
+        const homepage = new Homepage(page);
+
+        // Precondition: Ensure we are on the homepage and ready
+        await test.step('Precondition: Navigate to Homepage and dismiss banner', async () => {
+            await homepage.navigate();
+            await homepage.dismissConsentBanner();
+        });
+
+        // Test Step 1: Click "Measuring Tools" and verify URL
+        await test.step('1. Click "Measuring Tools" link and verify page loads', async () => {
             await homepage.clickAndVerifyCategoryLink(homepage.measuringToolsLink, 'measuring-and-layout-tools');
         });
 
-        // NEW Step 4: Click "Hand Tools" link
-    await test.step('4. Click "Hand Tools" link and verify page loads', async () => {
-      await homepage.clickAndVerifyCategoryLink(homepage.handToolsLink, 'hand-tools');
+        // Test Step 2: Click "Hand Tools" link
+        await test.step('2. Click "Hand Tools" link and verify page loads', async () => {
+            await homepage.clickAndVerifyCategoryLink(homepage.handToolsLink, 'hand-tools');
+        });
     });
 
-    // NEW Step 5: Click "Service" link
-    await test.step('5. Click "Service" link and verify page loads', async () => {
-      await homepage.clickAndVerifyCategoryLink(homepage.serviceLink, 'service');
+    test('NAV-002c: Verify service category links (Service, Trade Solutions, New Products)', async ({ page }) => {
+        const homepage = new Homepage(page);
+
+        // Precondition: Ensure we are on the homepage and ready
+        await test.step('Precondition: Navigate to Homepage and dismiss banner', async () => {
+            await homepage.navigate();
+            await homepage.dismissConsentBanner();
+        });
+
+        // Test Step 1: Click "Service" link
+        await test.step('1. Click "Service" link and verify page loads', async () => {
+            await homepage.clickAndVerifyCategoryLink(homepage.serviceLink, 'service');
+        });
+        
+        // Test Step 2: Click "Trade Solutions" link
+        await test.step('2. Click "Trade Solutions" link and verify page loads', async () => {
+            await homepage.clickAndVerifyCategoryLink(homepage.tradeSolutionsLink, 'trade-solutions');  
+        });
+        
+        // Test Step 3: Click "New Products" link
+        await test.step('3. Click "New Products" link and verify page loads', async () => {
+            await homepage.clickAndVerifyCategoryLink(homepage.newProductsLink, 'new-products');  
+        });
     });
-    // NEW Step 6: Click "Trade Solutions" link
-    await test.step('6. Click "Trade Solutions" link and verify page loads', async () => {
-      await homepage.clickAndVerifyCategoryLink(homepage.tradeSolutionsLink, 'trade-solutions');  
-    });
-    // NEW Step 7: Click "New Products" link
-    await test.step('7. Click "New Products" link and verify page loads', async () => {
-      await homepage.clickAndVerifyCategoryLink(homepage.newProductsLink, 'new-products');  
-    });
-  });
 
   // NAV-003: Verify all footer links return HTTP 200 status.
     test('NAV-003: Verify all footer links return HTTP 200 status', async ({ page }) => {

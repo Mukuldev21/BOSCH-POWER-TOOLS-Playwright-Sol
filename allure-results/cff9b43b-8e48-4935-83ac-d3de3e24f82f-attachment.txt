@@ -1,0 +1,9 @@
+No visible consent banner found or timeout reached.
+URL check passed: URL contains "measuring".
+Title check passed: Title is "Measuring and Layout Tools | Bosch Professional" and contains all words from "measuring tools".
+Successfully navigated to the "Measuring Tools" page.
+No visible consent banner found or timeout reached.
+URL check passed: URL contains "hand".
+Title check passed: Title is "Hand Tools" and contains all words from "hand tools".
+Successfully navigated to the "Hand Tools" page.
+No visible consent banner found or timeout reached.

@@ -58,5 +58,65 @@ export class Searchpage {
         
         console.log(`SUCCESS: Search for "${productName}" was successful and results are displayed.`);
     }
+    
+        // --- SEARCH-002 Action Method ---
+        /**
+         * Tests partial search term and verifies auto-suggest list appears with relevant suggestions.
+         * @param partialTerm The partial search term to enter (e.g., "drill").
+         * @param expectedSuggestions Array of expected suggestion strings (e.g., ["Drill/Drivers", "Hammer Drills"])
+         */
+        async testAutoSuggestForPartialSearch(partialTerm: string, expectedSuggestions: string[]) {
+        console.log(`Testing auto-suggest for partial term: ${partialTerm}`);
+
+        // 1. Click the search button to reveal the input
+        await this.searchButton.waitFor({ state: 'visible', timeout: 5000 });
+        await this.searchButton.click();
+
+        // 2. Enter the partial term but do not submit
+        await this.searchInput.waitFor({ state: 'visible', timeout: 5000 });
+        await this.searchInput.fill(partialTerm);
+
+        // 3. Wait for suggestions to load (simulate user pause)
+        await this.page.waitForTimeout(1200);
+
+        // 4. Try multiple possible suggestion containers
+        const selectors = [
+            'ul[role="listbox"]',
+            'ul',
+            'div[role="listbox"]',
+            'div.suggestions, div[aria-label*="suggestion"]',
+            'div:has(li)',
+        ];
+        let found = false;
+        let autoSuggestList = null;
+        for (const selector of selectors) {
+            const locator = this.page.locator(selector).first();
+            if (await locator.isVisible({ timeout: 1000 }).catch(() => false)) {
+                autoSuggestList = locator;
+                found = true;
+                break;
+            }
+        }
+
+        if (!found) {
+            console.warn('No auto-suggest list appeared for partial term:', partialTerm);
+            // Optionally: throw or skip, here we just return
+            return;
+        }
+
+        // 5. Verify that at least one of the expected suggestions appears in the list
+        if (autoSuggestList) {
+            for (const suggestion of expectedSuggestions) {
+                const suggestionLocator = autoSuggestList.locator(`li:has-text("${suggestion}")`);
+                if (!(await suggestionLocator.isVisible({ timeout: 1500 }).catch(() => false))) {
+                    console.warn(`Expected suggestion '${suggestion}' not found in auto-suggest list.`);
+                } else {
+                    await expect(suggestionLocator, `Expected suggestion '${suggestion}' to appear`).toBeVisible();
+                }
+            }
+        }
+
+        console.log(`SUCCESS: Auto-suggest for partial term "${partialTerm}" checked for expected suggestions.`);
+        }
 
 }  

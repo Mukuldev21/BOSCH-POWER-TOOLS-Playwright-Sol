@@ -1,0 +1,4 @@
+No visible consent banner found or timeout reached.
+Starting search for: GWX10-45E
+SUCCESS: Search for "GWX10-45E" was successful and results are displayed.
+Test case SEARCH-001 passed successfully.

@@ -1,0 +1,13 @@
+No visible consent banner found or timeout reached.
+URL check passed: URL contains "service".
+Title check passed: Title is "Bosch service | Boschtools" and contains all words from "service".
+Successfully navigated to the "Service" page.
+No visible consent banner found or timeout reached.
+URL check passed: URL contains "trade".
+Title check passed: Title is "Trade Solutions | Boschtools" and contains all words from "trade solutions".
+Successfully navigated to the "Trade Solutions" page.
+No visible consent banner found or timeout reached.
+URL check passed: URL contains "new".
+Title check passed: Title is "New Products | Boschtools" and contains all words from "new products".
+Successfully navigated to the "New Products" page.
+No visible consent banner found or timeout reached.
