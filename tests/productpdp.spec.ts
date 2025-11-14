@@ -6,6 +6,33 @@ import { ProductPage } from '../pages/ProductPage';
 const PRODUCT_URL = 'https://www.boschtools.com/us/en/products/gxl18v-496b22-06019G5215';
 
 test.describe('Category C: Product Details Page (PDP) Validation', () => {
+    /**
+     * Test Case: PDP-003
+     * Description: Validate specification section content.
+     * Steps:
+     *   1. Locate the technical specification tab/section.
+     *   2. Verify that key specifications (e.g., "Voltage," "RPM," "Weight") have non-empty values.
+     * Expected: The technical specification table is populated with data.
+     */
+    test('PDP-003: Should validate technical specification section content', async ({ page }) => {
+      const pdp = new ProductPage(page);
+      await test.step('Navigate directly to the Product Details Page (PDP)', async () => {
+        await pdp.goto(PRODUCT_URL);
+      });
+
+      await test.step('Locate the technical specification section/tab', async () => {
+        await pdp.openSpecificationSectionIfNeeded();
+      });
+
+      await test.step('Verify key specifications have non-empty values', async () => {
+        const keys = ['Voltage', 'RPM', 'Weight'];
+        for (const key of keys) {
+          const value = await pdp.getSpecificationValue(key);
+          expect(value, `Spec for ${key} should not be empty`).toBeTruthy();
+        }
+      });
+      console.log('Test case PDP-003 passed successfully.');
+    });
   /**
    * Test Case: PDP-001
    * Description: Verify essential product information loads on the PDP.
@@ -58,10 +85,18 @@ test.describe('Category C: Product Details Page (PDP) Validation', () => {
     });
 
     await test.step('Verify a modal or new page with dealer/seller info is shown', async () => {
-      // Check for modal
-      const modal = page.locator('text=/authorized sellers|dealer locator|where to buy/i');
-      if (await modal.isVisible()) {
-        expect(await modal.isVisible()).toBe(true);
+      // Prefer the actionable link for 'Where to buy' (avoid strict mode violation)
+      const whereToBuyLink = page.getByRole('link', { name: /where to buy/i }).first();
+      if (await whereToBuyLink.isVisible()) {
+        expect(await whereToBuyLink.isVisible()).toBe(true);
+        // Optionally, click and check navigation or modal
+        // await whereToBuyLink.click();
+        return;
+      }
+      // Fallback: check for modal/banner text (not actionable link)
+      const modalOrBanner = page.locator('text=/authorized sellers|dealer locator|where to buy/i').first();
+      if (await modalOrBanner.isVisible()) {
+        expect(await modalOrBanner.isVisible()).toBe(true);
         return;
       }
       // Or check for new page

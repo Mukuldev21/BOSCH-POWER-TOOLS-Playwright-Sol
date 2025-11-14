@@ -1,0 +1,1055 @@
+Could not find spec for key 'RPM'. Spec section text: [
+  '\n' +
+    '    \n' +
+    '\n' +
+    '      \n' +
+    '\n' +
+    '\n' +
+    '\n' +
+    '      \n' +
+    '\n' +
+    '\n' +
+    '      \n' +
+    '\n' +
+    '        \n' +
+    '          \n' +
+    '            \n' +
+    '\n' +
+    '            \n' +
+    '              \n' +
+    '                Previous\n' +
+    '\n' +
+    '\n' +
+    '                    \n' +
+    '\n' +
+    '\n' +
+    '                    \n' +
+    '                      \n' +
+    '                      \n' +
+    '                    \n' +
+    '\n' +
+    '                  \n' +
+    '\n' +
+    '                  \n' +
+    '\n' +
+    '\n' +
+    '                    \n' +
+    '\n' +
+    '\n' +
+    '                    \n' +
+    '                      \n' +
+    '                      \n' +
+    '                    \n' +
+    '\n' +
+    '                  \n' +
+    '\n' +
+    '                  \n' +
+    '\n' +
+    '\n' +
+    '                    \n' +
+    '\n' +
+    '\n' +
+    '                    \n' +
+    '                      \n' +
+    '                      \n' +
+    '                    \n' +
+    '\n' +
+    '                  \n' +
+    '\n' +
+    '                  \n' +
+    '\n' +
+    '\n' +
+    '                    \n' +
+    '\n' +
+    '\n' +
+    '                    \n' +
+    '                      \n' +
+    '                      \n' +
+    '                    \n' +
+    '\n' +
+    '                  \n' +
+    '\n' +
+    '                  \n' +
+    '\n' +
+    '\n' +
+    '                    \n' +
+    '\n' +
+    '\n' +
+    '                    \n' +
+    '                      \n' +
+    '                      \n' +
+    '                    \n' +
+    '\n' +
+    '                  \n' +
+    '\n' +
+    '                  \n' +
+    '\n' +
+    '\n' +
+    '                    \n' +
+    '\n' +
+    '\n' +
+    '                    \n' +
+    '                      \n' +
+    '                      \n' +
+    '                    \n' +
+    '\n' +
+    '                  \n' +
+    '\n' +
+    '                  \n' +
+    '\n' +
+    '\n' +
+    '                    \n' +
+    '\n' +
+    '\n' +
+    '                    \n' +
+    '                      \n' +
+    '                      \n' +
+    '                    \n' +
+    '\n' +
+    '                  \n' +
+    '\n' +
+    '                  \n' +
+    '\n' +
+    '\n' +
+    '                    \n' +
+    '\n' +
+    '\n' +
+    '                    \n' +
+    '                      \n' +
+    '                      \n' +
+    '                    \n' +
+    '\n' +
+    '                  \n' +
+    '\n' +
+    '                  \n' +
+    '\n' +
+    '\n' +
+    '                    \n' +
+    '\n' +
+    '\n' +
+    '                    \n' +
+    '                      \n' +
+    '                      \n' +
+    '                    \n' +
+    '\n' +
+    '                  \n' +
+    '\n' +
+    '                  \n' +
+    '\n' +
+    '\n' +
+    '                    \n' +
+    '\n' +
+    '\n' +
+    '                    \n' +
+    '                      \n' +
+    '                      \n' +
+    '                    \n' +
+    '\n' +
+    '                  \n' +
+    '\n' +
+    '                  \n' +
+    '\n' +
+    '\n' +
+    '                    \n' +
+    '\n' +
+    '\n' +
+    '                    \n' +
+    '                      \n' +
+    '                      \n' +
+    '                    \n' +
+    '\n' +
+    '                  \n' +
+    '\n' +
+    '                  \n' +
+    '\n' +
+    '\n' +
+    '                    \n' +
+    '\n' +
+    '\n' +
+    '                    \n' +
+    '                      \n' +
+    '                      \n' +
+    '                    \n' +
+    '\n' +
+    '                  \n' +
+    '\n' +
+    '                  \n' +
+    '\n' +
+    '\n' +
+    '                    \n' +
+    '\n' +
+    '\n' +
+    '                    \n' +
+    '                      \n' +
+    '                      \n' +
+    '                    \n' +
+    '\n' +
+    '                  \n' +
+    '\n' +
+    '                  \n' +
+    '\n' +
+    '\n' +
+    '                    \n' +
+    '\n' +
+    '\n' +
+    '                    \n' +
+    '                      \n' +
+    '                      \n' +
+    '                    \n' +
+    '\n' +
+    '                  \n' +
+    '\n' +
+    '                  \n' +
+    '\n' +
+    '\n' +
+    '                    \n' +
+    '\n' +
+    '\n' +
+    '                    \n' +
+    '                      \n' +
+    '                      \n' +
+    '                    \n' +
+    '\n' +
+    '                  \n' +
+    '\n' +
+    '                  \n' +
+    '\n' +
+    '\n' +
+    '                    \n' +
+    '\n' +
+    '\n' +
+    '                    \n' +
+    '                      \n' +
+    '                      \n' +
+    '                    \n' +
+    '\n' +
+    '                  \n' +
+    '\n' +
+    '                  \n' +
+    '\n' +
+    '\n' +
+    '                    \n' +
+    '\n' +
+    '\n' +
+    '                    \n' +
+    '                      \n' +
+    '                      \n' +
+    '                    \n' +
+    '\n' +
+    '                  \n' +
+    '\n' +
+    '                  \n' +
+    '\n' +
+    '\n' +
+    '                    \n' +
+    '\n' +
+    '\n' +
+    '                    \n' +
+    '                      \n' +
+    '                      \n' +
+    '                    \n' +
+    '\n' +
+    '                  \n' +
+    '\n' +
+    '                  \n' +
+    '\n' +
+    '\n' +
+    '                    \n' +
+    '\n' +
+    '\n' +
+    '                    \n' +
+    '                      \n' +
+    '                      \n' +
+    '                    \n' +
+    '\n' +
+    '                  \n' +
+    '\n' +
+    '                  Next\n' +
+    '\n' +
+    '              \n' +
+    '\n' +
+    '              \n' +
+    '                \n' +
+    '                  \n' +
+    '                \n' +
+    '                \n' +
+    '                  \n' +
+    '                \n' +
+    '              \n' +
+    '            \n' +
+    '\n' +
+    '            \n' +
+    '\n' +
+    '              \n' +
+    '                \n' +
+    '                \n' +
+    '                  \n' +
+    '                  \n' +
+    '                \n' +
+    '\n' +
+    '                \n' +
+    '                \n' +
+    '                  \n' +
+    '                \n' +
+    '              \n' +
+    '\n' +
+    '                \n' +
+    '                \n' +
+    '              \n' +
+    '\n' +
+    '              \n' +
+    '                \n' +
+    '                \n' +
+    '                  \n' +
+    '                  \n' +
+    '                \n' +
+    '\n' +
+    '                \n' +
+    '                \n' +
+    '                  \n' +
+    '                \n' +
+    '              \n' +
+    '\n' +
+    '                \n' +
+    '                \n' +
+    '              \n' +
+    '\n' +
+    '              \n' +
+    '                \n' +
+    '                \n' +
+    '                  \n' +
+    '                  \n' +
+    '                \n' +
+    '\n' +
+    '                \n' +
+    '                \n' +
+    '                  \n' +
+    '                \n' +
+    '              \n' +
+    '\n' +
+    '                \n' +
+    '                \n' +
+    '              \n' +
+    '\n' +
+    '              \n' +
+    '                \n' +
+    '                \n' +
+    '                  \n' +
+    '                  \n' +
+    '                \n' +
+    '\n' +
+    '                \n' +
+    '                \n' +
+    '                  \n' +
+    '                \n' +
+    '              \n' +
+    '\n' +
+    '                \n' +
+    '                \n' +
+    '              \n' +
+    '\n' +
+    '              \n' +
+    '                \n' +
+    '                \n' +
+    '                  \n' +
+    '                  \n' +
+    '                \n' +
+    '\n' +
+    '                \n' +
+    '                \n' +
+    '                  \n' +
+    '                \n' +
+    '              \n' +
+    '\n' +
+    '                \n' +
+    '                \n' +
+    '              \n' +
+    '\n' +
+    '              \n' +
+    '                \n' +
+    '                \n' +
+    '                  \n' +
+    '                  \n' +
+    '                \n' +
+    '\n' +
+    '                \n' +
+    '                \n' +
+    '                  \n' +
+    '                \n' +
+    '              \n' +
+    '\n' +
+    '                \n' +
+    '                \n' +
+    '              \n' +
+    '\n' +
+    '              \n' +
+    '                \n' +
+    '                \n' +
+    '                  \n' +
+    '                  \n' +
+    '                \n' +
+    '\n' +
+    '                \n' +
+    '                \n' +
+    '                  \n' +
+    '                \n' +
+    '              \n' +
+    '\n' +
+    '                \n' +
+    '                \n' +
+    '              \n' +
+    '\n' +
+    '              \n' +
+    '                \n' +
+    '                \n' +
+    '                  \n' +
+    '                  \n' +
+    '                \n' +
+    '\n' +
+    '                \n' +
+    '                \n' +
+    '                  \n' +
+    '                \n' +
+    '              \n' +
+    '\n' +
+    '                \n' +
+    '                \n' +
+    '              \n' +
+    '\n' +
+    '              \n' +
+    '                \n' +
+    '                \n' +
+    '                  \n' +
+    '                  \n' +
+    '                \n' +
+    '\n' +
+    '                \n' +
+    '                \n' +
+    '                  \n' +
+    '                \n' +
+    '              \n' +
+    '\n' +
+    '                \n' +
+    '                \n' +
+    '              \n' +
+    '\n' +
+    '              \n' +
+    '                \n' +
+    '                \n' +
+    '                  \n' +
+    '                  \n' +
+    '                \n' +
+    '\n' +
+    '                \n' +
+    '                \n' +
+    '                  \n' +
+    '                \n' +
+    '              \n' +
+    '\n' +
+    '                \n' +
+    '                \n' +
+    '              \n' +
+    '\n' +
+    '              \n' +
+    '                \n' +
+    '                \n' +
+    '                  \n' +
+    '                  \n' +
+    '                \n' +
+    '\n' +
+    '                \n' +
+    '                \n' +
+    '                  \n' +
+    '                \n' +
+    '              \n' +
+    '\n' +
+    '                \n' +
+    '                \n' +
+    '              \n' +
+    '\n' +
+    '              \n' +
+    '                \n' +
+    '                \n' +
+    '                  \n' +
+    '                  \n' +
+    '                \n' +
+    '\n' +
+    '                \n' +
+    '                \n' +
+    '                  \n' +
+    '                \n' +
+    '              \n' +
+    '\n' +
+    '                \n' +
+    '                \n' +
+    '              \n' +
+    '\n' +
+    '              \n' +
+    '                \n' +
+    '                \n' +
+    '                  \n' +
+    '                  \n' +
+    '                \n' +
+    '\n' +
+    '                \n' +
+    '                \n' +
+    '                  \n' +
+    '                \n' +
+    '              \n' +
+    '\n' +
+    '                \n' +
+    '                \n' +
+    '              \n' +
+    '\n' +
+    '              \n' +
+    '                \n' +
+    '                \n' +
+    '                  \n' +
+    '                  \n' +
+    '                \n' +
+    '\n' +
+    '                \n' +
+    '                \n' +
+    '                  \n' +
+    '                \n' +
+    '              \n' +
+    '\n' +
+    '                \n' +
+    '                \n' +
+    '              \n' +
+    '\n' +
+    '              \n' +
+    '                \n' +
+    '                \n' +
+    '                  \n' +
+    '                  \n' +
+    '                \n' +
+    '\n' +
+    '                \n' +
+    '                \n' +
+    '                  \n' +
+    '                \n' +
+    '              \n' +
+    '\n' +
+    '                \n' +
+    '                \n' +
+    '              \n' +
+    '\n' +
+    '              \n' +
+    '                \n' +
+    '                \n' +
+    '                  \n' +
+    '                  \n' +
+    '                \n' +
+    '\n' +
+    '                \n' +
+    '                \n' +
+    '                  \n' +
+    '                \n' +
+    '              \n' +
+    '\n' +
+    '                \n' +
+    '                \n' +
+    '              \n' +
+    '\n' +
+    '              \n' +
+    '                \n' +
+    '                \n' +
+    '                  \n' +
+    '                  \n' +
+    '                \n' +
+    '\n' +
+    '                \n' +
+    '                \n' +
+    '                  \n' +
+    '                \n' +
+    '              \n' +
+    '\n' +
+    '                \n' +
+    '                \n' +
+    '              \n' +
+    '\n' +
+    '              \n' +
+    '                \n' +
+    '                \n' +
+    '                  \n' +
+    '                  \n' +
+    '                \n' +
+    '\n' +
+    '                \n' +
+    '                \n' +
+    '                  \n' +
+    '                \n' +
+    '              \n' +
+    '\n' +
+    '                \n' +
+    '                \n' +
+    '              \n' +
+    '\n' +
+    '              \n' +
+    '                \n' +
+    '                \n' +
+    '                  \n' +
+    '                  \n' +
+    '                \n' +
+    '\n' +
+    '                \n' +
+    '                \n' +
+    '                  \n' +
+    '                \n' +
+    '              \n' +
+    '\n' +
+    '                \n' +
+    '                \n' +
+    '              \n' +
+    '\n' +
+    '              \n' +
+    '\n' +
+    '              \n' +
+    '\n' +
+    '              \n' +
+    '\n' +
+    '              \n' +
+    '\n' +
+    '              \n' +
+    '\n' +
+    '              \n' +
+    '\n' +
+    '              \n' +
+    '\n' +
+    '              \n' +
+    '\n' +
+    '              \n' +
+    '\n' +
+    '              \n' +
+    '\n' +
+    '              \n' +
+    '\n' +
+    '            \n' +
+    '           1/19 \n' +
+    '        \n' +
+    '\n' +
+    '\n' +
+    '\n' +
+    '        \n' +
+    '          \n' +
+    '          \n' +
+    '\n' +
+    '          \n' +
+    '          GXL18V-496B22 Professional\n' +
+    '          Cordless Combo Kits\n' +
+    '          \n' +
+    '          \n' +
+    '  \n' +
+    '    \n' +
+    '  \n' +
+    '  \n' +
+    '  \n' +
+    '    GXL18V-496B22 18V 4-Tool Combo Kit with Compact Tough 1/2 In. Drill/Driver, Two-In-One 1/4 In. and 1/2 In. Bit/Socket Impact Driver/Wrench, Compact Reciprocating Saw, LED Worklight and (2) 2.0 Ah SlimPack Batteries/* == START CLEANSLATE == */\n' +
+    '/*!\n' +
+    '* This includes a subset of CleanSlate.\n' +
+    '*\n' +
+    '* ***IMPORTANT*** The only modifications to this code should be adding,\n' +
+    '* removing or namespacing rules.\n' +
+    '*\n' +
+    '* CleanSlate\n' +
+    '*   github.com/premasagar/cleanslate\n' +
+    '*\n' +
+    '*    An extreme CSS reset stylesheet, for normalising the styling of a container element and its children.\n' +
+    '*\n' +
+    '*    by Premasagar Rose\n' +
+    '*        dharmafly.com\n' +
+    '*\n' +
+    '*    license\n' +
+    '*        opensource.org/licenses/mit-license.php\n' +
+    '*\n' +
+    '*    v0.10.1\n' +
+    '*/\n' +
+    '[data-bv-show="rating_summary"] a,\n' +
+    '[data-bv-show="rating_summary"] span,\n' +
+    '[data-bv-show="rating_summary"] div,\n' +
+    '[data-bv-show="rating_summary"] svg,\n' +
+    '[data-bv-show="rating_summary"] path,\n' +
+    '[data-bv-show="rating_summary"] polygon,\n' +
+    '[data-bv-show="rating_summary"] button {\n' +
+    '  background-attachment: scroll !important;\n' +
+    '  background-color: transparent !important;\n' +
+    "  background-image: none !important; /* This rule affects the use of pngfix JavaScript http://dillerdesign.com/experiment/DD_BelatedPNG for IE6, which is used to force the browser to recognise alpha-transparent PNGs files that replace the IE6 lack of PNG transparency. (The rule overrides the VML image that is used to replace the given CSS background-image). If you don't know what that means, then you probably haven't used the pngfix script, and this comment may be ignored :) */\n" +
+    '  background-position: 0 0 !important;\n' +
+    '  background-repeat: repeat !important;\n' +
+    '  border-color: black !important;\n' +
+    '  border-color: currentColor !important; /* `border-color` should match font color. Modern browsers (incl. IE9) allow the use of "currentColor" to match the current font \'color\' value <http://www.w3.o'... 26580 more characters,
+  '\n' +
+    '    \n' +
+    '    \n' +
+    '        \n' +
+    '            Your Selected Variant\n' +
+    '            \n' +
+    '        \n' +
+    '        \n' +
+    '            \n' +
+    '                \n' +
+    '                    \n' +
+    '                        \n' +
+    '                        \n' +
+    '                    \n' +
+    '                \n' +
+    '                \n' +
+    '                    Your Selected Variant\n' +
+    '                    \n' +
+    '                        GXL18V-496B22 Professional\n' +
+    '                        \n' +
+    '                        \n' +
+    '                    \n' +
+    '                \n' +
+    '            \n' +
+    '            \n' +
+    '                \n' +
+    '                \n' +
+    '                    \n' +
+    '      \n' +
+    '      \n' +
+    '      \n' +
+    '      \n' +
+    '      \n' +
+    '      \n' +
+    '\n' +
+    '      \n' +
+    '\n' +
+    '    \n' +
+    '                \n' +
+    '            \n' +
+    '        \n' +
+    '    \n',
+  '\n' +
+    '    \n' +
+    '        \n' +
+    '            \n' +
+    '                Technical data\n' +
+    '            \n' +
+    '        \n' +
+    '        \n' +
+    '            \n' +
+    '                \n' +
+    '                    \n' +
+    '                        \n' +
+    '                            \n' +
+    '                                The most important data\n' +
+    '                            \n' +
+    '                        \n' +
+    '                    \n' +
+    '                    \n' +
+    '                        \n' +
+    '                            \n' +
+    '                                Battery\n' +
+    '                            \n' +
+    '                            \n' +
+    '                                Lithium-Ion Battery \n' +
+    '                            \n' +
+    '                        \n' +
+    '                        \n' +
+    '                            \n' +
+    '                                Battery Chemistry\n' +
+    '                            \n' +
+    '                            \n' +
+    '                                Lithium Ion \n' +
+    '                            \n' +
+    '                        \n' +
+    '                        \n' +
+    '                            \n' +
+    '                                Case Type\n' +
+    '                            \n' +
+    '                            \n' +
+    '                                Bag \n' +
+    '                            \n' +
+    '                        \n' +
+    '                        \n' +
+    '                            \n' +
+    '                                Height in\n' +
+    '                            \n' +
+    '                            \n' +
+    '                                7.9 "\n' +
+    '                            \n' +
+    '                        \n' +
+    '                        \n' +
+    '                            \n' +
+    '                                Length in\n' +
+    '                            \n' +
+    '                            \n' +
+    '                                7.5 "\n' +
+    '                            \n' +
+    '                        \n' +
+    '                        \n' +
+    '                            \n' +
+    '                                Number of Tools in Kit\n' +
+    '                            \n' +
+    '                            \n' +
+    '                                4 \n' +
+    '                            \n' +
+    '                        \n' +
+    '                        \n' +
+    '                            \n' +
+    '                                Weight\n' +
+    '                            \n' +
+    '                            \n' +
+    '                                2.6 lb\n' +
+    '                            \n' +
+    '                        \n' +
+    '                        \n' +
+    '                            \n' +
+    '                                Weight (lbs.)\n' +
+    '                            \n' +
+    '                            \n' +
+    '                                2.6 \n' +
+    '                            \n' +
+    '                        \n' +
+    '                        \n' +
+    '                            \n' +
+    '                                Width in\n' +
+    '                            \n' +
+    '                            \n' +
+    '                                3 "\n' +
+    '                            \n' +
+    '                        \n' +
+    '                        \n' +
+    '                            \n' +
+    '                                Includes\n' +
+    '                            \n' +
+    '                            \n' +
+    '                                (1) DDS181A 18V Compact Tough 1/2 In. Drill/Driver(1) GDX18V-1600 18V Two-In-One 1/4 In. and 1/2 In. Bit/Socket Impact Driver/Wrench(1) GSA18V-083 18V Compact Reciprocating Saw(1) GLI18V-300 18V Articulating LED Worklight(2) 18V Lithium-Ion 2.0 Ah SlimPack Batteries(1) 18V Charger(2) Belt Clips(2) Reciprocating Saw Blades(1) Bit Tip Set(1) Carrying Bag \n' +
+    '                            \n' +
+    '                        \n' +
+    '                    \n' +
+    '                \n' +
+    '                \n' +
+    '            \n' +
+    '            \n' +
+    '                \n' +
+    '                    \n' +
+    '                \n' +
+    '            \n' +
+    '        \n' +
+    '    \n',
+  '\n' +
+    '    \n' +
+    '        \n' +
+    '            \n' +
+    '                GXL18V-496B22 Professional: Further information\n' +
+    '                Product Highlights\n' +
+    "                The Bosch GXL18V-496B22 18V Cordless Four-Tool Kit is a convenient way to get into the Bosch's 18V platform. Included is the GDX18V-1800 two-in-one cordless impact driver/wrench for use with bits and sockets. It does two jobs with one tool and goes from impact wrench to impact driver fast. The DDS181A Drill/Driver features a compact motor with the same power as conventional 18V motors at a lighter weight. It produces 600 In.-Lbs. max torque. The GSA18V-083 Reciprocating Saw is 15-3/4 In. long and only 4.4 Lbs. (tool only), but it delivers 0-3,050 strokes per minute. The GLI18V-300 is a bright light with 300 minutes of runtime per amp hour. The kit comes with two 18V 2.0 Ah SlimPack batteries and a charger.\n" +
+    '                \n' +
+    '                \n' +
+    '                \n' +
+    '                \n' +
+    '                \n' +
+    '            \n' +
+    '        \n' +
+    '    \n',
+  '\n      \n        \n        \n      \n    ',
+  'Rating SnapshotSelect a row below to filter reviews.5 starsstars8 8 reviews with 5 stars. 4 starsstars2 2 reviews with 4 stars. 3 starsstars0 0 reviews with 3 stars. 2 starsstars0 0 reviews with 2 stars. 1 starstars0 0 reviews with 1 star. ',
+  'Overall Rating4.8 10 Reviews 9 out of 9 (100%) reviewers recommend this product6 of 10 reviewers received a sample product or took part in a promotion',
+  "jake90Incentivized ReviewGreen Bay, Wi Reviews 3 Votes 0Skill LevelAdvanced DIY User5 out of 5 stars.Great Tool SetIncentivized Review2 years agoI have been using this tool set for a few months. For different at home projects. I have used the impact drill to install a new wood handrail on my back patio. It has a great battery life and I was able to complete the project in one charge. I have used the reciprocating saw to cut wood and drywall in a basement bathroom remodel. It was east to handle and use the reciprocating saw. I would recommend this quality tool set to others.Yes, I recommend this product.Helpful?0 Helpful(0)0 Not helpful(0)  ReportQuality of ProductQuality of Product, 5.0 out of 55.0Value of ProductValue of Product, 5.0 out of 55.0MattyJBucks County Pennsylvania Reviews 2 Vote 1Skill LevelProfessional UserAge35 to 44GenderMale5 out of 5 stars.Absolute best on the market!5 years agoAbsolute no-brainer for everybody in America in the garage. Sell a company product and value all the way through. I am an 18-volt Bosch guy for life!Yes, I recommend this product.Helpful?1 Helpful(1)0 Not helpful(0)  ReportQuality of ProductQuality of Product, 5.0 out of 55.0Value of ProductValue of Product, 5.0 out of 55.0Melv715Jackson,NJ Reviews 2 Votes 0Skill LevelProfessional UserAge45 to 54GenderMale5 out of 5 stars.Great product5 years agoI bought this about two months ago. It is a great addition to my tool collection. I bought it tonite around the house for some home improvements, it worked well and seems it will last a long time. Great product.Yes, I recommend this product.Helpful?0 Helpful(0)0 Not helpful(0)  ReportQuality of ProductQuality of Product, 5.0 out of 55.0Value of ProductValue of Product, 5.0 out of 55.0Artie JohnGreenwood, SC Review 1 Votes 0Skill LevelAdvanced DIY UserAge65 or overGenderMale4 out of 5 stars.Another cordless system5 years agoI bought this system because my previous Bosch drill, the batteries died and replacements aren't available, my Milwaukee multi tool systems, both 18V and M18 batteries died and replacement either aren't available or are as expensive as a new tool, which of course has an incompatible battery.  So let's see how long these batteries last and how long before a design change obsoletes them.  So far the drill and reciprocating saw are working fine for what I've use them for.  Battery charge life is good, recharge is quick.  I like the fact that Lithium batteries run full power until dead, no taper off of speed or power.Yes, I recommend this product.Helpful?0 Helpful(0)0 Not helpful(0)  ReportQuality of ProductQuality of Product, 4.0 out of 54.0Value of ProductValue of Product, 4.0 out of 54.0MinnesotaToolGuyIncentivized ReviewMinnesota Reviews 9 Vote 1Age35 to 44GenderMale4 out of 5 stars.Awesome combo kitIncentivized Review6 years agoI’d like to start off by thanking Bosch for the opportunity to try out and review this combo tool kit, overall this is a great starter kit and works well for both DIY and in the work place.  I will add some other 18v tools they offer seeing the quality of these tools I’d be happy to retire some older power tools from my collection.\r\n" +
+    '\r\n' +
+    'I’ll start with my favorite tool in the combo and that would be “The FREAK” I was so pumped when I first seen this released, this is a perfect impact driver for many applications. I absolutely fell in love with the fact that I can carry one tool to use 1/2 sockets and 1/4 hex bits. I did run into one issue though my bit extension did not lock into the drill almost like the locking mechanism is deeper than my other impact drivers. I have seen complaints about it not being able to set a large lag into a 4x4 piece of lumber but I always pre drill a pilot hole first and believe it would do just fine. Another feature I really like is the trigger is pressure sensitive for speed control. \r\n' +
+    '\r\n' +
+    'Next I’ll move onto the Reciprocating Saw. I was also a fan of this it is light weight and easy to use in spots where a conventional one is very hard to use. I really like the fact that you can use it one handed for safety and convenience reasons it’s a more practical choice. Cuts good and isn’t a whole lot bigger than a 12v version I have. \r\n' +
+    '\r\n' +
+    'The light that comes with this set is a 300 lumens 6 led bright white compact work light. I’ll start with the positives, I was worried that being only 300 lumens that this would be dull and not really put out much light but I was wrong the light is bright and lights area, it is pretty compact/light weight and not bulky. The hook comes in handy but I wish it was metal because I worry I may accidentally snap it. I also really wish that it had a magnet for times when hanging it just isn’t a option. Overall it’s a good little work light and will come in real handy.\r\n' +
+    '\r\n' +
+    'And lastly the drill, it’s light weight and the grip has a good feel to it, I can tell it is still rugged as well it has a nice metal chuck not plastic , nothing was lost slimming the drill for comfort. It packs good power and drills pretty nice. The only downfall I really saw was I wish the led was higher up so it wouldn’t be blocked so easily.\r\n' +
+    '\r\n' +
+    "The kit also included a big bag but the downfall is there is no shoulder strap or any loops to add one so that makes a long walk to the job site a pain carrying it by the handle loaded up.Yes, I recommend this product.Helpful?1 Helpful(1)0 Not helpful(0)  ReportValue of ProductValue of Product, 4.0 out of 54.0norstar1Incentivized ReviewPlano,Texas Reviews 3 Votes 0Age35 to 44GenderMale5 out of 5 stars.the Best Tool Kit on the PlanetIncentivized Review6 years agoI love the Bosch Power Tools Set That Was Given to Try!!! I love the Many Products They Make. The Product Are Very Durable and Strong!   Great Color to Help Identify the Products. I make a Wooden Shelf the The Tool Set. I will Buy again in the Future!!!  I have Told Many of My Friends about the Products and MoreYes, I recommend this product.Helpful?0 Helpful(0)0 Not helpful(0)  ReportValue of ProductValue of Product, 5.0 out of 55.0BhremodIncentivized ReviewBiloxi, MS Review 1 Vote 1Age35 to 44GenderMale5 out of 5 stars.Very light tools with long lasting batteries!Incentivized Review6 years agoPleasantly surprised at how powerful the saw saw is compared to other battery operated ones I have used in the past! The drill and impact are very light but that doesn't stop them from being powerful. The flashlight is so bright I lit up a whole big room using just the flashlight. The batteries last a long time, I used the drill all day long for work & then switched the battery to the flashlight & had the light on for 6 hours while I worked on a car & the battery only used 1 bar of power up.Yes, I recommend this product.Helpful?1 Helpful(1)0 Not helpful(0)  ReportValue of ProductValue of Product, 5.0 out of 55.0BillyFredIncentivized ReviewCharlotte, NC Reviews 4 Votes 0Age45 to 54GenderMale5 out of 5 stars.Excellent variety!Incentivized Review6 years agoOn the drill: This compact 18v drill did great in a room remodel job. I usually use a hammer drill for my projects so this was a perfect opportunity to try this, the drill was light weight and had plenty of power and life to get it done. The belt clip hanger was very useful also to keep the drill close at all times and helpful will climbing up and down the ladder. \r\n" +
+    '\r\n' +
+    'On the saw: I enjoyed this light weight powerful saw. I used it on a few jobs so far. The room remodel I used it in to remove bad framing, it cut through wood and nails with ease. Also used it to remove some tree branches, while on the ladder using the saw it was light weight and compact enough to use with one hand. This came in quite helpful. It also has a nice rubber grip for two handed use. \r\n' +
+    '\r\n' +
+    'On the Socket Ready impact driver: I have to say the best feature is the ability to use this with all of the different bits from any of my socket sets. This was great to add power and torch, it made the job faster for sure! \r\n' +
+    '\r\n' +
+    'On the light: The LED brings great bright white light for seeing everything even the small details. The hanging feature allows you to put it anywhere you need with hands free ease. The battery life was amazing, I literally had it on for 4 1/2 hours before shutting it off and it only used 1 bar on the battery. I had to work in someone’s walk in craw space white lighting was not bright enough for the work I need to do, and this brightened the project perfectly. \r\n' +
+    '\r\n' +
+    'On the storage bag: this bag is plenty big enough to hold everything and extra items you will need for any project. But I would have liked to have inside pockets on the sides of the bag for the smaller accessories, so they do not get lost in the large bag. A side pouch for the batteries would be nice, or separate compartments for each tool. A way to organize the tools rather just having them all thrown in. Would make finding what you need much easier and faster. \r\n' +
+    '\r\n' +
+    'Overall I really like this set. The light weight design is great for on the job. It makes maneuvering with cords and ladders much easier. And the hands free hooks make the tools much easier to carry.Yes, I recommend this product.Helpful?0 Helpful(0)0 Not helpful(0)  ReportValue of ProductValue of Product, 5.0 out of 55.0',
+  'jake90Incentivized ReviewGreen Bay, Wi Reviews 3 Votes 0Skill LevelAdvanced DIY User5 out of 5 stars.Great Tool SetIncentivized Review2 years agoI have been using this tool set for a few months. For different at home projects. I have used the impact drill to install a new wood handrail on my back patio. It has a great battery life and I was able to complete the project in one charge. I have used the reciprocating saw to cut wood and drywall in a basement bathroom remodel. It was east to handle and use the reciprocating saw. I would recommend this quality tool set to others.Yes, I recommend this product.Helpful?0 Helpful(0)0 Not helpful(0)  ReportQuality of ProductQuality of Product, 5.0 out of 55.0Value of ProductValue of Product, 5.0 out of 55.0',
+  'MattyJBucks County Pennsylvania Reviews 2 Vote 1Skill LevelProfessional UserAge35 to 44GenderMale5 out of 5 stars.Absolute best on the market!5 years agoAbsolute no-brainer for everybody in America in the garage. Sell a company product and value all the way through. I am an 18-volt Bosch guy for life!Yes, I recommend this product.Helpful?1 Helpful(1)0 Not helpful(0)  ReportQuality of ProductQuality of Product, 5.0 out of 55.0Value of ProductValue of Product, 5.0 out of 55.0',
+  'Melv715Jackson,NJ Reviews 2 Votes 0Skill LevelProfessional UserAge45 to 54GenderMale5 out of 5 stars.Great product5 years agoI bought this about two months ago. It is a great addition to my tool collection. I bought it tonite around the house for some home improvements, it worked well and seems it will last a long time. Great product.Yes, I recommend this product.Helpful?0 Helpful(0)0 Not helpful(0)  ReportQuality of ProductQuality of Product, 5.0 out of 55.0Value of ProductValue of Product, 5.0 out of 55.0',
+  "Artie JohnGreenwood, SC Review 1 Votes 0Skill LevelAdvanced DIY UserAge65 or overGenderMale4 out of 5 stars.Another cordless system5 years agoI bought this system because my previous Bosch drill, the batteries died and replacements aren't available, my Milwaukee multi tool systems, both 18V and M18 batteries died and replacement either aren't available or are as expensive as a new tool, which of course has an incompatible battery.  So let's see how long these batteries last and how long before a design change obsoletes them.  So far the drill and reciprocating saw are working fine for what I've use them for.  Battery charge life is good, recharge is quick.  I like the fact that Lithium batteries run full power until dead, no taper off of speed or power.Yes, I recommend this product.Helpful?0 Helpful(0)0 Not helpful(0)  ReportQuality of ProductQuality of Product, 4.0 out of 54.0Value of ProductValue of Product, 4.0 out of 54.0",
+  'MinnesotaToolGuyIncentivized ReviewMinnesota Reviews 9 Vote 1Age35 to 44GenderMale4 out of 5 stars.Awesome combo kitIncentivized Review6 years agoI’d like to start off by thanking Bosch for the opportunity to try out and review this combo tool kit, overall this is a great starter kit and works well for both DIY and in the work place.  I will add some other 18v tools they offer seeing the quality of these tools I’d be happy to retire some older power tools from my collection.\r\n' +
+    '\r\n' +
+    'I’ll start with my favorite tool in the combo and that would be “The FREAK” I was so pumped when I first seen this released, this is a perfect impact driver for many applications. I absolutely fell in love with the fact that I can carry one tool to use 1/2 sockets and 1/4 hex bits. I did run into one issue though my bit extension did not lock into the drill almost like the locking mechanism is deeper than my other impact drivers. I have seen complaints about it not being able to set a large lag into a 4x4 piece of lumber but I always pre drill a pilot hole first and believe it would do just fine. Another feature I really like is the trigger is pressure sensitive for speed control. \r\n' +
+    '\r\n' +
+    'Next I’ll move onto the Reciprocating Saw. I was also a fan of this it is light weight and easy to use in spots where a conventional one is very hard to use. I really like the fact that you can use it one handed for safety and convenience reasons it’s a more practical choice. Cuts good and isn’t a whole lot bigger than a 12v version I have. \r\n' +
+    '\r\n' +
+    'The light that comes with this set is a 300 lumens 6 led bright white compact work light. I’ll start with the positives, I was worried that being only 300 lumens that this would be dull and not really put out much light but I was wrong the light is bright and lights area, it is pretty compact/light weight and not bulky. The hook comes in handy but I wish it was metal because I worry I may accidentally snap it. I also really wish that it had a magnet for times when hanging it just isn’t a option. Overall it’s a good little work light and will come in real handy.\r\n' +
+    '\r\n' +
+    'And lastly the drill, it’s light weight and the grip has a good feel to it, I can tell it is still rugged as well it has a nice metal chuck not plastic , nothing was lost slimming the drill for comfort. It packs good power and drills pretty nice. The only downfall I really saw was I wish the led was higher up so it wouldn’t be blocked so easily.\r\n' +
+    '\r\n' +
+    'The kit also included a big bag but the downfall is there is no shoulder strap or any loops to add one so that makes a long walk to the job site a pain carrying it by the handle loaded up.Yes, I recommend this product.Helpful?1 Helpful(1)0 Not helpful(0)  ReportValue of ProductValue of Product, 4.0 out of 54.0',
+  'norstar1Incentivized ReviewPlano,Texas Reviews 3 Votes 0Age35 to 44GenderMale5 out of 5 stars.the Best Tool Kit on the PlanetIncentivized Review6 years agoI love the Bosch Power Tools Set That Was Given to Try!!! I love the Many Products They Make. The Product Are Very Durable and Strong!   Great Color to Help Identify the Products. I make a Wooden Shelf the The Tool Set. I will Buy again in the Future!!!  I have Told Many of My Friends about the Products and MoreYes, I recommend this product.Helpful?0 Helpful(0)0 Not helpful(0)  ReportValue of ProductValue of Product, 5.0 out of 55.0',
+  "BhremodIncentivized ReviewBiloxi, MS Review 1 Vote 1Age35 to 44GenderMale5 out of 5 stars.Very light tools with long lasting batteries!Incentivized Review6 years agoPleasantly surprised at how powerful the saw saw is compared to other battery operated ones I have used in the past! The drill and impact are very light but that doesn't stop them from being powerful. The flashlight is so bright I lit up a whole big room using just the flashlight. The batteries last a long time, I used the drill all day long for work & then switched the battery to the flashlight & had the light on for 6 hours while I worked on a car & the battery only used 1 bar of power up.Yes, I recommend this product.Helpful?1 Helpful(1)0 Not helpful(0)  ReportValue of ProductValue of Product, 5.0 out of 55.0",
+  'BillyFredIncentivized ReviewCharlotte, NC Reviews 4 Votes 0Age45 to 54GenderMale5 out of 5 stars.Excellent variety!Incentivized Review6 years agoOn the drill: This compact 18v drill did great in a room remodel job. I usually use a hammer drill for my projects so this was a perfect opportunity to try this, the drill was light weight and had plenty of power and life to get it done. The belt clip hanger was very useful also to keep the drill close at all times and helpful will climbing up and down the ladder. \r\n' +
+    '\r\n' +
+    'On the saw: I enjoyed this light weight powerful saw. I used it on a few jobs so far. The room remodel I used it in to remove bad framing, it cut through wood and nails with ease. Also used it to remove some tree branches, while on the ladder using the saw it was light weight and compact enough to use with one hand. This came in quite helpful. It also has a nice rubber grip for two handed use. \r\n' +
+    '\r\n' +
+    'On the Socket Ready impact driver: I have to say the best feature is the ability to use this with all of the different bits from any of my socket sets. This was great to add power and torch, it made the job faster for sure! \r\n' +
+    '\r\n' +
+    'On the light: The LED brings great bright white light for seeing everything even the small details. The hanging feature allows you to put it anywhere you need with hands free ease. The battery life was amazing, I literally had it on for 4 1/2 hours before shutting it off and it only used 1 bar on the battery. I had to work in someone’s walk in craw space white lighting was not bright enough for the work I need to do, and this brightened the project perfectly. \r\n' +
+    '\r\n' +
+    'On the storage bag: this bag is plenty big enough to hold everything and extra items you will need for any project. But I would have liked to have inside pockets on the sides of the bag for the smaller accessories, so they do not get lost in the large bag. A side pouch for the batteries would be nice, or separate compartments for each tool. A way to organize the tools rather just having them all thrown in. Would make finding what you need much easier and faster. \r\n' +
+    '\r\n' +
+    'Overall I really like this set. The light weight design is great for on the job. It makes maneuvering with cords and ladders much easier. And the hands free hooks make the tools much easier to carry.Yes, I recommend this product.Helpful?0 Helpful(0)0 Not helpful(0)  ReportValue of ProductValue of Product, 5.0 out of 55.0',
+  '\n' +
+    '    \n' +
+    '        \n' +
+    '        \n' +
+    '        \n' +
+    '\n' +
+    '            \n' +
+    '\n' +
+    '            \n' +
+    '\n' +
+    '            \n' +
+    '\n' +
+    '            \n' +
+    '\n' +
+    '            \n' +
+    '\n' +
+    '            \n' +
+    '\n' +
+    '            \n' +
+    '\n' +
+    '            \n' +
+    '\n' +
+    '            \n' +
+    '\n' +
+    '            \n' +
+    '\n' +
+    '            \n' +
+    '\n' +
+    '            \n' +
+    '\n' +
+    '            \n' +
+    '\n' +
+    '            \n' +
+    '\n' +
+    '            \n' +
+    '\n' +
+    '            \n' +
+    '\n' +
+    '            \n' +
+    '\n' +
+    '            \n' +
+    '\n' +
+    '            \n' +
+    '\n' +
+    '          \n' +
+    '    \n',
+  '\n' +
+    '\n' +
+    '        \n' +
+    '            \n' +
+    '                Downloads\n' +
+    '            \n' +
+    '            \n' +
+    '                \n' +
+    '\n' +
+    '                    \n' +
+    '\n' +
+    '                    \n' +
+    '                        \n' +
+    '\n' +
+    '                            \n' +
+    '\n' +
+    '                                \n' +
+    '                                    \n' +
+    '                                        User Manual\n' +
+    '                                    \n' +
+    '                                    \n' +
+    '                                    \n' +
+    '                                        \n' +
+    '                                        \n' +
+    '                                            \n' +
+    '                                                \n' +
+    '                                                User Manual | o202653v2_2610051971_0219_GDR18V1400_GDX18V1600.pdf (PDF 3.6 MB)\n' +
+    '                                            \n' +
+    '                                        \n' +
+    '                                    \n' +
+    '                                        \n' +
+    '                                        \n' +
+    '                                            \n' +
+    '                                                \n' +
+    '                                                User Manual | o202321v2_2610039327_0515_DDS181A_HDS181A.pdf (PDF 2.9 MB)\n' +
+    '                                            \n' +
+    '                                        \n' +
+    '                                    \n' +
+    '                                        \n' +
+    '                                        \n' +
+    '                                            \n' +
+    '                                                \n' +
+    '                                                User Manual | o190931v2_2610047949_0717_GLI18V300.pdf (PDF 1.5 MB)\n' +
+    '                                            \n' +
+    '                                        \n' +
+    '                                    \n' +
+    '                                        \n' +
+    '                                        \n' +
+    '                                            \n' +
+    '                                                \n' +
+    '                                                User Manual | o207209v2_2610051988_032020_GSA18V083.pdf (PDF 3.5 MB)\n' +
+    '                                            \n' +
+    '                                        \n' +
+    '                                    \n' +
+    '                                        \n' +
+    '                                        \n' +
+    '                                            \n' +
+    '                                                \n' +
+    '                                                User Manual | o245109v2_GAL18V20_Owne ... ions_2610056537_0620.pdf (PDF 1.3 MB)\n' +
+    '                                            \n' +
+    '                                        \n' +
+    '                                    \n' +
+    '                                        \n' +
+    '                                        \n' +
+    '                                            \n' +
+    '                                                \n' +
+    '                                                User Manual | o245130v2_Battery_Charger_List_2610067470_122021.pdf (PDF 0.1 MB)\n' +
+    '                                            \n' +
+    '                                        \n' +
+    '                                    \n' +
+    '                                \n' +
+    '\n' +
+    '                                \n' +
+    '\n' +
+    '                                \n' +
+    '\n' +
+    '                              \n' +
+    '\n' +
+    '                                \n' +
+    '\n' +
+    '                                \n' +
+    '\n' +
+    '                                \n' +
+    '\n' +
+    '                                \n' +
+    '\n' +
+    '                              \n' +
+    '\n' +
+    '                                \n' +
+    '\n' +
+    '                                \n' +
+    '                            \n' +
+    '                        \n' +
+    '                    \n' +
+    '                \n' +
+    '            \n' +
+    '        \n' +
+    '\n' +
+    '    ',
+  '\n' +
+    '\n' +
+    '\n' +
+    'Join our email list\n' +
+    '\n' +
+    'Subscribe now for new product updates and more.\n' +
+    '\n' +
+    'Subscribe\n' +
+    '\n' +
+    '\n'
+]
