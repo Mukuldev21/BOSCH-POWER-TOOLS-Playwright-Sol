@@ -105,12 +105,26 @@ export class DealerLocatorPage {
 
   async assertDealersOrMapVisible() {
     // Wait for results: map or dealer list
-    const map = this.page.locator('iframe, [id*="map" i], [class*="map" i]').first();
-    const list = this.page.locator('[class*="dealer" i], [class*="result" i], ul, ol').first();
-    // Wait for either map or list to be visible
-    await expect(
-      map.or(list),
-      'Dealer map or list should be visible after search'
-    ).toBeVisible({ timeout: 15000 });
+    // Be more specific to avoid matching hidden iframes and navigation menus
+    const map = this.page.locator('iframe:visible, [id*="map" i]:visible, [class*="map" i]:visible').first();
+    const list = this.page.locator('[class*="dealer" i]:visible, [class*="result" i]:visible, [class*="location" i]:visible, [data-testid*="dealer" i]:visible').first();
+
+    // Try to wait for either map or list to be visible
+    try {
+      await expect(
+        map.or(list),
+        'Dealer map or list should be visible after search'
+      ).toBeVisible({ timeout: 15000 });
+    } catch (error) {
+      // If the .or() fails due to strict mode, try each individually
+      const mapVisible = await map.isVisible().catch(() => false);
+      const listVisible = await list.isVisible().catch(() => false);
+
+      if (!mapVisible && !listVisible) {
+        // Log what's on the page for debugging
+        console.log('Current URL:', this.page.url());
+        throw new Error('Neither dealer map nor dealer list is visible after search');
+      }
+    }
   }
 }
