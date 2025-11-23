@@ -3,7 +3,12 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "scripts": {},
+  "scripts": {
+    "report:generate": "node_modules\\\\allure-commandline\\\\dist\\\\bin\\\\allure.bat generate allure-results --clean",
+    "report:open": "node_modules\\\\allure-commandline\\\\dist\\\\bin\\\\allure.bat open allure-report",
+    "clean:results": "if exist allure-results rmdir /s /q allure-results",
+    "test:report": "npm run clean:results && npx playwright test && npm run report:generate && npm run report:open"
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",

@@ -6,6 +6,9 @@ export class Searchpage {
     readonly searchInput: Locator;  
     readonly firstSearchResultCard: Locator;
 
+    readonly autoSuggestContainer: Locator;
+    readonly autoSuggestItems: Locator; 
+
     constructor(page: Page) {
         this.page = page;  
         this.searchButton = page.getByRole('button', { name: 'Onsite Search', exact: true }); 
@@ -14,6 +17,11 @@ export class Searchpage {
         // or that it is located by its type/name after clicking the button.
         this.searchInput = page.getByRole('combobox', { name: 'Search' });
         this.firstSearchResultCard = page.locator('[data-track_moduletype="Product List"]').first();
+
+        // Locators for Auto-Suggest Feature
+        this.autoSuggestContainer = page.locator('[class*="searchResults"], [class*="searchSuggestion"], ul[role="listbox"]');
+        this.autoSuggestItems = this.autoSuggestContainer.locator('a, li');
+          
     }   
 
     // --- SEARCH-001 Action Method ---
@@ -57,6 +65,48 @@ export class Searchpage {
         await expect(srpHeading).toContainText(productName, { ignoreCase: true, timeout: 5000 });
         
         console.log(`SUCCESS: Search for "${productName}" was successful and results are displayed.`);
+    }
+
+    // --- SEARCH-002 Action Method ---
+
+    /**
+     * Tests the auto-suggest feature by entering a partial product name and verifying suggestions appear.
+     * @param partialProductName The partial name of the product to trigger auto-suggestions.
+     */
+    async verifyAutoSuggest(partialProductName: string, expectedSuggestions?: string[]) {
+        console.log(`Testing auto-suggest with input: ${partialProductName}`); 
+        
+        // 1. Click the search button to reveal the input
+        await this.searchButton.waitFor({ state: 'visible', timeout: 5000 });
+        await this.searchButton.click(); 
+
+    
+        
+        // 2. Enter the partial product name
+        await this.searchInput.waitFor({ state: 'visible', timeout: 5000 });
+        await this.searchInput.fill(partialProductName);
+        
+        
+        // 3. Verify that the auto-suggest container appears
+        await this.autoSuggestContainer.waitFor({ state: 'visible', timeout: 7000 });
+        await expect(this.autoSuggestContainer).toBeVisible();
+        
+        
+
+        // 4. Verify that at least one suggestion is listed
+        const suggestionCount = await this.autoSuggestItems.count();
+        expect(suggestionCount, 'Expected at least one auto-suggest item to be displayed').toBeGreaterThan(0);
+
+        // 5. Check for specific suggestions if provided
+        if (expectedSuggestions && expectedSuggestions.length > 0) {
+            for (const suggestion of expectedSuggestions) {
+                // Check if the suggestion container contains the expected text
+                await expect(this.autoSuggestContainer).toContainText(suggestion, { ignoreCase: true, timeout: 3000 });
+                console.log(`- Verified expected suggestion: "${suggestion}" is present.`);
+            }
+        }
+
+        console.log(`SUCCESS: Auto-suggest displayed ${suggestionCount} items for input "${partialProductName}".`);
     }
 
 }  

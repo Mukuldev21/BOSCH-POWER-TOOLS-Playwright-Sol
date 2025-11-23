@@ -1,3 +1,0 @@
-No visible consent banner found or timeout reached.
-Successfully navigated to the "Power Tools" page.
-No visible consent banner found or timeout reached.

@@ -27,4 +27,49 @@ test.describe('Category B: Product Search Functionality', () => {
         // Final verification confirmation
         console.log('Test case SEARCH-001 passed successfully.');
     });
+
+     /**
+     * Test Case: SEARCH-002
+     * Description: Enter a partial search term ("drill") and verify the auto-suggest dropdown 
+     * appears with relevant suggestions.
+     */
+    /*
+    test('SEARCH-002: Should display auto-suggest list with relevant results for partial term', async ({page}) => {
+        const homepage = new Homepage(page);
+        const searchpage = new Searchpage(page);
+        const partialTerm = 'drill';
+        await test.step('Navigate to Homepage and dismiss consent banner', async () => {
+            await homepage.navigate();
+            await homepage.dismissConsentBanner();
+        });
+
+        await test.step(`Enter partial search term: ${partialTerm} and verify auto-suggest`, async () => {
+            await searchpage.testAutoSuggest(partialTerm);
+        });
+        console.log('Test case SEARCH-002 passed successfully.');
+    }); */
+
+     test('SEARCH-002: Should display auto-suggest list with relevant results for partial term', async ({page}) => {
+        const partialTerm = 'drill';
+        const homepage = new Homepage(page);
+        const searchPage = new Searchpage(page);
+        // These are common and relevant suggestions expected for "drill"
+        const expectedSuggestions = [
+            'Drill/Drivers', 
+            'Hammer Drills', 
+            'Cordless Drills' 
+        ];
+        await test.step('Navigate to Homepage and dismiss consent banner', async () => {
+            await homepage.navigate();
+            await homepage.dismissConsentBanner();
+        });
+        
+
+        await test.step(`Verify auto-suggest for partial term: ${partialTerm}`, async () => {
+            // Updated method name to verifyAutoSuggest
+            await searchPage.verifyAutoSuggest(partialTerm, expectedSuggestions);
+        });
+    });
+
+
 });

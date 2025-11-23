@@ -1,2 +1,2 @@
 "DESCRIPTION","DURATION IN MS","NAME","PARENT SUITE","START TIME","STATUS","STOP TIME","SUB SUITE","SUITE","TEST CLASS","TEST METHOD"
-"","26389","Should load homepage, dismiss consent, and display core elements","chromium","2025-11-01","passed","2025-11-01","NAV-001: Homepage Integrity and Essential Elements","navtest.spec.ts","",""
+"","8920","Should verify the Hamburger Menu opens and reveals navigation links","chromium","Sun Nov 23 10:58:37 IST 2025","passed","Sun Nov 23 10:58:46 IST 2025","NAV-004: Mobile Responsiveness and Navigation","nav_mobile.spec.ts","",""
