@@ -1,0 +1,4 @@
+Attempting to dismiss consent banner...
+No visible consent banner found or timeout reached. Continuing test.
+Page Title: Bosch Power Tools | Boschtools
+Main search bar element is visible.

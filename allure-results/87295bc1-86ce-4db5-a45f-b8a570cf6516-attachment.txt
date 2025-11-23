@@ -1,0 +1,2 @@
+Expected suggestion 'Drill/Drivers' not found in auto-suggest list.
+Expected suggestion 'Hammer Drills' not found in auto-suggest list.

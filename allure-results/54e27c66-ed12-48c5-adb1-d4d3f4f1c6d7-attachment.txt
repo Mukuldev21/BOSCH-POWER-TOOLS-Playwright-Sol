@@ -1,0 +1,51 @@
+No visible consent banner found or timeout reached.
+Starting search for: drill
+SUCCESS: Search for "drill" was successful and results are displayed.
+DEBUG: Visible filter checkbox labels: [
+  'Power Tools\n                                                76',
+  '18V Drill/Drivers\n                                            13',
+  '18V Hammer Drill/Drivers\n                                            10',
+  '12V Max Drill/Drivers\n                                            5',
+  'Cordless Drill/Drivers\n                                            4',
+  'Cordless Hammer Drill/Drivers\n' +
+    '                                            4',
+  '12V Max Hammer Drill/Drivers\n                                            3',
+  'PROFACTOR 18V Drill/Drivers\n                                            2',
+  'PROFACTOR 18V Hammer Drill/Drivers\n' +
+    '                                            2',
+  'Corded Hammer Drills\n                                            2',
+  '12V Max Right Angle Drills\n                                            1',
+  'Accessories\n                                                267',
+  'Drill Bit Sets\n                                            55',
+  'Masonry & Concrete Drill Bits\n' +
+    '                                            40',
+  'Screwdriver Bits\n                                            27',
+  'Metal Drill Bits\n                                            23',
+  'Wood Drill Bits\n                                            21',
+  'Hole Saws\n                                            15',
+  'Other Chisels & Accessories\n                                            13',
+  'Adapters and Bit Holders\n                                            7',
+  'Screwdriver Bit & Socket Sets\n' +
+    '                                            7',
+  'Tile Drill Bits\n                                            7',
+  'Screwdriver Bit Sets\n                                            6',
+  'Flat Chisels\n                                            5',
+  'Socket Wrenches\n                                            5',
+  'Multi-Material Drill Bits\n                                            4',
+  'Pointed Chisels\n                                            4',
+  'Saw Blade & Hole Saw Sets\n                                            4',
+  'Saw Blade Sets\n                                            4',
+  'Chisel Sets\n                                            3',
+  'Mixed Accessory Sets\n                                            3',
+  'Spade Chisels\n                                            3',
+  'Diamond Drill Bits\n                                            2',
+  'Diamond Hole Saws\n                                            2',
+  'Flush Trim Bits\n                                            2',
+  'Tile Chisels\n                                            2',
+  'Cup Wheels, Grinding Wheels and Mounted Points\n' +
+    '                                            1',
+  'Tap & Die Sets\n                                            1',
+  'Threading Tool Sets\n                                            1'
+]
+SUCCESS: Filtered by '12V Max Drill/Drivers' and at least one product matches.
+Test case SEARCH-003 passed for battery system: 12V Max Drill/Drivers

@@ -93,7 +93,16 @@ export class Homepage {
      * @param categoryName The expected URL slug (e.g., 'power-tools').
      */
     async clickAndVerifyCategoryLink(locator: Locator, categoryName: string) {
-        await expect(locator).toBeVisible({ timeout: 15000 }); // Wait longer for visibility
+        try {
+            await expect(locator).toBeVisible({ timeout: 15000 }); // Wait longer for visibility
+        } catch (error) {
+            console.log(`Locator not visible: ${error}. Checking if page is still active.`);
+            // Check if page is still active
+            if (this.page.isClosed()) {
+                throw new Error('Page has been closed unexpectedly');
+            }
+            throw error;
+        }
         
         const categoryLabel = (await locator.textContent())?.trim() || categoryName;
         
@@ -107,9 +116,9 @@ export class Homepage {
         // We wait for the 'load' state which is generally more reliable for confirming navigation is complete
         await Promise.all([
             // 2. Wait for navigation to complete (using 'load' state)
-            this.page.waitForLoadState('load'), 
+            this.page.waitForLoadState('load'),
             // 1. Force a more stable click
-            locator.click({ force: true }),
+            locator.click({ force: true })
         ]);
 
         // 2. Anchor for Title check: Use the actual link text (with spaces) to match the title.
@@ -142,11 +151,16 @@ export class Homepage {
         console.log(`Successfully navigated to the "${categoryLabel}" page.`);
 
         // 3. Ensure the homepage is fully ready before the next click
-        await this.page.goto(this.baseURL);
-        
-        // Final wait sequence to ensure the page is stable for the next click
-        await this.page.waitForLoadState('load'); 
-        await this.searchButton.waitFor({ state: 'visible', timeout: 15000 }); 
+        try {
+            await this.page.goto(this.baseURL, { timeout: 60000 });
+            await this.page.waitForLoadState('load', { timeout: 30000 });
+            await this.searchButton.waitFor({ state: 'visible', timeout: 15000 });
+        } catch (error) {
+            console.log(`Navigation back to homepage failed: ${error}. Attempting alternative approach.`);
+            // Alternative: refresh the current page if navigation fails
+            await this.page.reload({ timeout: 30000 });
+            await this.navigate();
+        } 
 
         // Re-dismiss banner in case the navigation back to the root page causes it to reappear
         await this.dismissConsentBanner(); 
@@ -269,8 +283,8 @@ export class Homepage {
         // Wait for navigation after pressing 'Enter'
         await Promise.all([
             // Wait for navigation to complete (using 'domcontentloaded' for speed)
-            this.page.waitForNavigation({ waitUntil: 'domcontentloaded' }), 
-            this.page.keyboard.press('Enter'),
+            this.page.waitForNavigation({ waitUntil: 'domcontentloaded' }),
+            this.page.keyboard.press('Enter')
         ]);
 
         // 3. Verify the Search Results Page (SRP) loads (URL check)
