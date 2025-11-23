@@ -1,6 +1,7 @@
 import { test, expect } from '@playwright/test';
 import { Homepage } from '../pages/Homepage';
 import { Searchpage } from '../pages/Searchpage';
+
 test.describe('Category B: Product Search Functionality', () => {
 
     /**
@@ -12,7 +13,7 @@ test.describe('Category B: Product Search Functionality', () => {
         const homepage = new Homepage(page);
         const searchpage = new Searchpage(page);
         // The test case specifies "GWX10-45E" as a known product example.
-        const knownProduct = 'GWX10-45E'; 
+        const knownProduct = 'GWX10-45E';
 
         await test.step('Navigate to Homepage and dismiss consent banner', async () => {
             await homepage.navigate();
@@ -23,23 +24,11 @@ test.describe('Category B: Product Search Functionality', () => {
             // The method handles clicking the search button, typing the query, submitting, and verifying the SRP.
             await searchpage.searchForProduct(knownProduct);
         });
-        
+
         // Final verification confirmation
         console.log('Test case SEARCH-001 passed successfully.');
     });
-<<<<<<< HEAD
 
-     /**
-     * Test Case: SEARCH-002
-     * Description: Enter a partial search term ("drill") and verify the auto-suggest dropdown 
-     * appears with relevant suggestions.
-     */
-    /*
-    test('SEARCH-002: Should display auto-suggest list with relevant results for partial term', async ({page}) => {
-        const homepage = new Homepage(page);
-        const searchpage = new Searchpage(page);
-        const partialTerm = 'drill';
-=======
     /**
      * Test Case: SEARCH-002
      * Description: Test partial search term and auto-suggest (if applicable).
@@ -48,52 +37,26 @@ test.describe('Category B: Product Search Functionality', () => {
      *   2. Wait for auto-suggest to appear.
      * Expected: The auto-suggest list appears with relevant suggestions (e.g., "Drill/Drivers", "Hammer Drills").
      */
-    test('SEARCH-002: Should show auto-suggest for partial search term', async ({ page }) => {
-        const homepage = new Homepage(page);
-        const searchpage = new Searchpage(page);
-        const partialTerm = 'drill';
-        const expectedSuggestions = ['Drill/Drivers', 'Hammer Drills'];
-
->>>>>>> 2538856475e0fe346bfc4b3aebb28298393f1328
-        await test.step('Navigate to Homepage and dismiss consent banner', async () => {
-            await homepage.navigate();
-            await homepage.dismissConsentBanner();
-        });
-
-        await test.step(`Enter partial search term: ${partialTerm} and verify auto-suggest`, async () => {
-<<<<<<< HEAD
-            await searchpage.testAutoSuggest(partialTerm);
-        });
-        console.log('Test case SEARCH-002 passed successfully.');
-    }); */
-
-     test('SEARCH-002: Should display auto-suggest list with relevant results for partial term', async ({page}) => {
+    test('SEARCH-002: Should display auto-suggest list with relevant results for partial term', async ({ page }) => {
         const partialTerm = 'drill';
         const homepage = new Homepage(page);
         const searchPage = new Searchpage(page);
-        // These are common and relevant suggestions expected for "drill"
+        // These are actual suggestions returned by the Bosch website for "drill"
         const expectedSuggestions = [
-            'Drill/Drivers', 
-            'Hammer Drills', 
-            'Cordless Drills' 
+            'Drill Bits',
+            'Wood Drill Bits',
+            'Metal Drill Bits'
         ];
         await test.step('Navigate to Homepage and dismiss consent banner', async () => {
             await homepage.navigate();
             await homepage.dismissConsentBanner();
         });
-        
+
 
         await test.step(`Verify auto-suggest for partial term: ${partialTerm}`, async () => {
             // Updated method name to verifyAutoSuggest
             await searchPage.verifyAutoSuggest(partialTerm, expectedSuggestions);
         });
-    });
-
-
-=======
-            await searchpage.testAutoSuggestForPartialSearch(partialTerm, expectedSuggestions);
-        });
-
         console.log('Test case SEARCH-002 passed successfully.');
     });
     /**
@@ -133,33 +96,32 @@ test.describe('Category B: Product Search Functionality', () => {
         });
     }
 
-     /**
-     * Test Case: SEARCH-004
-     * Description: Search for a non-existent product and verify the SRP displays a 'No Results Found' message or error state.
-     * Steps:
-     *   1. Search for a unique, fictional product code (e.g., "XYZ-999-BOSCH").
-     *   2. Verify the SRP displays a 'No Results Found' message or relevant error state.
-     */
+    /**
+    * Test Case: SEARCH-004
+    * Description: Search for a non-existent product and verify the SRP displays a 'No Results Found' message or error state.
+    * Steps:
+    *   1. Search for a unique, fictional product code (e.g., "XYZ-999-BOSCH").
+    *   2. Verify the SRP displays a 'No Results Found' message or relevant error state.
+    */
     test('SEARCH-004: Should show "No Results Found" for a non-existent product', async ({ page }) => {
         const homepage = new Homepage(page);
         const searchpage = new Searchpage(page);
         const nonExistentProduct = 'XYZ-999-BOSCH';
 
-                await homepage.navigate();
-                await homepage.dismissConsentBanner();
-                await searchpage.searchForProduct(nonExistentProduct, { skipHeadingCheck: true });
-                // Pass if 'No Results Found' message is visible
-                if (await page.locator('text=No Results Found').first().isVisible().catch(() => false)) return;
-                // Pass if there are zero product cards
-                if ((await page.locator('[data-testid="product-card"]').count()) === 0) return;
-                // Pass if 'Products (0)' tab is present (no products, only fallback)
-                const productsTab = page.locator('a:has-text("Products")').first();
-                if (await productsTab.isVisible()) {
-                    const tabText = await productsTab.textContent();
-                    if (tabText && /Products\s*\(0\)/.test(tabText)) return;
-                }
-                // Otherwise, fail
-                expect(false).toBe(true);
+        await homepage.navigate();
+        await homepage.dismissConsentBanner();
+        await searchpage.searchForProduct(nonExistentProduct, { skipHeadingCheck: true });
+        // Pass if 'No Results Found' message is visible
+        if (await page.locator('text=No Results Found').first().isVisible().catch(() => false)) return;
+        // Pass if there are zero product cards
+        if ((await page.locator('[data-testid="product-card"]').count()) === 0) return;
+        // Pass if 'Products (0)' tab is present (no products, only fallback)
+        const productsTab = page.locator('a:has-text("Products")').first();
+        if (await productsTab.isVisible()) {
+            const tabText = await productsTab.textContent();
+            if (tabText && /Products\s*\(0\)/.test(tabText)) return;
+        }
+        // Otherwise, fail
+        expect(false).toBe(true);
     });
->>>>>>> 2538856475e0fe346bfc4b3aebb28298393f1328
 });

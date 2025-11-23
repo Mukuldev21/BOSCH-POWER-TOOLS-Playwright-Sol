@@ -1,0 +1,38 @@
+No visible consent banner found or timeout reached.
+Auto-suggest items: [
+  'Compatible productsShow all productsTile Drill BitsNatural Stone Drill Bit SetsTile Drill BitsPorcelain Diamond Drill BitsTile Drill BitsPorcelain Diamond Drill Bit Sets',
+  'Compatible productsShow all products',
+  'Show all products',
+  'Tile Drill BitsNatural Stone Drill Bit Sets',
+  'Tile Drill BitsPorcelain Diamond Drill Bits',
+  'Tile Drill BitsPorcelain Diamond Drill Bit Sets',
+  'CategoriesTile Drill BitsWood Drill BitsMasonry & Concrete Drill BitsMetal Drill BitsMulti-Material Drill BitsServiceDaredevilChoosing a Hammer12V MAXPower Tool Safety - KickBack Controlpower tools like a bosch',
+  'Tile Drill Bits',
+  'Tile Drill Bits',
+  'Wood Drill Bits',
+  'Wood Drill Bits',
+  'Masonry & Concrete Drill Bits',
+  'Masonry & Concrete Drill Bits',
+  'Metal Drill Bits',
+  'Metal Drill Bits',
+  'Multi-Material Drill Bits',
+  'Multi-Material Drill Bits',
+  'Daredevil',
+  'Daredevil',
+  'Choosing a Hammer',
+  'Choosing a Hammer',
+  '12V MAX',
+  '12V MAX',
+  'Power Tool Safety - KickBack Control',
+  'Power Tool Safety - KickBack Control',
+  'power tools like a bosch',
+  'power tools like a bosch',
+  'drillShow results',
+  'drill',
+  'drill',
+  '',
+  '',
+  'Show results'
+]
+⚠ Expected suggestions not found: Drill/Drivers, Hammer Drills, Cordless Drills
+Actual suggestions received: Compatible productsShow all productsTile Drill BitsNatural Stone Drill Bit SetsTile Drill BitsPorcelain Diamond Drill BitsTile Drill BitsPorcelain Diamond Drill Bit Sets, Compatible productsShow all products, Show all products, Tile Drill BitsNatural Stone Drill Bit Sets, Tile Drill BitsPorcelain Diamond Drill Bits, Tile Drill BitsPorcelain Diamond Drill Bit Sets, CategoriesTile Drill BitsWood Drill BitsMasonry & Concrete Drill BitsMetal Drill BitsMulti-Material Drill BitsServiceDaredevilChoosing a Hammer12V MAXPower Tool Safety - KickBack Controlpower tools like a bosch, Tile Drill Bits, Tile Drill Bits, Wood Drill Bits, Wood Drill Bits, Masonry & Concrete Drill Bits, Masonry & Concrete Drill Bits, Metal Drill Bits, Metal Drill Bits, Multi-Material Drill Bits, Multi-Material Drill Bits, Daredevil, Daredevil, Choosing a Hammer, Choosing a Hammer, 12V MAX, 12V MAX, Power Tool Safety - KickBack Control, Power Tool Safety - KickBack Control, power tools like a bosch, power tools like a bosch, drillShow results, drill, drill, , , Show results

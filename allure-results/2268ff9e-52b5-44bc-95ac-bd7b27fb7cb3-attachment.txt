@@ -1,0 +1,4 @@
+No visible consent banner found or timeout reached.
+Starting search for: drill
+SUCCESS: Search for "drill" was successful and results are displayed.
+Filter section not immediately visible, trying to find a filter button to open it.

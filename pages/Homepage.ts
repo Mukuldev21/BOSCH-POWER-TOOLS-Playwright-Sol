@@ -2,13 +2,13 @@
 import { Page, Locator, expect } from '@playwright/test';
 
 export class Homepage {
-  readonly page: Page;
-  readonly baseURL = 'https://www.boschtools.com/us/en/';
-  readonly expectedTitle = /Bosch Power Tools \| Boschtools/i;
-  readonly consentButton: Locator;
-  readonly searchButton: Locator;
+    readonly page: Page;
+    readonly baseURL = 'https://www.boschtools.com/us/en/';
+    readonly expectedTitle = /Bosch Power Tools \| Boschtools/i;
+    readonly consentButton: Locator;
+    readonly searchButton: Locator;
 
-  // Locators for NAV-002: Main Category Links
+    // Locators for NAV-002: Main Category Links
     readonly powerToolsLink: Locator;
     readonly accessoriesLink: Locator;
     readonly measuringToolsLink: Locator;
@@ -26,65 +26,65 @@ export class Homepage {
     // NEW LOCATOR: First product card on Search Results Page (SRP)
     // NOTE: This class name (.product-card) is an estimate and may need adjustment 
     // based on the actual website's CSS.
-    readonly firstSearchResultCard: Locator; 
+    readonly firstSearchResultCard: Locator;
 
 
-  constructor(page: Page) {
-    this.page = page;
-    this.consentButton = page.getByRole('button', { name: /Accept All|Accept Cookies|OK/i });
-    this.searchButton = page.getByRole('button', { name: 'Onsite Search', exact: true });
+    constructor(page: Page) {
+        this.page = page;
+        this.consentButton = page.getByRole('button', { name: /Accept All|Accept Cookies|OK/i });
+        this.searchButton = page.getByRole('button', { name: 'Onsite Search', exact: true });
 
-    // Initializing Locators for NAV-002
-    // Targeting main navigation links by text/role
-    this.powerToolsLink = page.getByRole('link', { name: 'Power Tools' }).first();
-    this.accessoriesLink = page.getByRole('link', { name: 'Accessories' }).first();
-    this.measuringToolsLink = page.getByRole('link', { name: 'Measuring Tools' }).first();
-    this.handToolsLink = page.getByRole('link', { name: 'Hand Tools' }).first();
-    this.serviceLink = page.getByRole('link', { name: 'Service' }).first();
-    this.tradeSolutionsLink = page.getByRole('link', { name: 'Trade Solutions' }).first();
-    this.newProductsLink = page.getByRole('link', { name: 'New Products' }).first();
+        // Initializing Locators for NAV-002
+        // Targeting main navigation links by text/role
+        this.powerToolsLink = page.getByRole('link', { name: 'Power Tools' }).first();
+        this.accessoriesLink = page.getByRole('link', { name: 'Accessories' }).first();
+        this.measuringToolsLink = page.getByRole('link', { name: 'Measuring Tools' }).first();
+        this.handToolsLink = page.getByRole('link', { name: 'Hand Tools' }).first();
+        this.serviceLink = page.getByRole('link', { name: 'Service' }).first();
+        this.tradeSolutionsLink = page.getByRole('link', { name: 'Trade Solutions' }).first();
+        this.newProductsLink = page.getByRole('link', { name: 'New Products' }).first();
 
-    // Initializing Locators for NAV-004 (Mobile Menu)
-    // Using a more robust OR locator to find the menu button.
-    this.hamburgerIcon = page.locator('.m-mainNavigation__toggle');   
-    // This targets the wrapper for the overall mobile navigation
-    this.mobileNavContainer = page.locator('nav.mobile-navigation, div#mobile-menu, .m-mainNavigation__itemsWrapper');  
+        // Initializing Locators for NAV-004 (Mobile Menu)
+        // Using a more robust OR locator to find the menu button.
+        this.hamburgerIcon = page.locator('.m-mainNavigation__toggle');
+        // This targets the wrapper for the overall mobile navigation
+        this.mobileNavContainer = page.locator('nav.mobile-navigation, div#mobile-menu, .m-mainNavigation__itemsWrapper');
 
-    // Initializing Locators for Search Functionality
-    // Assuming the input placeholder is 'Search for products' or similar, 
-    // or that it is located by its type/name after clicking the button.
-    this.searchInput = page.getByRole('combobox', { name: 'Search' });
-    this.firstSearchResultCard = page.locator('.product-card').first();
-  }
-
-  async navigate() {
-    await this.page.goto(this.baseURL);
-    await expect(this.page).toHaveURL(this.baseURL);
-  }
-
-  async dismissConsentBanner() {
-    try {
-      await this.consentButton.waitFor({ state: 'visible', timeout: 5000 });
-      await this.consentButton.click();
-      console.log('Consent banner dismissed.');
-    } catch {
-      console.log('No visible consent banner found or timeout reached.');
+        // Initializing Locators for Search Functionality
+        // Assuming the input placeholder is 'Search for products' or similar, 
+        // or that it is located by its type/name after clicking the button.
+        this.searchInput = page.getByRole('combobox', { name: 'Search' });
+        this.firstSearchResultCard = page.locator('.product-card').first();
     }
-  }
 
-  async verifyTitle() {
-    const title = await this.page.title();
-    console.log(`Page Title: ${title}`);
-    await expect(this.page).toHaveTitle(this.expectedTitle);
-  }
+    async navigate() {
+        await this.page.goto(this.baseURL);
+        await expect(this.page).toHaveURL(this.baseURL);
+    }
 
-  async verifySearchBarVisible() {
-    await this.searchButton.waitFor({ state: 'visible' });
-    await expect(this.searchButton).toBeVisible();
-    console.log('Main search bar element is visible.');
-  }
+    async dismissConsentBanner() {
+        try {
+            await this.consentButton.waitFor({ state: 'visible', timeout: 5000 });
+            await this.consentButton.click();
+            console.log('Consent banner dismissed.');
+        } catch {
+            console.log('No visible consent banner found or timeout reached.');
+        }
+    }
 
-  // --- NAV-002 Action Method ---
+    async verifyTitle() {
+        const title = await this.page.title();
+        console.log(`Page Title: ${title}`);
+        await expect(this.page).toHaveTitle(this.expectedTitle);
+    }
+
+    async verifySearchBarVisible() {
+        await this.searchButton.waitFor({ state: 'visible' });
+        await expect(this.searchButton).toBeVisible();
+        console.log('Main search bar element is visible.');
+    }
+
+    // --- NAV-002 Action Method ---
 
     /**
      * Clicks a category link and verifies the resulting URL contains the expected category slug.
@@ -103,15 +103,15 @@ export class Homepage {
             }
             throw error;
         }
-        
+
         const categoryLabel = (await locator.textContent())?.trim() || categoryName;
-        
+
         // Logic to derive two different anchors for better resilience:
         const slugParts = categoryName.split('-');
-        
+
         // 1. Anchor for URL check: Use only the first word. This is the most reliable part of the URL.
         const urlAnchor = slugParts[0].toLowerCase();
-        
+
         // FIX: Use Promise.all to wait for both the click action and the page navigation/load event
         // We wait for the 'load' state which is generally more reliable for confirming navigation is complete
         await Promise.all([
@@ -122,32 +122,32 @@ export class Homepage {
         ]);
 
         // 2. Anchor for Title check: Use the actual link text (with spaces) to match the title.
-        const titleAnchor = categoryLabel.toLowerCase(); 
-        
+        const titleAnchor = categoryLabel.toLowerCase();
+
         // 1. Verify URL contains the primary anchor (case-insensitive)
         const currentUrl = this.page.url().toLowerCase();
-        
+
         const urlCheckPassed = currentUrl.includes(urlAnchor);
 
-        expect(urlCheckPassed, 
+        expect(urlCheckPassed,
             `Expected URL "${currentUrl}" to contain category slug anchor "${urlAnchor}"`)
             .toBe(true);
         console.log(`URL check passed: URL contains "${urlAnchor}".`);
-        
+
         // 2. Verify Page Title contains the title anchor (case-insensitive)
         const currentTitle = await this.page.title();
         const currentTitleLower = currentTitle.toLowerCase();
-        
+
         // FIX: Instead of checking the whole titleAnchor, check if all words from the link text are present in the page title.
         const titleWords = titleAnchor.split(' ');
         const allWordsInTitle = titleWords.every(word => currentTitleLower.includes(word));
 
-        expect(allWordsInTitle, 
+        expect(allWordsInTitle,
             `Expected page title "${currentTitle}" to contain all words from category anchor "${titleAnchor}"`)
             .toBe(true);
-            
+
         console.log(`Title check passed: Title is "${currentTitle}" and contains all words from "${titleAnchor}".`);
-        
+
         console.log(`Successfully navigated to the "${categoryLabel}" page.`);
 
         // 3. Ensure the homepage is fully ready before the next click
@@ -160,14 +160,14 @@ export class Homepage {
             // Alternative: refresh the current page if navigation fails
             await this.page.reload({ timeout: 30000 });
             await this.navigate();
-        } 
+        }
 
         // Re-dismiss banner in case the navigation back to the root page causes it to reappear
-        await this.dismissConsentBanner(); 
+        await this.dismissConsentBanner();
     }
-    
 
-  // --- NAV-003 New Action Method ---
+
+    // --- NAV-003 New Action Method ---
 
     /**
      * Verifies that all links within the footer section return a successful HTTP status code (200).
@@ -176,7 +176,7 @@ export class Homepage {
 
     async verifyFooterLinks(footerSelector: string = 'footer') {
         await this.page.waitForSelector(footerSelector);
-        
+
         // Find all links within the footer that have an href attribute
         const links = await this.page.locator(`${footerSelector} a[href]`).all();
 
@@ -191,7 +191,7 @@ export class Homepage {
                 console.log(`Skipping link: ${linkText} (${url})`);
                 return { status: 200, url: url || 'Skipped', text: linkText };
             }
-            
+
             // CRITICAL FIX: Determine if the href is relative or absolute.
             if (!url.startsWith('http') && !url.startsWith('//')) {
                 // If it's a relative path, construct the full URL
@@ -209,12 +209,12 @@ export class Homepage {
                 // Use a request context to check the status without navigating
                 const response = await this.page.request.head(url, { timeout: 10000 });
                 const status = response.status();
-                
+
                 // Assert the status code is acceptable (200 is successful, 301/302 are redirects, 403 Forbidden is sometimes valid)
-                expect([200, 204, 301, 302, 403].includes(status), 
+                expect([200, 204, 301, 302, 403].includes(status),
                     `Link "${linkText}" at ${url} failed with status: ${status}`)
                     .toBe(true);
-                
+
                 console.log(`PASS: Link "${linkText}" (${url}) returned status ${status}`);
                 return { status, url, text: linkText };
 
@@ -232,8 +232,8 @@ export class Homepage {
     }
 
 
-     // --- NAV-004 Mobile Action Method ---
-    
+    // --- NAV-004 Mobile Action Method ---
+
     /**
      * Verifies the hamburger menu icon is visible and that clicking it reveals the mobile navigation.
      */
@@ -244,7 +244,7 @@ export class Homepage {
 
         // 2. Click the menu icon
         await this.hamburgerIcon.click();
-        
+
         // 3. Verify the main navigation container/drawer is visible
         // We use the Power Tools link as a representative element within the revealed menu
         await expect(this.powerToolsLink).toBeVisible({ timeout: 10000 });
@@ -261,48 +261,4 @@ export class Homepage {
         console.log('Mobile navigation menu closed.');
     }
 
-    
-    // --- SEARCH-001 Action Method ---
-
-    /**
-     * Executes a search for a product and verifies the Search Results Page (SRP) loads 
-     * and displays results.
-     * @param productName The name of the product to search for.
-     */
-    async searchForProduct(productName: string) {
-        console.log(`Starting search for: ${productName}`);
-
-        // 1. Click the search button to reveal the input
-        await this.searchButton.waitFor({ state: 'visible', timeout: 5000 });
-        await this.searchButton.click();
-        
-        // 2. Enter the product name and press Enter to submit the search
-        await this.searchInput.waitFor({ state: 'visible', timeout: 5000 });
-        await this.searchInput.fill(productName);
-        
-        // Wait for navigation after pressing 'Enter'
-        await Promise.all([
-            // Wait for navigation to complete (using 'domcontentloaded' for speed)
-            this.page.waitForNavigation({ waitUntil: 'domcontentloaded' }),
-            this.page.keyboard.press('Enter')
-        ]);
-
-        // 3. Verify the Search Results Page (SRP) loads (URL check)
-        const currentUrl = this.page.url();
-        // Assuming the SRP URL contains 'search' or 'q='
-        const isSearchUrl = /search|\?q=/.test(currentUrl.toLowerCase());
-        expect(isSearchUrl, `Expected URL to navigate to Search Results Page (containing /search or ?q=), but got ${currentUrl}`).toBe(true);
-
-
-        // 4. Verify the expected product is listed as a result
-        // This validates that the search was successful and returned products
-        await expect(this.firstSearchResultCard).toBeVisible({ timeout: 15000 });
-        
-        // 5. Verify the SRP title or a heading contains the search term for user confirmation
-        const srpHeading = this.page.locator('h1').or(this.page.locator('.search-results-title'));
-        await expect(srpHeading).toContainText(productName, { ignoreCase: true, timeout: 5000 });
-        
-        console.log(`SUCCESS: Search for "${productName}" was successful and results are displayed.`);
-    }
-    
 }

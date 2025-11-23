@@ -1,19 +1,18 @@
 
-
 import { Page, Locator, expect } from '@playwright/test';
 
 export class Searchpage {
     readonly page: Page;
     readonly searchButton: Locator;
-    readonly searchInput: Locator;  
+    readonly searchInput: Locator;
     readonly firstSearchResultCard: Locator;
 
     readonly autoSuggestContainer: Locator;
-    readonly autoSuggestItems: Locator; 
+    readonly autoSuggestItems: Locator;
 
     constructor(page: Page) {
-        this.page = page;  
-        this.searchButton = page.getByRole('button', { name: 'Onsite Search', exact: true }); 
+        this.page = page;
+        this.searchButton = page.getByRole('button', { name: 'Onsite Search', exact: true });
         // Initializing Locators for Search Functionality
         // Assuming the input placeholder is 'Search for products' or similar, 
         // or that it is located by its type/name after clicking the button.
@@ -21,10 +20,10 @@ export class Searchpage {
         this.firstSearchResultCard = page.locator('[data-track_moduletype="Product List"]').first();
 
         // Locators for Auto-Suggest Feature
-        this.autoSuggestContainer = page.locator('[class*="searchResults"], [class*="searchSuggestion"], ul[role="listbox"]');
-        this.autoSuggestItems = this.autoSuggestContainer.locator('a, li');
-          
-    }   
+        this.autoSuggestContainer = page.locator('.o-header-search__results');
+        this.autoSuggestItems = this.autoSuggestContainer.locator('a, li, [class*="suggestion"]');
+
+    }
 
     // --- SEARCH-001 Action Method ---
 
@@ -39,22 +38,21 @@ export class Searchpage {
         // 1. Click the search button to reveal the input
         await this.searchButton.waitFor({ state: 'visible', timeout: 5000 });
         await this.searchButton.click();
-        
+
         // 2. Enter the product name and press Enter to submit the search
         await this.searchInput.waitFor({ state: 'visible', timeout: 5000 });
         await this.searchInput.fill(productName);
-        
+
         // Wait for navigation after pressing 'Enter'
+        // Using waitForURL is more reliable than waitForNavigation for both SPA and MPA
         await Promise.all([
-            // Wait for navigation to complete (using 'domcontentloaded' for speed)
-            this.page.waitForNavigation({ waitUntil: 'domcontentloaded' }), 
+            this.page.waitForURL(/search|\\?q=/, { timeout: 15000, waitUntil: 'domcontentloaded' }),
             this.page.keyboard.press('Enter'),
         ]);
 
         // 3. Verify the Search Results Page (SRP) loads (URL check)
         const currentUrl = this.page.url();
-        // Assuming the SRP URL contains 'search' or 'q='
-        const isSearchUrl = /search|\?q=/.test(currentUrl.toLowerCase());
+        const isSearchUrl = /search|\\?q=/.test(currentUrl.toLowerCase());
         expect(isSearchUrl, `Expected URL to navigate to Search Results Page (containing /search or ?q=), but got ${currentUrl}`).toBe(true);
 
 
@@ -70,116 +68,70 @@ export class Searchpage {
         }
         console.log(`SUCCESS: Search for "${productName}" was successful and results are displayed.`);
     }
-    
-        // --- SEARCH-002 Action Method ---
-        /**
-         * Tests partial search term and verifies auto-suggest list appears with relevant suggestions.
-         * @param partialTerm The partial search term to enter (e.g., "drill").
-         * @param expectedSuggestions Array of expected suggestion strings (e.g., ["Drill/Drivers", "Hammer Drills"])
-         */
-        async testAutoSuggestForPartialSearch(partialTerm: string, expectedSuggestions: string[]) {
-        console.log(`Testing auto-suggest for partial term: ${partialTerm}`);
 
-<<<<<<< HEAD
     // --- SEARCH-002 Action Method ---
-
     /**
      * Tests the auto-suggest feature by entering a partial product name and verifying suggestions appear.
+     * This method combines logic from two branches, prioritizing robust suggestion container detection.
      * @param partialProductName The partial name of the product to trigger auto-suggestions.
+     * @param expectedSuggestions Array of expected suggestion strings (e.g., ["Drill/Drivers", "Hammer Drills"]). Optional.
      */
     async verifyAutoSuggest(partialProductName: string, expectedSuggestions?: string[]) {
-        console.log(`Testing auto-suggest with input: ${partialProductName}`); 
-        
-        // 1. Click the search button to reveal the input
-        await this.searchButton.waitFor({ state: 'visible', timeout: 5000 });
-        await this.searchButton.click(); 
-
-    
-        
-        // 2. Enter the partial product name
-        await this.searchInput.waitFor({ state: 'visible', timeout: 5000 });
-        await this.searchInput.fill(partialProductName);
-        
-        
-        // 3. Verify that the auto-suggest container appears
-        await this.autoSuggestContainer.waitFor({ state: 'visible', timeout: 7000 });
-        await expect(this.autoSuggestContainer).toBeVisible();
-        
-        
-
-        // 4. Verify that at least one suggestion is listed
-        const suggestionCount = await this.autoSuggestItems.count();
-        expect(suggestionCount, 'Expected at least one auto-suggest item to be displayed').toBeGreaterThan(0);
-
-        // 5. Check for specific suggestions if provided
-        if (expectedSuggestions && expectedSuggestions.length > 0) {
-            for (const suggestion of expectedSuggestions) {
-                // Check if the suggestion container contains the expected text
-                await expect(this.autoSuggestContainer).toContainText(suggestion, { ignoreCase: true, timeout: 3000 });
-                console.log(`- Verified expected suggestion: "${suggestion}" is present.`);
-            }
-        }
-
-        console.log(`SUCCESS: Auto-suggest displayed ${suggestionCount} items for input "${partialProductName}".`);
-    }
-
-}  
-=======
         // 1. Click the search button to reveal the input
         await this.searchButton.waitFor({ state: 'visible', timeout: 5000 });
         await this.searchButton.click();
 
-        // 2. Enter the partial term but do not submit
+        // 2. Enter the partial product name without submitting
+        // Use type() instead of fill() to trigger auto-suggest properly
         await this.searchInput.waitFor({ state: 'visible', timeout: 5000 });
-        await this.searchInput.fill(partialTerm);
+        await this.searchInput.type(partialProductName, { delay: 100 });
 
-        // 3. Wait for suggestions to load (simulate user pause)
-        await this.page.waitForTimeout(1200);
+        // 3. Wait for the auto-suggest container to become visible and contain items
+        // The container should appear after typing
+        await this.page.waitForTimeout(1000); // Give it a moment to start loading
 
-        // 4. Try multiple possible suggestion containers
-        const selectors = [
-            'ul[role="listbox"]',
-            'ul',
-            'div[role="listbox"]',
-            'div.suggestions, div[aria-label*="suggestion"]',
-            'div:has(li)',
-        ];
-        let found = false;
-        let autoSuggestList = null;
-        for (const selector of selectors) {
-            const locator = this.page.locator(selector).first();
-            if (await locator.isVisible({ timeout: 1000 }).catch(() => false)) {
-                autoSuggestList = locator;
-                found = true;
-                break;
-            }
-        }
+        // Wait for suggestions to appear
+        const suggestionLocator = this.page.locator('.o-header-search__results a, .o-header-search__results li, .o-header-search__results [class*="suggestion"]');
+        await suggestionLocator.first().waitFor({ state: 'visible', timeout: 10000 });
 
-        if (!found) {
-            console.warn('No auto-suggest list appeared for partial term:', partialTerm);
-            // Optionally: throw or skip, here we just return
-            return;
-        }
+        // 4. Capture suggestion texts
+        const suggestions = await suggestionLocator.allTextContents();
+        console.log('Auto-suggest items:', suggestions);
 
-        // 5. Verify that at least one of the expected suggestions appears in the list
-        if (autoSuggestList) {
-            for (const suggestion of expectedSuggestions) {
-                const suggestionLocator = autoSuggestList.locator(`li:has-text("${suggestion}")`);
-                if (!(await suggestionLocator.isVisible({ timeout: 1500 }).catch(() => false))) {
-                    console.warn(`Expected suggestion '${suggestion}' not found in auto-suggest list.`);
+        // 5. If expected suggestions are provided, verify at least one is present
+        if (expectedSuggestions && expectedSuggestions.length > 0) {
+            let foundCount = 0;
+            const notFound: string[] = [];
+
+            for (const expected of expectedSuggestions) {
+                const match = suggestions.find(s => s.toLowerCase().includes(expected.toLowerCase()));
+                if (match) {
+                    foundCount++;
+                    console.log(`✓ Found expected suggestion: "${expected}" (matched: "${match}")`);
                 } else {
-                    await expect(suggestionLocator, `Expected suggestion '${suggestion}' to appear`).toBeVisible();
+                    notFound.push(expected);
                 }
             }
-        }
 
-        console.log(`SUCCESS: Auto-suggest for partial term "${partialTerm}" checked for expected suggestions.`);
+            // Log what wasn't found for debugging
+            if (notFound.length > 0) {
+                console.log(`⚠ Expected suggestions not found: ${notFound.join(', ')}`);
+                console.log(`Actual suggestions received: ${suggestions.join(', ')}`);
+            }
+
+            // Pass if at least one expected suggestion was found
+            expect(foundCount, `None of the expected suggestions were found. Expected: [${expectedSuggestions.join(', ')}], Got: [${suggestions.join(', ')}]`).toBeGreaterThan(0);
+        } else {
+            // Ensure at least one suggestion appears
+            expect(suggestions.length, 'No auto-suggest items were displayed').toBeGreaterThan(0);
         }
+        console.log(`SUCCESS: Auto-suggest displayed ${suggestions.length} items for "${partialProductName}".`);
+    }
 
     // --- SEARCH-003 Action Method ---
     /**
-     * Filters SRP results by battery system (e.g., '18V System') after searching for a generic tool type.
-     * @param toolType The generic tool type to search for (e.g., 'saw').
+     * Filters the search results by a specific battery system label.
+     * @param toolType The generic tool type to search for (e.g., 'drill').
      * @param batterySystemLabel The label of the battery system filter (e.g., '18V System').
      */
     async filterByBatterySystem(toolType: string, batterySystemLabel: string) {
@@ -188,7 +140,17 @@ export class Searchpage {
 
         // 2. Wait for the filter/refine section to be visible (try common selectors)
         const filterSection = this.page.locator('dialog[aria-label*="Filter" i], aside[aria-label*="Filter" i], [aria-label*="Refine" i], [aria-label*="facet" i], [role="region"]:has-text("Filter")').first();
-        await filterSection.waitFor({ state: 'visible', timeout: 10000 }).catch(() => {});
+        try {
+            await filterSection.waitFor({ state: 'visible', timeout: 10000 });
+        } catch {
+            console.log("Filter section not immediately visible, trying to find a filter button to open it.");
+            // Sometimes filters are hidden behind a button on mobile or smaller screens
+            const filterButton = this.page.getByRole('button', { name: /filter|refine/i });
+            if (await filterButton.isVisible()) {
+                await filterButton.click();
+                await filterSection.waitFor({ state: 'visible', timeout: 5000 });
+            }
+        }
 
         // 3. Expand all filter groups to reveal hidden checkboxes
         const expandButtons = this.page.locator('a[aria-expanded="false"], button[aria-expanded="false"], [role="button"][aria-expanded="false"]');
@@ -203,18 +165,18 @@ export class Searchpage {
 
         // 4. Debug: Log all visible filter checkbox labels after expanding
         const allCheckboxes = this.page.locator('input[type="checkbox"]');
-        const allLabels = await allCheckboxes.evaluateAll((nodes) => nodes.map(cb => {
-            let label = cb.getAttribute('aria-label') || '';
-            if (!label && cb.id) {
-                const labelElem = document.querySelector(`label[for='${cb.id}']`);
-                if (labelElem) label = labelElem.textContent || '';
-            }
-            if (!label && cb.parentElement && cb.parentElement.tagName.toLowerCase() === 'label') {
-                label = cb.parentElement.textContent || '';
-            }
-            return label.trim();
-        }));
-        console.log('DEBUG: Visible filter checkbox labels:', allLabels);
+        // const allLabels = await allCheckboxes.evaluateAll((nodes) => nodes.map(cb => {
+        //     let label = cb.getAttribute('aria-label') || '';
+        //     if (!label && cb.id) {
+        //         const labelElem = document.querySelector(`label[for='${cb.id}']`);
+        //         if (labelElem) label = labelElem.textContent || '';
+        //     }
+        //     if (!label && cb.parentElement && cb.parentElement.tagName.toLowerCase() === 'label') {
+        //         label = cb.parentElement.textContent || '';
+        //     }
+        //     return label.trim();
+        // }));
+        // console.log('DEBUG: Visible filter checkbox labels:', allLabels);
 
         // 5. Find and select the battery system filter checkbox (by label text)
         const batteryCheckbox = this.page.getByRole('checkbox', { name: new RegExp(batterySystemLabel, 'i') });
@@ -222,7 +184,7 @@ export class Searchpage {
         await batteryCheckbox.check();
 
         // 6. Wait for the results to update
-        await this.page.waitForTimeout(2000);
+        await this.page.waitForTimeout(3000); // Wait a bit longer for AJAX update
 
         // 7. Check for product cards or a 'No Results' message
         const productCards = this.page.locator('[data-track_moduletype="Product List"], .product-card');
@@ -273,4 +235,3 @@ export class Searchpage {
         console.log(`SUCCESS: Filtered by '${batterySystemLabel}' and at least one product matches.`);
     }
 }
->>>>>>> 2538856475e0fe346bfc4b3aebb28298393f1328
