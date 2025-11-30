@@ -1,2 +1,0 @@
-No visible consent banner found or timeout reached.
-Testing auto-suggest with input: drill

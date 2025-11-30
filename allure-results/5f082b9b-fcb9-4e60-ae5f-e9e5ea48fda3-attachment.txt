@@ -1,3 +1,0 @@
-No visible consent banner found or timeout reached.
-Starting search for: drill
-SUCCESS: Search for "drill" was successful and results are displayed.

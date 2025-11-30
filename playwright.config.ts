@@ -25,7 +25,7 @@ export default defineConfig({
   timeout: 60000,
   /* Reporter to use. See https://playwright.dev/docs/test-reporters */
   reporter: [
-    ['html'],
+    ['html', { open: 'never' }],
     ['line'],
     ['allure-playwright']
   ],
@@ -48,10 +48,12 @@ export default defineConfig({
   /* Configure projects for major browsers */
   projects: [
     {
-      name: 'chromium',
+      name: 'Bosch Power Tools E2E Tests',
       use: { ...devices['Desktop Chrome'] },
     },
 
+    //only chrome is required
+    /*
     {
       name: 'firefox',
       use: { ...devices['Desktop Firefox'] },
@@ -61,7 +63,7 @@ export default defineConfig({
       name: 'webkit',
       use: { ...devices['Desktop Safari'] },
     },
-
+    */
     /* Test against mobile viewports. */
     // {
     //   name: 'Mobile Chrome',
