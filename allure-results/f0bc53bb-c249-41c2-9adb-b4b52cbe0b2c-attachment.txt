@@ -1,0 +1,30 @@
+Navigated to OpenMRS login page
+Entered username: admin
+Clicked Continue button
+Entered password
+Clicked Login button
+✓ Successfully logged in
+Error selecting location: TimeoutError: page.waitForURL: Timeout 15000ms exceeded.
+=========================== logs ===========================
+waiting for navigation until "load"
+  navigated to "https://o3.openmrs.org/openmrs/spa/home"
+  navigated to "https://o3.openmrs.org/openmrs/spa/home"
+  navigated to "https://o3.openmrs.org/openmrs/spa/home/service-queues"
+============================================================. Attempting to continue...
+✓ Location selected
+Clicked Add Patient button
+Navigated to patient registration page
+✓ Navigated to patient registration page
+Filled first name: John
+Filled middle name: Michael
+Filled family name: Doe
+Selected sex: Male
+Filled date of birth: 15/06/1990
+✓ Patient details filled
+Clicked Register Patient button
+Patient registration completed
+✓ Patient registered successfully
+✓ Patient name is displayed: John Michael Doe
+✓ Date of birth is displayed: 15/06/1990
+✓ OpenMRS ID is displayed
+✓ Patient details validated

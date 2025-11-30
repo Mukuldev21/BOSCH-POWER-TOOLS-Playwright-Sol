@@ -1,0 +1,12 @@
+Navigated to OpenMRS login page
+Entered username: admin
+Clicked Continue button
+Entered password
+Clicked Login button
+Error selecting location: TimeoutError: page.waitForURL: Timeout 15000ms exceeded.
+=========================== logs ===========================
+waiting for navigation until "load"
+  navigated to "https://o3.openmrs.org/openmrs/spa/home"
+  navigated to "https://o3.openmrs.org/openmrs/spa/home"
+  navigated to "https://o3.openmrs.org/openmrs/spa/home/service-queues"
+============================================================. Attempting to continue...

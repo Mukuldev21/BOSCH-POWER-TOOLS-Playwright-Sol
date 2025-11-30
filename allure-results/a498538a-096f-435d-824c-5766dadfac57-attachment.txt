@@ -1,0 +1,3 @@
+No visible consent banner found or timeout reached.
+Skipping link: Subscribe (//www.boschtools.com/us/en/footer/newsletter-signup/)
+All footer link status checks completed.
