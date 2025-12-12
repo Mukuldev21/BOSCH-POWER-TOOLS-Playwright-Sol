@@ -128,4 +128,28 @@ export class DealerLocatorPage {
       }
     }
   }
+
+
+  async verifyStoreLocatorLoaded() {
+    // 3. Verify URL contains specific path
+    await expect(this.page).toHaveURL(/.*store-locator/);
+
+    // Wait for network idle to ensure dynamic content is loaded
+    await this.page.waitForLoadState('networkidle');
+
+    // 4. Verify Map, List, or Helper Text
+    // Checks for multiple indicators of success: header, map container, or postal code input
+    const mapContainer = this.page.locator('.store-locator-map-container, #map, .map-canvas').first();
+    const listContainer = this.page.locator('.store-list, .dealer-list').first();
+    const zipInput = this.page.getByPlaceholder(/Zip|Postal|City|Address/i).first();
+    const header = this.page.locator('h1, h2, h3').filter({ hasText: /Where to buy|Store Locator|Find a Dealer/i }).first();
+
+    // Expect at least one of these critical elements to be visible
+    await expect(
+      header
+        .or(mapContainer)
+        .or(listContainer)
+        .or(zipInput)
+    ).toBeVisible();
+  }
 }
