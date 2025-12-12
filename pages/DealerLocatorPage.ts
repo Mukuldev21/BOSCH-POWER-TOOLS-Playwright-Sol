@@ -51,7 +51,8 @@ export class DealerLocatorPage {
     // Log all links for debugging
     const allLinks = await this.page.locator('a').allTextContents();
     console.log('All links on page:', allLinks);
-    throw new Error('Dealer Locator/Where to Buy link not found.');
+    console.log('Viewing viewport size:', this.page.viewportSize());
+    throw new Error('Dealer Locator/Where to Buy link not found. Check console for available links.');
   }
 
   async enterZipAndSubmit(zip = '90210') {
