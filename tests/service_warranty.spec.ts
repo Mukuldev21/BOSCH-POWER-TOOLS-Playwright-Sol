@@ -1,4 +1,5 @@
 import { test, expect } from '@playwright/test';
+import { ServicePage } from '../pages/ServicePage';
 
 test.describe('Category: Service & Warranty', () => {
 
@@ -30,19 +31,14 @@ test.describe('Category: Service & Warranty', () => {
     });
 
     test('REPAIR-001: Verify "Start a Repair" link points to repair order page', async ({ page }) => {
+        // Use the ServicePage object for modularity
+        const servicePage = new ServicePage(page);
+
         // Go to main Service page to find loop
         await page.goto('https://www.boschtools.com/us/en/service/product-warranty/');
 
-        // Check for "Start a Repair" or similar CTA
-        const repairLink = page.getByRole('link', { name: /Start a Repair/i });
-        if (await repairLink.isVisible()) {
-            await expect(repairLink).toHaveAttribute('href', /.*repair-order/);
-        } else {
-            console.log('Start a Repair link not found directly on Warranty page, checking Service landing.');
-            await page.goto('https://www.boschtools.com/us/en/service/');
-            // Added .first() to avoid strict mode violation if multiple links exist
-            await expect(page.getByRole('link', { name: /Tool Repair/i }).first()).toBeVisible();
-        }
+        // Verify using the Page Class method
+        await servicePage.verifyStartRepairLink();
     });
 
 });

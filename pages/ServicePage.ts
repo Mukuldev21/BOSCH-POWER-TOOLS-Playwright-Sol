@@ -68,4 +68,18 @@ export class ServicePage {
 
     throw new Error('Repair/Service heading or content not found on Tool Repair page.');
   }
+
+  async verifyStartRepairLink() {
+    // Check for "Start a Repair" or similar CTA on the current page
+    const repairLink = this.page.getByRole('link', { name: /Start a Repair/i });
+
+    if (await repairLink.isVisible()) {
+      await expect(repairLink).toHaveAttribute('href', /.*repair-order/);
+    } else {
+      console.log('Start a Repair link not found directly on current page, checking Service landing.');
+      await this.page.goto('https://www.boschtools.com/us/en/service/');
+      // Using .first() to avoid strict mode violation if multiple links exist
+      await expect(this.page.getByRole('link', { name: /Tool Repair/i }).first()).toBeVisible();
+    }
+  }
 }
