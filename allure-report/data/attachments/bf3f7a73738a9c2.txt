@@ -1,0 +1,4 @@
+No visible consent banner found or timeout reached.
+Verifying auto-suggest for: "drill"
+SUCCESS: Found matching auto-suggestions for "drill".
+Test case SEARCH-002 passed successfully.
