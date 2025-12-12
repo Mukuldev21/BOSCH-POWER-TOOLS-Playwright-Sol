@@ -82,4 +82,22 @@ export class ServicePage {
       await expect(this.page.getByRole('link', { name: /Tool Repair/i }).first()).toBeVisible();
     }
   }
+
+
+  async verifyWarrantyPageLoaded() {
+    // Verify Title
+    await expect(this.page).toHaveTitle(/Warranty/i);
+
+    // Verify key headers for warranty types exist
+    const warrantyTypes = [
+      '18V Warranty',
+      '12V Warranty',
+      'Corded Warranty',
+      'Measuring Warranty'
+    ];
+
+    for (const type of warrantyTypes) {
+      await expect(this.page.getByRole('link', { name: type, exact: false }).first()).toBeVisible();
+    }
+  }
 }

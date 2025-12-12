@@ -4,23 +4,14 @@ import { ServicePage } from '../pages/ServicePage';
 test.describe('Category: Service & Warranty', () => {
 
     test('WARRANTY-001: Verify "Product Warranty" page loads and displays warranty categories', async ({ page }) => {
+        // Use the ServicePage object
+        const servicePage = new ServicePage(page);
+
         // Direct navigation to Warranty page
         await page.goto('https://www.boschtools.com/us/en/service/product-warranty/');
 
-        // Verify Title
-        await expect(page).toHaveTitle(/Warranty/i);
-
-        // Verify key headers for warranty types exist
-        const warrantyTypes = [
-            '18V Warranty',
-            '12V Warranty',
-            'Corded Warranty',
-            'Measuring Warranty'
-        ];
-
-        for (const type of warrantyTypes) {
-            await expect(page.getByRole('link', { name: type, exact: false }).first()).toBeVisible();
-        }
+        // Verify using page method
+        await servicePage.verifyWarrantyPageLoaded();
     });
 
     test('MANUAL-001: Verify "Manuals and Part Diagrams" page is accessible', async ({ page }) => {
