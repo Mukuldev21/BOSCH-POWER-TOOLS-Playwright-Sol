@@ -35,13 +35,26 @@ This document outlines the automated test cases covered in the Bosch Power Tools
 | :--- | :--- | :--- |
 | **SERVICE-001** | Verify the Tool Repair landing page is accessible | `tests/service-repair.spec.ts` |
 | **SERVICE-002** | Verify the Dealer Locator map loads | `tests/service-dealerlocator.spec.ts` |
+## 📍 Store Locator
+
+| Test ID | Description | File |
+| :--- | :--- | :--- |
+| **STORE-001** | Verify "Where to Buy" page loads and map/list container is present | `tests/store_locator.spec.ts` |
+
+## 🛡️ Warranty & Manuals
+
+| Test ID | Description | File |
+| :--- | :--- | :--- |
+| **WARRANTY-001** | Verify "Product Warranty" page loads and displays warranty categories | `tests/service_warranty.spec.ts` |
+| **MANUAL-001** | Verify "Manuals and Part Diagrams" page is accessible | `tests/service_warranty.spec.ts` |
+| **REPAIR-001** | Verify "Start a Repair" link points to repair order page | `tests/service_warranty.spec.ts` |
 
 ---
 
 ## 📊 Test Summary
 
-- **Total Test Suites**: 7
-- **Total Test Cases**: 14 (including 5 SEARCH-003 variations)
-- **Categories Covered**: Navigation, Search, Product Details, Service & Support
+- **Total Test Suites**: 9
+- **Total Test Cases**: 18 (including 5 SEARCH-003 variations)
+- **Categories Covered**: Navigation, Search, Product Details, Service & Support, Store Locator, Warranty
 
 *Note: Test IDs are used where available in the test title.*
