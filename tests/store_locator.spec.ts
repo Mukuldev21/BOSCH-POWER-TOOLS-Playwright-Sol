@@ -1,7 +1,7 @@
 import { test, expect } from '@playwright/test';
 import { DealerLocatorPage } from '../pages/DealerLocatorPage';
 
-test.describe('Category: Store Locator', () => {
+test.describe('📍 Store Locator', () => {
     test('STORE-001: Verify "Where to Buy" page loads and map container is present', async ({ page }) => {
         const dealerPage = new DealerLocatorPage(page);
 

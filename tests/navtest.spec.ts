@@ -26,8 +26,8 @@ test.describe('Category A: Site Integrity and Navigation (Smoke)', () => {
   });
   */
 
-   test.describe('Category A: Site Integrity and Navigation (Smoke)', () => {
-    
+test.describe('📱 Navigation & Layout', () => {
+
     // NAV-001: Verify Homepage loads and essential elements are present.
     test('NAV-001: Should load homepage, dismiss consent, and display core elements', async ({ page }) => {
         const homepage = new Homepage(page);
@@ -40,7 +40,7 @@ test.describe('Category A: Site Integrity and Navigation (Smoke)', () => {
             // This is crucial for consistent subsequent tests
             await homepage.dismissConsentBanner();
         });
-        
+
         // 3. Expected Result checks
         await test.step('3a. Verify Page Title', async () => {
             await homepage.verifyTitle();
@@ -52,7 +52,7 @@ test.describe('Category A: Site Integrity and Navigation (Smoke)', () => {
     });
 
 
-  // NAV-002: Verify main product category links are functional - Split into smaller tests
+    // NAV-002: Verify main product category links are functional - Split into smaller tests
     test('NAV-002a: Verify core category links (Power Tools, Accessories)', async ({ page }) => {
         const homepage = new Homepage(page);
 
@@ -106,19 +106,19 @@ test.describe('Category A: Site Integrity and Navigation (Smoke)', () => {
         await test.step('1. Click "Service" link and verify page loads', async () => {
             await homepage.clickAndVerifyCategoryLink(homepage.serviceLink, 'service');
         });
-        
+
         // Test Step 2: Click "Trade Solutions" link
         await test.step('2. Click "Trade Solutions" link and verify page loads', async () => {
-            await homepage.clickAndVerifyCategoryLink(homepage.tradeSolutionsLink, 'trade-solutions');  
+            await homepage.clickAndVerifyCategoryLink(homepage.tradeSolutionsLink, 'trade-solutions');
         });
-        
+
         // Test Step 3: Click "New Products" link
         await test.step('3. Click "New Products" link and verify page loads', async () => {
-            await homepage.clickAndVerifyCategoryLink(homepage.newProductsLink, 'new-products');  
+            await homepage.clickAndVerifyCategoryLink(homepage.newProductsLink, 'new-products');
         });
     });
 
-  // NAV-003: Verify all footer links return HTTP 200 status.
+    // NAV-003: Verify all footer links return HTTP 200 status.
     test('NAV-003: Verify all footer links return HTTP 200 status', async ({ page }) => {
         const homepage = new Homepage(page);
 
@@ -132,5 +132,5 @@ test.describe('Category A: Site Integrity and Navigation (Smoke)', () => {
             await homepage.verifyFooterLinks();
         });
     });
-    
+
 });

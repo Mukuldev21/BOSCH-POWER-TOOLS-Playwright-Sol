@@ -2,7 +2,7 @@ import { test, expect } from '@playwright/test';
 import { Homepage } from '../pages/Homepage';
 import { Searchpage } from '../pages/Searchpage';
 
-test.describe('Category B: Product Search Functionality', () => {
+test.describe('🔍 Search Functionality', () => {
 
     /**
      * Test Case: SEARCH-001

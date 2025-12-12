@@ -5,7 +5,7 @@ import { ProductPage } from '../pages/ProductPage';
 // Example product URL (replace with a real PDP URL from your site)
 const PRODUCT_URL = 'https://www.boschtools.com/us/en/products/gxl18v-496b22-06019G5215';
 
-test.describe('Category C: Product Details Page (PDP) Validation', () => {
+test.describe('📦 Product Details Page (PDP)', () => {
   /**
    * Test Case: PDP-003
    * Description: Validate specification section content.

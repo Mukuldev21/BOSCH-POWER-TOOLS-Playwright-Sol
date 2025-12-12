@@ -2,7 +2,7 @@ import { test, expect } from '@playwright/test';
 import { ProductPage } from '../pages/ProductPage';
 
 // PDP-004: Verify related accessories section (cross-selling)
-test.describe('PDP-004 Verify related accessories section (cross-selling)', () => {
+test.describe('📦 Product Details Page (PDP)', () => {
   test('should display at least one accessory tile and links should be clickable', async ({ page }) => {
     // Go to a sample product PDP (reuse existing navigation logic)
     const pdp = new ProductPage(page);

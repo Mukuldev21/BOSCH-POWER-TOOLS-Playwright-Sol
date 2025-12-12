@@ -1,7 +1,7 @@
 import { test, expect } from '@playwright/test';
 import { ServicePage } from '../pages/ServicePage';
 
-test.describe('Category: Service & Warranty', () => {
+test.describe('🛡️ Warranty & Manuals', () => {
 
     test('WARRANTY-001: Verify "Product Warranty" page loads and displays warranty categories', async ({ page }) => {
         // Use the ServicePage object
