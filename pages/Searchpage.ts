@@ -77,55 +77,54 @@ export class Searchpage {
      * @param expectedSuggestions Array of expected suggestion strings (e.g., ["Drill/Drivers", "Hammer Drills"]). Optional.
      */
     async verifyAutoSuggest(partialProductName: string, expectedSuggestions?: string[]) {
+        console.log(`Verifying auto-suggest for: "${partialProductName}"`);
+
         // 1. Click the search button to reveal the input
         await this.searchButton.waitFor({ state: 'visible', timeout: 5000 });
         await this.searchButton.click();
 
-        // 2. Enter the partial product name without submitting
-        // Use type() instead of fill() to trigger auto-suggest properly
+        // 2. Enter the partial product name
+        // Ensure input is editable and clear it first
         await this.searchInput.waitFor({ state: 'visible', timeout: 5000 });
+        await this.searchInput.clear();
         await this.searchInput.type(partialProductName, { delay: 100 });
 
-        // 3. Wait for the auto-suggest container to become visible and contain items
-        // The container should appear after typing
-        await this.page.waitForTimeout(1000); // Give it a moment to start loading
-
-        // Wait for suggestions to appear
+        // 3. Wait for suggestions to appear using assertions with retries
+        // The container selector
         const suggestionLocator = this.page.locator('.o-header-search__results a, .o-header-search__results li, .o-header-search__results [class*="suggestion"]');
-        await suggestionLocator.first().waitFor({ state: 'visible', timeout: 10000 });
 
-        // 4. Capture suggestion texts
-        const suggestions = await suggestionLocator.allTextContents();
-        console.log('Auto-suggest items:', suggestions);
+        // Use expect.poll to retry checking the count until it's greater than 0
+        await expect.poll(async () => {
+            const count = await suggestionLocator.count();
+            return count;
+        }, {
+            message: 'Auto-suggest items should populate',
+            timeout: 10000,
+        }).toBeGreaterThan(0);
 
-        // 5. If expected suggestions are provided, verify at least one is present
+        // 4. Capture and Verify
+        // Use expect.poll to wait for *specific* text if expected suggestions are provided
         if (expectedSuggestions && expectedSuggestions.length > 0) {
-            let foundCount = 0;
-            const notFound: string[] = [];
-
-            for (const expected of expectedSuggestions) {
-                const match = suggestions.find(s => s.toLowerCase().includes(expected.toLowerCase()));
-                if (match) {
-                    foundCount++;
-                    console.log(`✓ Found expected suggestion: "${expected}" (matched: "${match}")`);
-                } else {
-                    notFound.push(expected);
+            await expect.poll(async () => {
+                const suggestions = await suggestionLocator.allTextContents();
+                // Check if ANY of the expected suggestions are present
+                const matches = expectedSuggestions.filter(expected =>
+                    suggestions.some(s => s.toLowerCase().includes(expected.toLowerCase()))
+                );
+                if (matches.length > 0) {
+                    return true; // Success
                 }
-            }
+                console.log(`Current suggestions: ${suggestions.join(', ')}`);
+                return false;
+            }, {
+                message: `Expected at least one of [${expectedSuggestions.join(', ')}] to appear in suggestions`,
+                timeout: 10000
+            }).toBe(true);
 
-            // Log what wasn't found for debugging
-            if (notFound.length > 0) {
-                console.log(`⚠ Expected suggestions not found: ${notFound.join(', ')}`);
-                console.log(`Actual suggestions received: ${suggestions.join(', ')}`);
-            }
-
-            // Pass if at least one expected suggestion was found
-            expect(foundCount, `None of the expected suggestions were found. Expected: [${expectedSuggestions.join(', ')}], Got: [${suggestions.join(', ')}]`).toBeGreaterThan(0);
+            console.log(`SUCCESS: Found matching auto-suggestions for "${partialProductName}".`);
         } else {
-            // Ensure at least one suggestion appears
-            expect(suggestions.length, 'No auto-suggest items were displayed').toBeGreaterThan(0);
+            console.log(`SUCCESS: Auto-suggest displayed items for "${partialProductName}".`);
         }
-        console.log(`SUCCESS: Auto-suggest displayed ${suggestions.length} items for "${partialProductName}".`);
     }
 
     // --- SEARCH-003 Action Method ---

@@ -1,0 +1,6 @@
+No visible consent banner found or timeout reached.
+Verifying auto-suggest for: "drill"
+Current suggestions: drillundefined, drill, drill, , , undefined
+Current suggestions: Compatible productsShow all productsScrewdriver BitsCustom Case System Drill & Drive SetsScrewdriver BitsExtra Hard Drilling & Driving Mixed Bit SetsCircular Saw AttachmentsWD7RIP, Compatible productsShow all products, Show all products, Screwdriver BitsCustom Case System Drill & Drive Sets, Screwdriver BitsExtra Hard Drilling & Driving Mixed Bit Sets, Circular Saw AttachmentsWD7RIP, CategoriesScrewdriver BitsScrewdriver Bit SetsDrill Bit SetsMixed Accessory SetsScrewdriver Bit & Socket SetsServicePrivacy NoticePRO360 - Privacy PolicyPRO360 - Privacy PolicyPRO360 - TermsPRO360 - FAQ, Screwdriver Bits, Screwdriver Bits, Screwdriver Bit Sets, Screwdriver Bit Sets, Drill Bit Sets, Drill Bit Sets, Mixed Accessory Sets, Mixed Accessory Sets, Screwdriver Bit & Socket Sets, Screwdriver Bit & Socket Sets, Privacy Notice, Privacy Notice, PRO360 - Privacy Policy, PRO360 - Privacy Policy, PRO360 - Privacy Policy, PRO360 - Privacy Policy, PRO360 - Terms, PRO360 - Terms, PRO360 - FAQ, PRO360 - FAQ, drillShow results, drill, drill, , , Show results
+SUCCESS: Found matching auto-suggestions for "drill".
+Test case SEARCH-002 passed successfully.
