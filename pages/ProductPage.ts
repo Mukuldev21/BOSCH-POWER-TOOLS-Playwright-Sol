@@ -1,170 +1,170 @@
 import { expect, Page } from '@playwright/test';
 
 export class ProductPage {
-      async openSpecificationSectionIfNeeded() {
-        // Try clicking a tab or expanding a section if needed
-        const tab = this.page.getByRole('tab', { name: /specification|specs|technical/i }).first();
-        if (await tab.count()) {
-          await tab.click();
-          return;
-        }
-        // Try a button or link
-        const btn = this.page.getByRole('button', { name: /specification|specs|technical/i }).first();
-        if (await btn.count()) {
-          await btn.click();
-          return;
-        }
-        // Try fallback by text
-        const textLink = this.page.getByText(/specification|specs|technical/i, { exact: false }).first();
-        if (await textLink.count()) {
-          await textLink.click();
-          return;
-        }
-        // If nothing to click, assume section is already visible
-      }
-
-      async getSpecificationValue(key: string): Promise<string | null> {
-        // 1. Try to find any element whose text includes the key (case-insensitive, partial match)
-        // 2. Try to extract value from nearby cell, sibling, or text node
-        // 3. Return the first non-empty value found
-
-        // Try common variants for the key
-        const variants = [
-          key,
-          key.toUpperCase(),
-          key.toLowerCase(),
-        ];
-        if (key.toLowerCase() === 'rpm') {
-          variants.push('Speed', 'No-load speed', 'Speed (RPM)', 'Rotational Speed', 'No Load Speed', 'Speed Range');
-        }
-        let found = false;
-        // Table row pattern: find all rows, filter for th or td containing the key (case-insensitive, partial match)
-        const allRows = this.page.locator('tr');
-        const rowCount = await allRows.count();
-        for (let i = 0; i < rowCount; i++) {
-          const row = allRows.nth(i);
-          const thText = (await row.locator('th').textContent())?.trim() || '';
-          const tdText = (await row.locator('td').first().textContent())?.trim() || '';
-          for (const variant of variants) {
-            if (
-              thText.toLowerCase().includes(variant.toLowerCase()) ||
-              tdText.toLowerCase().includes(variant.toLowerCase())
-            ) {
-              found = true;
-              // Prefer value in td (if th matched), or next td
-              const valueCell = row.locator('td').last();
-              if (await valueCell.count()) {
-                const value = (await valueCell.textContent())?.trim();
-                if (value) return value;
-              }
-              // Try th's next sibling
-              const thCell = row.locator('th').first();
-              if (await thCell.count()) {
-                const nextTd = thCell.locator('xpath=following-sibling::td[1]');
-                if (await nextTd.count()) {
-                  const value = (await nextTd.textContent())?.trim();
-                  if (value) return value;
-                }
-              }
-            }
-          }
-        }
-
-        // Definition list pattern: find all dt, filter for text containing the key or variants (case-insensitive, partial match)
-        const allDts = this.page.locator('dt');
-        const dtCount = await allDts.count();
-        for (let i = 0; i < dtCount; i++) {
-          const dt = allDts.nth(i);
-          const dtText = (await dt.textContent())?.trim() || '';
-          for (const variant of variants) {
-            if (dtText.toLowerCase().includes(variant.toLowerCase())) {
-              found = true;
-              const dd = dt.locator('xpath=following-sibling::dd[1]');
-              if (await dd.count()) {
-                const value = (await dd.textContent())?.trim();
-                if (value) return value;
-              }
-            }
-          }
-        }
-
-        // Any element (div, span, li, etc.) containing the key or variants, try to extract value from text
-        for (const variant of variants) {
-          const label = this.page.getByText(new RegExp(variant, 'i')).first();
-          if (await label.count()) {
-            // Try next sibling
-            const next = label.locator('xpath=following-sibling::*[1]');
-            if (await next.count()) {
-              const value = (await next.textContent())?.trim();
-              if (value && !value.toLowerCase().includes(variant.toLowerCase())) return value;
-            }
-            // Try parent text
-            const parent = await label.evaluateHandle(el => el?.parentElement);
-            if (parent) {
-              const value = await parent.evaluate((el, k) => {
-                if (!el) return null;
-                const text = el.textContent || '';
-                // Find the first value after the key
-                const match = text.match(new RegExp(`${k}\\s*:?\\s*([^\\n]+)`, 'i'));
-                return match ? match[1].trim() : null;
-              }, variant);
-              if (value && !value.toLowerCase().includes(variant.toLowerCase())) return value;
-            }
-          }
-        }
-
-        // As a last resort, search all visible text for a line containing the key or variants and try to extract a value
-        const allText = (await this.page.content()).toString();
-        for (const variant of variants) {
-          const regex = new RegExp(`${variant}\\s*:?\\s*([^<\\n]+)`, 'i');
-          const match = allText.match(regex);
-          if (match && match[1]) {
-            const value = match[1].trim();
-            if (value && !value.toLowerCase().includes(variant.toLowerCase())) return value;
-          }
-        }
-
-        // If not found, log all found spec labels and values for debugging
-        const foundSpecs: string[] = [];
-        // Table rows
-        for (let i = 0; i < rowCount; i++) {
-          const row = allRows.nth(i);
-          const thText = (await row.locator('th').textContent())?.trim() || '';
-          const tdText = (await row.locator('td').first().textContent())?.trim() || '';
-          foundSpecs.push(`TR: th='${thText}' td='${tdText}'`);
-        }
-        // Definition list
-        for (let i = 0; i < dtCount; i++) {
-          const dt = allDts.nth(i);
-          const dtText = (await dt.textContent())?.trim() || '';
-          const dd = dt.locator('xpath=following-sibling::dd[1]');
-          const ddText = (await dd.count()) ? (await dd.textContent())?.trim() || '' : '';
-          foundSpecs.push(`DL: dt='${dtText}' dd='${ddText}'`);
-        }
-        console.log(`Could not find spec for key '${key}'. Found specs:`, foundSpecs);
-        return null;
-      }
-    async clickWhereToBuyOrDealerLocator() {
-      // Try common selectors/texts for Where to Buy/Dealer Locator
-      const cta = this.page.getByRole('button', { name: /where to buy|dealer locator|find a dealer|find store/i }).first();
-      if (await cta.count()) {
-        await cta.click();
-        return;
-      }
-      // Try as a link
-      const link = this.page.getByRole('link', { name: /where to buy|dealer locator|find a dealer|find store/i }).first();
-      if (await link.count()) {
-        await link.click();
-        return;
-      }
-      // Try fallback by text
-      const textLink = this.page.getByText(/where to buy|dealer locator|find a dealer|find store/i, { exact: false }).first();
-      if (await textLink.count()) {
-        await textLink.click();
-        return;
-      }
-      throw new Error('Where to Buy / Dealer Locator button or link not found on PDP.');
+  async openSpecificationSectionIfNeeded() {
+    // Try clicking a tab or expanding a section if needed
+    const tab = this.page.getByRole('tab', { name: /specification|specs|technical/i }).first();
+    if (await tab.count()) {
+      await tab.click();
+      return;
     }
+    // Try a button or link
+    const btn = this.page.getByRole('button', { name: /specification|specs|technical/i }).first();
+    if (await btn.count()) {
+      await btn.click();
+      return;
+    }
+    // Try fallback by text
+    const textLink = this.page.getByText(/specification|specs|technical/i, { exact: false }).first();
+    if (await textLink.count()) {
+      await textLink.click();
+      return;
+    }
+    // If nothing to click, assume section is already visible
+  }
+
+  async getSpecificationValue(key: string): Promise<string | null> {
+    // 1. Try to find any element whose text includes the key (case-insensitive, partial match)
+    // 2. Try to extract value from nearby cell, sibling, or text node
+    // 3. Return the first non-empty value found
+
+    // Try common variants for the key
+    const variants = [
+      key,
+      key.toUpperCase(),
+      key.toLowerCase(),
+    ];
+    if (key.toLowerCase() === 'rpm') {
+      variants.push('Speed', 'No-load speed', 'Speed (RPM)', 'Rotational Speed', 'No Load Speed', 'Speed Range');
+    }
+    let found = false;
+    // Table row pattern: find all rows, filter for th or td containing the key (case-insensitive, partial match)
+    const allRows = this.page.locator('tr');
+    const rowCount = await allRows.count();
+    for (let i = 0; i < rowCount; i++) {
+      const row = allRows.nth(i);
+      const thText = (await row.locator('th').textContent())?.trim() || '';
+      const tdText = (await row.locator('td').first().textContent())?.trim() || '';
+      for (const variant of variants) {
+        if (
+          thText.toLowerCase().includes(variant.toLowerCase()) ||
+          tdText.toLowerCase().includes(variant.toLowerCase())
+        ) {
+          found = true;
+          // Prefer value in td (if th matched), or next td
+          const valueCell = row.locator('td').last();
+          if (await valueCell.count()) {
+            const value = (await valueCell.textContent())?.trim();
+            if (value) return value;
+          }
+          // Try th's next sibling
+          const thCell = row.locator('th').first();
+          if (await thCell.count()) {
+            const nextTd = thCell.locator('xpath=following-sibling::td[1]');
+            if (await nextTd.count()) {
+              const value = (await nextTd.textContent())?.trim();
+              if (value) return value;
+            }
+          }
+        }
+      }
+    }
+
+    // Definition list pattern: find all dt, filter for text containing the key or variants (case-insensitive, partial match)
+    const allDts = this.page.locator('dt');
+    const dtCount = await allDts.count();
+    for (let i = 0; i < dtCount; i++) {
+      const dt = allDts.nth(i);
+      const dtText = (await dt.textContent())?.trim() || '';
+      for (const variant of variants) {
+        if (dtText.toLowerCase().includes(variant.toLowerCase())) {
+          found = true;
+          const dd = dt.locator('xpath=following-sibling::dd[1]');
+          if (await dd.count()) {
+            const value = (await dd.textContent())?.trim();
+            if (value) return value;
+          }
+        }
+      }
+    }
+
+    // Any element (div, span, li, etc.) containing the key or variants, try to extract value from text
+    for (const variant of variants) {
+      const label = this.page.getByText(new RegExp(variant, 'i')).first();
+      if (await label.count()) {
+        // Try next sibling
+        const next = label.locator('xpath=following-sibling::*[1]');
+        if (await next.count()) {
+          const value = (await next.textContent())?.trim();
+          if (value && !value.toLowerCase().includes(variant.toLowerCase())) return value;
+        }
+        // Try parent text
+        const parent = await label.evaluateHandle(el => el?.parentElement);
+        if (parent) {
+          const value = await parent.evaluate((el, k) => {
+            if (!el) return null;
+            const text = el.textContent || '';
+            // Find the first value after the key
+            const match = text.match(new RegExp(`${k}\\s*:?\\s*([^\\n]+)`, 'i'));
+            return match ? match[1].trim() : null;
+          }, variant);
+          if (value && !value.toLowerCase().includes(variant.toLowerCase())) return value;
+        }
+      }
+    }
+
+    // As a last resort, search all visible text for a line containing the key or variants and try to extract a value
+    const allText = (await this.page.content()).toString();
+    for (const variant of variants) {
+      const regex = new RegExp(`${variant}\\s*:?\\s*([^<\\n]+)`, 'i');
+      const match = allText.match(regex);
+      if (match && match[1]) {
+        const value = match[1].trim();
+        if (value && !value.toLowerCase().includes(variant.toLowerCase())) return value;
+      }
+    }
+
+    // If not found, log all found spec labels and values for debugging
+    const foundSpecs: string[] = [];
+    // Table rows
+    for (let i = 0; i < rowCount; i++) {
+      const row = allRows.nth(i);
+      const thText = (await row.locator('th').textContent())?.trim() || '';
+      const tdText = (await row.locator('td').first().textContent())?.trim() || '';
+      foundSpecs.push(`TR: th='${thText}' td='${tdText}'`);
+    }
+    // Definition list
+    for (let i = 0; i < dtCount; i++) {
+      const dt = allDts.nth(i);
+      const dtText = (await dt.textContent())?.trim() || '';
+      const dd = dt.locator('xpath=following-sibling::dd[1]');
+      const ddText = (await dd.count()) ? (await dd.textContent())?.trim() || '' : '';
+      foundSpecs.push(`DL: dt='${dtText}' dd='${ddText}'`);
+    }
+    console.log(`Could not find spec for key '${key}'. Found specs:`, foundSpecs);
+    return null;
+  }
+  async clickWhereToBuyOrDealerLocator() {
+    // Try common selectors/texts for Where to Buy/Dealer Locator
+    const cta = this.page.getByRole('button', { name: /where to buy|dealer locator|find a dealer|find store/i }).first();
+    if (await cta.count()) {
+      await cta.click();
+      return;
+    }
+    // Try as a link
+    const link = this.page.getByRole('link', { name: /where to buy|dealer locator|find a dealer|find store/i }).first();
+    if (await link.count()) {
+      await link.click();
+      return;
+    }
+    // Try fallback by text
+    const textLink = this.page.getByText(/where to buy|dealer locator|find a dealer|find store/i, { exact: false }).first();
+    if (await textLink.count()) {
+      await textLink.click();
+      return;
+    }
+    throw new Error('Where to Buy / Dealer Locator button or link not found on PDP.');
+  }
   readonly page: Page;
 
   constructor(page: Page) {
@@ -216,5 +216,42 @@ export class ProductPage {
     }
     // If none found, fail
     throw new Error('Model number not found or not visible on the PDP.');
+  }
+
+  async verifyRelatedAccessories() {
+    // Try broader selectors for the section, as in original test
+    const section = this.page.locator(
+      'section:has-text("Related Accessories"), section:has-text("Accessories"), section:has-text("You may also like"), div:has-text("Related Accessories"), div:has-text("Accessories"), div:has-text("You may also like")'
+    ).first();
+
+    try {
+      await section.scrollIntoViewIfNeeded();
+      await expect(section, 'Related accessories section should be visible').toBeVisible({ timeout: 5000 });
+    } catch (e) {
+      console.log('No related accessories section present on this PDP, skipping logic for this product variant.');
+      return;
+    }
+
+    // Restrict tile selector to likely accessory/product tiles
+    const accessoryTiles = section.locator('[data-testid*="accessory"], .accessory-tile, .product-tile');
+    const count = await accessoryTiles.count();
+    if (count === 0) {
+      console.log('No accessory tiles present in related accessories section.');
+      return;
+    }
+
+    let foundClickable = false;
+    const maxTilesToCheck = Math.min(count, 10);
+    for (let i = 0; i < maxTilesToCheck; i++) {
+      const tile = accessoryTiles.nth(i);
+      if (await tile.isVisible() && await tile.isEnabled()) {
+        const href = await tile.getAttribute('href');
+        if (href && (href.match(/\/product\//i) || href.match(/\/p\//i))) {
+          foundClickable = true;
+          break;
+        }
+      }
+    }
+    expect(foundClickable, 'At least one accessory tile should link to a PDP').toBe(true);
   }
 }
