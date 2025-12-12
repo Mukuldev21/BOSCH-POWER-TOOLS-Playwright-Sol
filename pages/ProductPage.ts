@@ -1,6 +1,7 @@
 import { expect, Page } from '@playwright/test';
 
 export class ProductPage {
+  // Used in Test: PDP-003
   async openSpecificationSectionIfNeeded() {
     // Try clicking a tab or expanding a section if needed
     const tab = this.page.getByRole('tab', { name: /specification|specs|technical/i }).first();
@@ -23,6 +24,7 @@ export class ProductPage {
     // If nothing to click, assume section is already visible
   }
 
+  // Used in Test: PDP-003
   async getSpecificationValue(key: string): Promise<string | null> {
     // 1. Try to find any element whose text includes the key (case-insensitive, partial match)
     // 2. Try to extract value from nearby cell, sibling, or text node
@@ -144,6 +146,7 @@ export class ProductPage {
     console.log(`Could not find spec for key '${key}'. Found specs:`, foundSpecs);
     return null;
   }
+  // Helper for Test: PDP-002
   async clickWhereToBuyOrDealerLocator() {
     // Try common selectors/texts for Where to Buy/Dealer Locator
     const cta = this.page.getByRole('button', { name: /where to buy|dealer locator|find a dealer|find store/i }).first();
@@ -175,6 +178,7 @@ export class ProductPage {
     await this.page.goto(productUrl);
   }
 
+  // Used in Test: PDP-001
   async assertProductTitleVisible() {
     // Try common selectors for product title
     const title = this.page.locator('h1, .product-title, [data-testid="product-title"]').first();
@@ -182,6 +186,7 @@ export class ProductPage {
     return title;
   }
 
+  // Used in Test: PDP-001
   async assertProductImageLoaded() {
     // Try common selectors for product image
     const image = this.page.locator('img[alt][src*="product"], img.product-image, [data-testid="product-image"]').first();
@@ -193,6 +198,7 @@ export class ProductPage {
     return image;
   }
 
+  // Used in Test: PDP-001
   async assertModelNumberVisible() {
     // Try [data-testid="model-number"] first
     let model = this.page.locator('[data-testid="model-number"]').first();
@@ -218,6 +224,7 @@ export class ProductPage {
     throw new Error('Model number not found or not visible on the PDP.');
   }
 
+  // Used in Test: PDP-004
   async verifyRelatedAccessories() {
     // Try broader selectors for the section, as in original test
     const section = this.page.locator(
@@ -296,6 +303,7 @@ export class ProductPage {
     // Create a new method `openAndVerifyWhereToBuy(context)`
   }
 
+  // Used in Test: PDP-002
   async openAndVerifyWhereToBuy(context: any) {
     // Setup listener for potential new page before clicking
     const pagePromise = context.waitForEvent('page').catch(() => null);
